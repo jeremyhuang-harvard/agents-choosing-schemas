@@ -1,0 +1,2358 @@
+2026-10-21 15:55:25 queue started; waiting on pid 20133
+2026-10-21 16:55:47 start s1_single (batch 16)
+500 cells, 0 done, running 500
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7304.32it/s]
+[1/500] none__nonstop_flight__r1 ok 58.5s ans=200.0 think=1376ch 
+[2/500] none__priority_pickup__r0 ok 68.6s ans=5.0 think=1566ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 106, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+wrote answers.csv, summary.md, traces.md in runs/s1_single (2 calls)
+2026-10-21 16:57:01 s1 done; start s2_combos
+1140 cells, 0 done, running 1140
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 6844.74it/s]
+[1/1140] C-I__priority_pickup__r1 ok 128.6s ans=3.0 think=2890ch 
+[2/1140] H-I__grocery_delivery__r0 ok 135.9s ans=15.0 think=2941ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 106, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+wrote answers.csv, summary.md, traces.md in runs/s2_combos (2 calls)
+2026-10-21 16:59:39 queue finished
+2026-10-21 17:00:02 start s1_single (batch 8)
+500 cells, 2 done, running 498
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 6966.00it/s]
+[1/498] none__priority_pickup__r3 ok 77.6s ans=5.0 think=2294ch 
+[2/498] none__grocery_delivery__r4 ok 78.9s ans=10.0 think=2150ch 
+[3/498] none__volunteer_or_donate__r1 ok 84.4s ans=50.0 think=2441ch 
+[4/498] none__general__r4 ok 86.8s ans=25.0 think=2602ch 
+[5/498] none__furniture_assembly__r2 ok 102.7s ans=40.0 think=2706ch 
+[6/498] none__volunteer_or_donate__r3 ok 108.4s ans=30.0 think=2994ch 
+[7/498] none__grocery_delivery__r2 ok 119.4s ans=10.0 think=3430ch 
+[8/498] none__weekend_gig__r0 ok 148.5s ans=50.0 think=4041ch 
+[9/498] none__nonstop_flight__r4 ok 67.8s ans=150.0 think=1981ch 
+[10/498] none__general__r2 ok 96.3s ans=25.0 think=2894ch 
+[11/498] none__weekend_gig__r2 ok 107.6s ans=25.0 think=2958ch 
+[12/498] none__research_study__r3 ok 85.4s ans=15.0 think=2466ch 
+[13/498] none__weekend_gig__r3 ok 131.0s ans=50.0 think=3589ch 
+[14/498] none__general__r1 ok 104.4s ans=20.0 think=3163ch 
+[15/498] none__priority_pickup__r4 ok 68.5s ans=5.0 think=2138ch 
+[16/498] none__train_delay__r2 ok 123.0s ans=250.0 think=3916ch 
+[17/498] none__priority_pickup__r1 ok 81.6s ans=5.0 think=2542ch 
+[18/498] none__nonstop_flight__r3 ok 83.1s ans=150.0 think=2645ch 
+[19/498] none__theme_park__r3 ok 69.8s ans=40.0 think=2179ch 
+[20/498] none__volunteer_or_donate__r4 ok 64.2s ans=20.0 think=2049ch 
+[21/498] none__nonstop_flight__r0 ok 93.7s ans=150.0 think=2880ch 
+[22/498] none__research_study__r1 ok 122.8s ans=15.0 think=3730ch 
+[23/498] none__theme_park__r4 ok 94.2s ans=25.0 think=2895ch 
+[24/498] none__train_delay__r0 ok 115.5s ans=50.0 think=3844ch 
+[25/498] none__furniture_assembly__r4 ok 71.2s ans=25.0 think=2128ch 
+[26/498] none__grocery_delivery__r0 ok 117.1s ans=12.0 think=3445ch 
+[27/498] none__theme_park__r0 ok 69.4s ans=20.0 think=2122ch 
+[28/498] none__nonstop_flight__r2 ok 90.7s ans=200.0 think=2631ch 
+[29/498] none__general__r3 ok 110.5s ans=20.0 think=3353ch 
+[30/498] none__research_study__r0 ok 106.1s ans=15.0 think=3121ch 
+[31/498] none__research_study__r2 ok 117.6s ans=15.0 think=3452ch 
+[32/498] none__weekend_gig__r4 ok 80.6s ans=50.0 think=2283ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 106, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 17:07:21 s1_single crashed (attempt 1); resuming in 30s
+500 cells, 34 done, running 466
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8064.25it/s]
+[1/466] none__priority_pickup__r2 ok 69.1s ans=5.0 think=2373ch 
+[2/466] none__volunteer_or_donate__r2 ok 78.5s ans=25.0 think=2515ch 
+[3/466] none__theme_park__r1 ok 80.7s ans=20.0 think=2734ch 
+[4/466] none__weekend_gig__r1 ok 87.0s ans=50.0 think=2696ch 
+[5/466] none__train_delay__r1 ok 90.1s ans=50.0 think=3090ch 
+[6/466] none__volunteer_or_donate__r0 ok 114.4s ans=50.0 think=3327ch 
+[7/466] none__theme_park__r2 ok 147.4s ans=30.0 think=4503ch 
+[8/466] none__train_delay__r3 ok 71.6s ans=200.0 think=2262ch 
+[9/466] none__research_study__r4 ok 159.6s ans=20.0 think=4796ch 
+[10/466] none__furniture_assembly__r1 ok 85.2s ans=50.0 think=2469ch 
+[11/466] none__furniture_assembly__r3 ok 135.2s ans=30.0 think=3862ch 
+[12/466] none__grocery_delivery__r3 ok 99.5s ans=10.0 think=2856ch 
+[13/466] none__train_delay__r4 ok 183.0s ans=50.0 think=5130ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 106, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 17:12:13 s1_single crashed (attempt 2); resuming in 30s
+500 cells, 47 done, running 453
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7449.92it/s]
+2026-10-21 17:14:01 start s1_single (batch 8)
+500 cells, 47 done, running 453
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7121.06it/s]
+[1/453] none__grocery_delivery__r1 ok 100.5s ans=10.0 think=2873ch 
+[2/453] none__general__r0 ok 115.0s ans=20.0 think=3443ch 
+[3/453] B__grocery_delivery__r4 ok 125.2s ans=10.0 think=3529ch 
+[4/453] I__weekend_gig__r4 ok 132.4s ans=30.0 think=3616ch 
+[5/453] none__furniture_assembly__r0 ok 137.8s ans=25.0 think=3673ch 
+[6/453] F__research_study__r2 ok 160.1s ans=20.0 think=4602ch 
+[7/453] E__furniture_assembly__r4 ok 107.1s ans=50.0 think=2711ch 
+[8/453] A__weekend_gig__r2 ok 230.3s ans=50.0 think=5812ch 
+[9/453] I__theme_park__r4 ok 114.3s ans=20.0 think=3009ch 
+[10/453] B__train_delay__r3 ok 241.4s ans=20.0 think=6679ch 
+[11/453] E__theme_park__r2 ok 116.5s ans=15.0 think=2986ch 
+[12/453] B__grocery_delivery__r1 ok 75.6s ans=10.0 think=1992ch 
+[13/453] G__train_delay__r2 ok 213.1s ans=145.0 think=5783ch 
+[14/453] C__nonstop_flight__r4 ok 122.4s ans=45.0 think=2995ch 
+[15/453] G__research_study__r2 ok 265.9s ans=15.0 think=7147ch 
+[16/453] I__general__r2 ok 222.4s ans=18.0 think=5781ch 
+[17/453] E__furniture_assembly__r2 ok 151.4s ans=15.0 think=3916ch 
+[18/453] F__furniture_assembly__r0 ok 185.6s ans=50.0 think=4794ch 
+[19/453] A__volunteer_or_donate__r2 ok 146.2s ans=40.0 think=3910ch 
+[20/453] E__research_study__r1 ok 126.2s ans=20.0 think=3524ch 
+[21/453] B__train_delay__r2 ok 90.8s ans=50.0 think=2970ch 
+[22/453] I__grocery_delivery__r0 ok 118.0s ans=10.0 think=3573ch 
+[23/453] G__priority_pickup__r4 ok 48.1s ans=5.0 think=1499ch 
+[24/453] B__nonstop_flight__r0 ok 192.6s ans=15.0 think=5212ch 
+[25/453] D__priority_pickup__r2 ok 153.9s ans=6.0 think=4532ch 
+[26/453] F__train_delay__r4 ok 169.3s ans=1050.0 think=4766ch 
+[27/453] F__general__r4 ok 171.3s ans=210.0 think=5042ch 
+[28/453] F__weekend_gig__r1 ok 151.0s ans=50.0 think=4299ch 
+[29/453] G__general__r2 ok 78.5s ans=35.0 think=2349ch 
+[30/453] F__nonstop_flight__r2 ok 271.4s ans=630.0 think=7239ch 
+[31/453] E__priority_pickup__r3 ok 70.2s ans=5.0 think=2098ch 
+[32/453] A__research_study__r4 ok 103.4s ans=15.0 think=2880ch 
+[33/453] C__priority_pickup__r3 ok 170.4s ans=10.0 think=4754ch 
+[34/453] E__grocery_delivery__r1 ok 139.1s ans=12.0 think=3960ch 
+[35/453] H__theme_park__r0 ok 113.6s ans=40.0 think=3192ch 
+[36/453] A__train_delay__r4 ok 118.2s ans=50.0 think=3574ch 
+[37/453] E__train_delay__r3 ok 176.7s ans=50.0 think=5589ch 
+[38/453] A__priority_pickup__r3 ok 86.8s ans=5.0 think=2631ch 
+[39/453] F__train_delay__r3 ok 110.5s ans=1050.0 think=3047ch 
+[40/453] C__grocery_delivery__r3 ok 68.8s ans=15.0 think=2072ch 
+[41/453] F__grocery_delivery__r3 ok 89.2s ans=25.0 think=2588ch 
+[42/453] E__furniture_assembly__r3 ok 113.8s ans=25.0 think=3464ch 
+[43/453] I__research_study__r0 ok 82.1s ans=10.0 think=2493ch 
+[44/453] C__grocery_delivery__r2 ok 174.2s ans=15.0 think=5056ch 
+[45/453] E__theme_park__r0 ok 122.0s ans=15.0 think=3742ch 
+[46/453] A__general__r1 ok 153.3s ans=20.0 think=4396ch 
+[47/453] C__furniture_assembly__r0 ok 137.9s ans=30.0 think=4052ch 
+[48/453] I__theme_park__r3 ok 126.9s ans=15.0 think=3608ch 
+[49/453] I__volunteer_or_donate__r0 ok 147.8s ans=25.0 think=4199ch 
+[50/453] A__weekend_gig__r4 ok 110.2s ans=50.0 think=2924ch 
+[51/453] D__train_delay__r4 ok 108.6s ans=180.0 think=3069ch 
+[52/453] I__train_delay__r1 ok 87.3s ans=50.0 think=2676ch 
+[53/453] H__volunteer_or_donate__r3 ok 52.7s ans=40.0 think=1455ch 
+[54/453] C__general__r3 ok 56.2s ans=15.0 think=1807ch 
+[55/453] F__general__r1 ok 181.0s ans=210.0 think=5236ch 
+[56/453] I__furniture_assembly__r2 ok 85.6s ans=15.0 think=2489ch 
+[57/453] B__general__r4 ok 106.2s ans=15.0 think=3238ch 
+[58/453] E__nonstop_flight__r2 ok 95.6s ans=150.0 think=2674ch 
+[59/453] F__priority_pickup__r1 ok 113.4s ans=35.0 think=3290ch 
+[60/453] F__furniture_assembly__r3 ok 158.5s ans=50.0 think=4202ch 
+[61/453] H__theme_park__r4 ok 145.4s ans=40.0 think=4042ch 
+[62/453] G__furniture_assembly__r3 ok 124.9s ans=25.0 think=3441ch 
+[63/453] I__grocery_delivery__r3 ok 37.2s ans=10.0 think=1108ch 
+[64/453] B__furniture_assembly__r3 ok 148.5s ans=25.0 think=3984ch 
+[65/453] B__weekend_gig__r2 ok 120.5s ans=40.0 think=3411ch 
+[66/453] A__general__r3 ok 112.3s ans=19.0 think=3132ch 
+[67/453] E__train_delay__r0 ok 160.5s ans=100.0 think=4675ch 
+[68/453] A__nonstop_flight__r4 ok 76.7s ans=50.0 think=2195ch 
+[69/453] F__general__r2 ok 133.1s ans=210.0 think=3746ch 
+[70/453] B__volunteer_or_donate__r0 ok 95.2s ans=50.0 think=2646ch 
+[71/453] G__nonstop_flight__r4 ok 263.3s ans=29.0 think=7166ch 
+[72/453] B__volunteer_or_donate__r4 ok 139.3s ans=25.0 think=3777ch 
+[73/453] E__weekend_gig__r3 ok 125.6s ans=40.0 think=3257ch 
+[74/453] G__nonstop_flight__r3 ok 124.8s ans=87.0 think=3427ch 
+[75/453] F__priority_pickup__r4 ok 191.7s ans=10.0 think=5059ch 
+[76/453] C__grocery_delivery__r4 ok 112.0s ans=15.0 think=3044ch 
+[77/453] H__nonstop_flight__r0 ok 78.6s ans=60.0 think=2449ch 
+[78/453] G__theme_park__r0 ok 316.0s ans=29.0 think=8901ch 
+[79/453] A__theme_park__r2 ok 133.7s ans=25.0 think=3872ch 
+[80/453] H__weekend_gig__r3 ok 126.5s ans=80.0 think=3878ch 
+[81/453] B__furniture_assembly__r0 ok 113.5s ans=50.0 think=3470ch 
+[82/453] D__theme_park__r2 ok 182.0s ans=72.0 think=5149ch 
+[83/453] F__research_study__r4 ok 117.4s ans=20.0 think=3859ch 
+[84/453] E__train_delay__r2 ok 73.4s ans=150.0 think=2539ch 
+[85/453] H__general__r0 ok 81.9s ans=20.0 think=2837ch 
+[86/453] C__general__r0 ok 58.4s ans=15.0 think=2150ch 
+[87/453] D__research_study__r2 ok 235.0s ans=15.0 think=7211ch 
+[88/453] A__train_delay__r1 ok 94.9s ans=100.0 think=2798ch 
+[89/453] E__nonstop_flight__r3 ok 52.2s ans=200.0 think=1727ch 
+[90/453] F__volunteer_or_donate__r1 ok 136.6s ans=35.0 think=4164ch 
+[91/453] F__weekend_gig__r0 ok 163.4s ans=25.0 think=5000ch 
+[92/453] E__volunteer_or_donate__r2 ok 106.3s ans=25.0 think=3346ch 
+[93/453] E__grocery_delivery__r3 ok 79.6s ans=12.0 think=2639ch 
+[94/453] C__train_delay__r4 ok 125.3s ans=75.0 think=4262ch 
+[95/453] I__volunteer_or_donate__r2 ok 70.8s ans=30.0 think=2146ch 
+[96/453] B__general__r2 ok 133.0s ans=30.0 think=4243ch 
+[97/453] H__priority_pickup__r3 ok 142.1s ans=10.0 think=4347ch 
+[98/453] B__priority_pickup__r4 ok 73.7s ans=4.0 think=2070ch 
+[99/453] H__grocery_delivery__r3 ok 134.6s ans=20.0 think=3744ch 
+[100/453] D__train_delay__r3 ok 101.5s ans=180.0 think=2619ch 
+[101/453] H__weekend_gig__r4 ok 322.2s ans=60.0 think=9212ch 
+[102/453] B__furniture_assembly__r1 ok 129.2s ans=20.0 think=3233ch 
+[103/453] E__research_study__r4 ok 154.0s ans=10.0 think=4229ch 
+[104/453] C__research_study__r3 ok 146.1s ans=20.0 think=4179ch 
+[105/453] H__volunteer_or_donate__r1 ok 155.0s ans=40.0 think=4018ch 
+[106/453] F__weekend_gig__r2 ok 108.6s ans=50.0 think=2796ch 
+[107/453] G__grocery_delivery__r3 ok 147.0s ans=15.0 think=3969ch 
+[108/453] G__general__r3 ok 178.6s ans=30.0 think=4836ch 
+[109/453] H__priority_pickup__r1 ok 147.4s ans=5.0 think=3954ch 
+[110/453] D__weekend_gig__r3 ok 91.4s ans=50.0 think=2238ch 
+[111/453] C__theme_park__r2 ok 78.9s ans=30.0 think=1910ch 
+[112/453] C__theme_park__r4 ok 57.5s ans=30.0 think=1441ch 
+[113/453] A__priority_pickup__r2 ok 100.5s ans=5.0 think=2379ch 
+[114/453] F__furniture_assembly__r2 ok 377.2s ans=420.0 think=8881ch 
+[115/453] C__general__r1 ok 115.0s ans=15.0 think=2979ch 
+[116/453] B__train_delay__r4 ok 131.9s ans=150.0 think=3522ch 
+[117/453] A__weekend_gig__r3 ok 213.6s ans=50.0 think=5084ch 
+[118/453] H__nonstop_flight__r3 ok 135.1s ans=60.0 think=3633ch 
+[119/453] C__volunteer_or_donate__r4 ok 111.5s ans=30.0 think=3171ch 
+[120/453] H__grocery_delivery__r2 ok 157.4s ans=20.0 think=4026ch 
+[121/453] A__research_study__r0 ok 113.8s ans=10.0 think=3320ch 
+[122/453] E__nonstop_flight__r4 ok 50.2s ans=250.0 think=1550ch 
+[123/453] A__grocery_delivery__r2 ok 78.0s ans=15.0 think=2260ch 
+[124/453] D__research_study__r0 ok 124.7s ans=10.0 think=3504ch 
+[125/453] I__research_study__r3 ok 110.4s ans=10.0 think=3355ch 
+[126/453] A__nonstop_flight__r1 ok 77.4s ans=100.0 think=2152ch 
+[127/453] H__research_study__r2 ok 179.6s ans=20.0 think=5262ch 
+[128/453] C__priority_pickup__r0 ok 129.8s ans=3.0 think=3507ch 
+[129/453] A__theme_park__r1 ok 108.9s ans=25.0 think=3077ch 
+[130/453] C__volunteer_or_donate__r0 ok 65.3s ans=30.0 think=2002ch 
+[131/453] C__train_delay__r2 ok 109.0s ans=75.0 think=3231ch 
+[132/453] E__priority_pickup__r2 ok 94.1s ans=5.0 think=2848ch 
+[133/453] A__furniture_assembly__r0 ok 149.4s ans=20.0 think=4172ch 
+[134/453] A__general__r0 ok 169.2s ans=20.0 think=4766ch 
+[135/453] I__priority_pickup__r4 ok 112.3s ans=3.0 think=3390ch 
+[136/453] F__general__r3 ok 213.4s ans=210.0 think=5926ch 
+[137/453] H__volunteer_or_donate__r0 ok 112.3s ans=40.0 think=3401ch 
+[138/453] I__furniture_assembly__r0 ok 105.8s ans=20.0 think=3163ch 
+[139/453] F__grocery_delivery__r1 ok 131.6s ans=20.0 think=3755ch 
+[140/453] H__nonstop_flight__r4 ok 164.1s ans=60.0 think=4834ch 
+[141/453] D__weekend_gig__r1 ok 90.5s ans=50.0 think=2882ch 
+[142/453] D__volunteer_or_donate__r2 ok 71.6s ans=50.0 think=2342ch 
+[143/453] I__weekend_gig__r3 ok 115.6s ans=20.0 think=3532ch 
+[144/453] I__train_delay__r3 ok 60.0s ans=50.0 think=1980ch 
+[145/453] G__weekend_gig__r0 ok 142.4s ans=50.0 think=4665ch 
+[146/453] A__nonstop_flight__r3 ok 70.4s ans=150.0 think=2087ch 
+[147/453] A__grocery_delivery__r3 ok 91.0s ans=10.0 think=2597ch 
+[148/453] H__weekend_gig__r0 ok 296.0s ans=60.0 think=8352ch 
+[149/453] C__weekend_gig__r4 ok 149.5s ans=20.0 think=4166ch 
+[150/453] C__theme_park__r3 ok 26.6s ans=30.0 think=730ch 
+[151/453] D__theme_park__r0 ok 230.6s ans=20.0 think=6279ch 
+[152/453] F__priority_pickup__r3 ok 143.6s ans=35.0 think=4079ch 
+[153/453] E__weekend_gig__r0 ok 181.9s ans=0.0 think=5149ch 
+[154/453] F__nonstop_flight__r0 ok 174.4s ans=100.0 think=4629ch 
+[155/453] A__weekend_gig__r0 ok 148.1s ans=50.0 think=4069ch 
+[156/453] F__volunteer_or_donate__r2 ok 120.2s ans=50.0 think=3075ch 
+[157/453] H__volunteer_or_donate__r4 ok 100.5s ans=40.0 think=2670ch 
+[158/453] H__furniture_assembly__r4 ok 124.0s ans=40.0 think=3167ch 
+[159/453] A__nonstop_flight__r2 ok 119.9s ans=150.0 think=3295ch 
+[160/453] H__weekend_gig__r2 ok 401.3s ans=60.0 think=10623ch 
+[161/453] G__research_study__r3 ok 198.9s ans=15.0 think=6058ch 
+[162/453] F__furniture_assembly__r4 ok 223.4s ans=50.0 think=6224ch 
+[163/453] D__nonstop_flight__r2 ok 125.1s ans=100.0 think=4136ch 
+[164/453] E__train_delay__r4 ok 99.4s ans=150.0 think=4000ch 
+[165/453] I__volunteer_or_donate__r3 ok 97.8s ans=20.0 think=4052ch 
+[166/453] C__research_study__r0 ok 64.2s ans=20.0 think=3352ch 
+[167/453] C__general__r4 ok 56.5s ans=15.0 think=3116ch 
+[168/453] C__volunteer_or_donate__r3 ok 74.6s ans=30.0 think=3390ch 
+[169/453] E__weekend_gig__r2 ok 81.4s ans=20.0 think=3080ch 
+[170/453] I__nonstop_flight__r3 ok 96.8s ans=75.0 think=3731ch 
+[171/453] A__furniture_assembly__r3 ok 130.9s ans=20.0 think=3897ch 
+[172/453] E__general__r1 ok 165.8s ans=45.0 think=5455ch 
+[173/453] G__theme_park__r2 ok 102.4s ans=20.0 think=2990ch 
+[174/453] D__research_study__r3 ok 183.5s ans=15.0 think=4971ch 
+[175/453] D__grocery_delivery__r4 ok 191.2s ans=36.0 think=5133ch 
+[176/453] I__general__r4 ok 188.6s ans=18.0 think=5014ch 
+[177/453] D__train_delay__r0 ok 82.3s ans=180.0 think=2121ch 
+[178/453] I__research_study__r1 ok 111.5s ans=15.0 think=2890ch 
+[179/453] C__theme_park__r0 ok 63.3s ans=30.0 think=1762ch 
+[180/453] F__theme_park__r3 ok 254.4s ans=50.0 think=6340ch 
+[181/453] F__research_study__r1 ok 172.4s ans=10.0 think=4868ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 18:06:14 s1_single crashed (attempt 1); resuming in 30s
+500 cells, 228 done, running 272
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7176.57it/s]
+[1/272] H__grocery_delivery__r1 ok 44.3s ans=20.0 think=2428ch 
+[2/272] I__furniture_assembly__r1 ok 48.1s ans=10.0 think=2659ch 
+[3/272] I__train_delay__r4 ok 74.8s ans=90.0 think=3649ch 
+[4/272] F__nonstop_flight__r4 ok 85.0s ans=300.0 think=4078ch 
+[5/272] A__train_delay__r3 ok 86.3s ans=96.0 think=4175ch 
+[6/272] G__nonstop_flight__r1 ok 91.9s ans=150.0 think=4545ch 
+[7/272] I__general__r0 ok 108.2s ans=15.0 think=4864ch 
+[8/272] C__volunteer_or_donate__r1 ok 88.3s ans=30.0 think=3089ch 
+[9/272] E__research_study__r3 ok 123.8s ans=20.0 think=3765ch 
+[10/272] I__theme_park__r2 ok 97.8s ans=15.0 think=2723ch 
+[11/272] E__nonstop_flight__r0 ok 80.2s ans=150.0 think=2348ch 
+[12/272] D__furniture_assembly__r0 ok 108.1s ans=20.0 think=2986ch 
+[13/272] H__weekend_gig__r1 ok 130.6s ans=80.0 think=3405ch 
+[14/272] D__furniture_assembly__r4 ok 240.8s ans=20.0 think=8031ch 
+[15/272] C__train_delay__r0 ok 61.2s ans=75.0 think=1655ch 
+[16/272] I__furniture_assembly__r4 ok 99.2s ans=15.0 think=2738ch 
+[17/272] C__research_study__r1 ok 161.1s ans=10.0 think=4758ch 
+[18/272] D__research_study__r4 ok 83.0s ans=15.0 think=2626ch 
+[19/272] D__theme_park__r3 ok 165.6s ans=72.0 think=4339ch 
+[20/272] F__volunteer_or_donate__r4 ok 145.0s ans=25.0 think=4217ch 
+[21/272] A__nonstop_flight__r0 ok 102.8s ans=150.0 think=2757ch 
+[22/272] A__volunteer_or_donate__r1 ok 177.8s ans=38.0 think=4605ch 
+[23/272] H__train_delay__r3 ok 162.1s ans=100.0 think=5027ch 
+[24/272] H__theme_park__r2 ok 76.0s ans=40.0 think=1931ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 18:13:40 s1_single crashed (attempt 2); resuming in 30s
+500 cells, 252 done, running 248
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7388.67it/s]
+[1/248] E__nonstop_flight__r1 ok 97.6s ans=150.0 think=2981ch 
+[2/248] C__furniture_assembly__r3 ok 103.2s ans=30.0 think=3377ch 
+[3/248] I__train_delay__r2 ok 111.6s ans=50.0 think=4046ch 
+[4/248] G__furniture_assembly__r1 ok 117.3s ans=30.0 think=3692ch 
+[5/248] I__theme_park__r0 ok 127.2s ans=10.0 think=4022ch 
+[6/248] D__theme_park__r4 ok 137.9s ans=72.0 think=4150ch 
+[7/248] G__train_delay__r4 ok 180.4s ans=145.0 think=6220ch 
+[8/248] H__general__r1 ok 192.2s ans=20.0 think=6423ch 
+[9/248] E__grocery_delivery__r2 ok 118.6s ans=15.0 think=3750ch 
+[10/248] A__weekend_gig__r1 ok 136.6s ans=50.0 think=4024ch 
+[11/248] C__furniture_assembly__r4 ok 117.5s ans=30.0 think=3848ch 
+[12/248] C__priority_pickup__r4 ok 133.6s ans=5.0 think=4061ch 
+[13/248] A__train_delay__r0 ok 182.2s ans=100.0 think=5374ch 
+[14/248] B__grocery_delivery__r0 ok 79.6s ans=15.0 think=2418ch 
+[15/248] B__weekend_gig__r3 ok 101.4s ans=20.0 think=3047ch 
+[16/248] B__volunteer_or_donate__r3 ok 232.2s ans=20.0 think=6880ch 
+[17/248] A__research_study__r2 ok 153.2s ans=10.0 think=4547ch 
+[18/248] B__volunteer_or_donate__r2 ok 115.7s ans=30.0 think=3525ch 
+[19/248] G__grocery_delivery__r0 ok 54.4s ans=15.0 think=1746ch 
+[20/248] E__volunteer_or_donate__r3 ok 189.2s ans=20.0 think=5770ch 
+[21/248] C__nonstop_flight__r0 ok 66.3s ans=45.0 think=2122ch 
+[22/248] B__general__r3 ok 107.5s ans=15.0 think=3329ch 
+[23/248] G__general__r4 ok 159.4s ans=30.0 think=5150ch 
+[24/248] A__theme_park__r4 ok 111.4s ans=20.0 think=3372ch 
+[25/248] A__priority_pickup__r0 ok 80.6s ans=5.0 think=2494ch 
+[26/248] D__grocery_delivery__r0 ok 129.5s ans=36.0 think=3862ch 
+[27/248] B__priority_pickup__r0 ok 183.4s ans=5.0 think=5582ch 
+[28/248] F__nonstop_flight__r3 ok 169.3s ans=50.0 think=4496ch 
+[29/248] G__furniture_assembly__r4 ok 75.8s ans=25.0 think=2271ch 
+[30/248] F__priority_pickup__r0 ok 135.9s ans=35.0 think=4132ch 
+[31/248] I__weekend_gig__r2 ok 159.2s ans=20.0 think=4785ch 
+[32/248] E__general__r3 ok 114.5s ans=15.0 think=3527ch 
+[33/248] I__research_study__r4 ok 98.4s ans=15.0 think=3081ch 
+[34/248] A__furniture_assembly__r1 ok 98.4s ans=20.0 think=2810ch 
+[35/248] H__theme_park__r1 ok 139.8s ans=40.0 think=4166ch 
+[36/248] D__grocery_delivery__r1 ok 273.3s ans=36.0 think=7986ch 
+[37/248] D__nonstop_flight__r1 ok 107.5s ans=108.0 think=2821ch 
+[38/248] C__research_study__r4 ok 143.8s ans=15.0 think=4246ch 
+[39/248] I__nonstop_flight__r2 ok 92.5s ans=100.0 think=2966ch 
+[40/248] C__weekend_gig__r0 ok 89.2s ans=20.0 think=2960ch 
+[41/248] I__furniture_assembly__r3 ok 146.8s ans=15.0 think=4485ch 
+[42/248] G__research_study__r1 ok 194.2s ans=10.0 think=6373ch 
+[43/248] C__volunteer_or_donate__r2 ok 54.1s ans=30.0 think=1759ch 
+[44/248] B__grocery_delivery__r2 ok 146.3s ans=7.5 think=4401ch 
+[45/248] D__nonstop_flight__r0 ok 206.2s ans=100.0 think=5921ch 
+[46/248] G__train_delay__r1 ok 200.4s ans=150.0 think=6637ch 
+[47/248] D__nonstop_flight__r3 ok 84.5s ans=108.0 think=2213ch 
+[48/248] H__research_study__r4 ok 143.4s ans=15.0 think=4335ch 
+[49/248] A__theme_park__r3 ok 144.1s ans=20.0 think=3964ch 
+[50/248] E__furniture_assembly__r0 ok 43.7s ans=50.0 think=1306ch 
+[51/248] D__train_delay__r1 ok 117.9s ans=180.0 think=3255ch 
+[52/248] D__furniture_assembly__r2 ok 134.0s ans=20.0 think=3719ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 18:30:02 s1_single crashed (attempt 3); resuming in 30s
+500 cells, 304 done, running 196
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7419.17it/s]
+[1/196] G__volunteer_or_donate__r4 ok 86.9s ans=58.0 think=3023ch 
+[2/196] I__train_delay__r0 ok 98.9s ans=50.0 think=3435ch 
+[3/196] D__priority_pickup__r3 ok 103.9s ans=6.0 think=3253ch 
+[4/196] H__nonstop_flight__r1 ok 117.2s ans=60.0 think=3769ch 
+[5/196] G__grocery_delivery__r1 ok 40.9s ans=15.0 think=1259ch 
+[6/196] B__train_delay__r0 ok 134.5s ans=50.0 think=4611ch 
+[7/196] G__furniture_assembly__r0 ok 138.9s ans=25.0 think=4355ch 
+[8/196] C__research_study__r2 ok 170.5s ans=15.0 think=5415ch 
+[9/196] G__volunteer_or_donate__r0 ok 47.0s ans=58.0 think=1468ch 
+[10/196] B__furniture_assembly__r2 ok 88.0s ans=25.0 think=2614ch 
+[11/196] E__research_study__r0 ok 195.1s ans=15.0 think=5877ch 
+[12/196] B__nonstop_flight__r1 ok 115.6s ans=10.0 think=3489ch 
+[13/196] A__grocery_delivery__r0 ok 83.2s ans=10.0 think=2532ch 
+[14/196] D__general__r3 ok 74.8s ans=36.0 think=2525ch 
+[15/196] B__grocery_delivery__r3 ok 74.0s ans=10.0 think=2373ch 
+[16/196] I__priority_pickup__r0 ok 115.5s ans=3.0 think=3628ch 
+[17/196] B__weekend_gig__r4 ok 145.7s ans=50.0 think=4558ch 
+[18/196] G__theme_park__r1 ok 132.7s ans=25.0 think=3964ch 
+[19/196] B__volunteer_or_donate__r1 ok 128.2s ans=30.0 think=3990ch 
+[20/196] I__nonstop_flight__r0 ok 158.3s ans=50.0 think=4658ch 
+[21/196] A__theme_park__r0 ok 96.3s ans=25.0 think=2682ch 
+[22/196] F__theme_park__r0 ok 303.0s ans=420.0 think=7796ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 18:37:58 s1_single crashed (attempt 4); resuming in 30s
+500 cells, 326 done, running 174
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8240.28it/s]
+[1/174] H__train_delay__r0 ok 57.2s ans=100.0 think=1884ch 
+[2/174] F__priority_pickup__r2 ok 62.0s ans=35.0 think=2145ch 
+[3/174] C__furniture_assembly__r2 ok 78.5s ans=30.0 think=2570ch 
+[4/174] B__general__r1 ok 105.3s ans=15.0 think=3579ch 
+[5/174] D__weekend_gig__r0 ok 109.8s ans=20.0 think=3765ch 
+[6/174] G__priority_pickup__r0 ok 56.9s ans=5.0 think=1918ch 
+[7/174] B__theme_park__r3 ok 130.3s ans=20.0 think=4087ch 
+[8/174] E__priority_pickup__r1 ok 106.1s ans=5.0 think=3622ch 
+[9/174] D__grocery_delivery__r2 ok 169.8s ans=20.0 think=5156ch 
+[10/174] H__research_study__r3 ok 195.8s ans=20.0 think=6159ch 
+[11/174] B__theme_park__r0 ok 139.5s ans=15.0 think=4129ch 
+[12/174] D__general__r2 ok 122.8s ans=36.0 think=3934ch 
+[13/174] F__furniture_assembly__r1 ok 152.2s ans=35.0 think=4562ch 
+[14/174] B__weekend_gig__r1 ok 142.1s ans=50.0 think=4401ch 
+[15/174] B__nonstop_flight__r2 ok 112.2s ans=10.0 think=3537ch 
+[16/174] I__weekend_gig__r1 ok 96.2s ans=20.0 think=2865ch 
+[17/174] F__volunteer_or_donate__r3 ok 88.6s ans=40.0 think=2654ch 
+[18/174] A__volunteer_or_donate__r3 ok 209.7s ans=50.0 think=5991ch 
+[19/174] C__nonstop_flight__r1 ok 165.0s ans=30.0 think=5004ch 
+[20/174] D__volunteer_or_donate__r3 ok 89.5s ans=72.0 think=2735ch 
+[21/174] E__weekend_gig__r1 ok 120.0s ans=20.0 think=3514ch 
+[22/174] A__research_study__r1 ok 109.7s ans=15.0 think=3244ch 
+[23/174] A__general__r2 ok 82.5s ans=20.0 think=2504ch 
+[24/174] I__volunteer_or_donate__r4 ok 93.6s ans=50.0 think=2808ch 
+[25/174] E__priority_pickup__r4 ok 57.7s ans=5.0 think=1776ch 
+[26/174] B__theme_park__r1 ok 302.5s ans=60.0 think=8347ch 
+[27/174] I__theme_park__r1 ok 116.2s ans=15.0 think=3482ch 
+[28/174] I__priority_pickup__r2 ok 99.6s ans=3.0 think=3053ch 
+[29/174] H__nonstop_flight__r2 ok 155.0s ans=60.0 think=4363ch 
+[30/174] F__volunteer_or_donate__r0 ok 207.4s ans=420.0 think=5625ch 
+[31/174] A__grocery_delivery__r1 ok 116.6s ans=15.0 think=3295ch 
+[32/174] G__priority_pickup__r1 ok 66.3s ans=5.0 think=2216ch 
+[33/174] G__general__r0 ok 230.5s ans=30.0 think=6984ch 
+[34/174] G__general__r1 ok 140.1s ans=35.0 think=4283ch 
+[35/174] B__nonstop_flight__r3 ok 175.6s ans=30.0 think=5098ch 
+[36/174] H__train_delay__r2 ok 95.2s ans=100.0 think=2799ch 
+[37/174] F__grocery_delivery__r2 ok 175.0s ans=25.0 think=5008ch 
+[38/174] F__research_study__r3 ok 149.4s ans=20.0 think=4539ch 
+[39/174] A__furniture_assembly__r2 ok 267.7s ans=38.0 think=7467ch 
+[40/174] H__research_study__r1 ok 184.6s ans=15.0 think=5265ch 
+[41/174] G__research_study__r4 ok 253.2s ans=10.0 think=8193ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 18:51:26 s1_single crashed (attempt 5); resuming in 30s
+500 cells, 367 done, running 133
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 6854.68it/s]
+[1/133] A__furniture_assembly__r4 ok 85.2s ans=30.0 think=2733ch 
+[2/133] D__volunteer_or_donate__r4 ok 90.0s ans=72.0 think=2626ch 
+[3/133] I__nonstop_flight__r4 ok 98.5s ans=100.0 think=3186ch 
+[4/133] D__priority_pickup__r1 ok 106.3s ans=6.0 think=3335ch 
+[5/133] D__research_study__r1 ok 112.5s ans=10.0 think=3720ch 
+[6/133] C__nonstop_flight__r2 ok 140.3s ans=45.0 think=4301ch 
+[7/133] H__theme_park__r3 ok 143.9s ans=40.0 think=4345ch 
+[8/133] D__train_delay__r2 ok 86.2s ans=180.0 think=2593ch 
+[9/133] B__train_delay__r1 ok 173.1s ans=500.0 think=5656ch 
+[10/133] I__weekend_gig__r0 ok 73.4s ans=15.0 think=2170ch 
+[11/133] E__priority_pickup__r0 ok 48.7s ans=5.0 think=1763ch 
+[12/133] D__furniture_assembly__r3 ok 143.9s ans=50.0 think=4242ch 
+[13/133] A__priority_pickup__r4 ok 77.1s ans=5.0 think=2458ch 
+[14/133] A__train_delay__r2 ok 128.7s ans=96.0 think=4115ch 
+[15/133] H__research_study__r0 ok 138.7s ans=15.0 think=4072ch 
+[16/133] G__weekend_gig__r2 ok 179.0s ans=116.0 think=5463ch 
+[17/133] B__theme_park__r2 ok 264.5s ans=15.0 think=7352ch 
+[18/133] G__volunteer_or_donate__r2 ok 248.3s ans=39.0 think=7136ch 
+[19/133] G__weekend_gig__r3 ok 269.4s ans=10.0 think=8473ch 
+[20/133] G__grocery_delivery__r2 ok 85.0s ans=15.0 think=2471ch 
+[21/133] D__volunteer_or_donate__r0 ok 111.6s ans=40.0 think=3262ch 
+[22/133] E__research_study__r2 ok 82.4s ans=10.0 think=2793ch 
+[23/133] D__priority_pickup__r0 ok 104.7s ans=6.0 think=3201ch 
+[24/133] B__research_study__r0 ok 141.1s ans=15.0 think=4216ch 
+[25/133] F__theme_park__r1 ok 194.1s ans=50.0 think=5350ch 
+[26/133] C__train_delay__r1 ok 74.0s ans=75.0 think=2111ch 
+[27/133] H__general__r3 ok 217.1s ans=20.0 think=6677ch 
+[28/133] F__weekend_gig__r4 ok 215.5s ans=30.0 think=6559ch 
+[29/133] C__theme_park__r1 ok 32.3s ans=30.0 think=997ch 
+[30/133] I__volunteer_or_donate__r1 ok 74.1s ans=30.0 think=2300ch 
+[31/133] G__volunteer_or_donate__r3 ok 197.3s ans=58.0 think=6111ch 
+[32/133] G__theme_park__r4 ok 246.9s ans=29.0 think=7664ch 
+[33/133] F__train_delay__r1 ok 140.3s ans=1050.0 think=4095ch 
+[34/133] G__priority_pickup__r3 ok 117.5s ans=5.0 think=3683ch 
+[35/133] D__priority_pickup__r4 ok 179.1s ans=5.0 think=5294ch 
+[36/133] C__weekend_gig__r1 ok 186.0s ans=20.0 think=5359ch 
+[37/133] A__grocery_delivery__r4 ok 124.2s ans=15.0 think=3683ch 
+[38/133] G__train_delay__r3 ok 150.7s ans=145.0 think=4917ch 
+[39/133] D__weekend_gig__r4 ok 137.0s ans=50.0 think=4293ch 
+[40/133] I__general__r3 ok 237.3s ans=10.0 think=7459ch 
+[41/133] H__priority_pickup__r2 ok 162.8s ans=5.0 think=4945ch 
+[42/133] F__train_delay__r2 ok 95.5s ans=1050.0 think=2768ch 
+[43/133] B__research_study__r4 ok 107.3s ans=15.0 think=3213ch 
+[44/133] A__priority_pickup__r1 ok 97.3s ans=5.0 think=2927ch 
+[45/133] E__theme_park__r4 ok 62.1s ans=20.0 think=1837ch 
+[46/133] A__volunteer_or_donate__r4 ok 251.1s ans=38.0 think=6813ch 
+[47/133] I__grocery_delivery__r2 ok 78.3s ans=10.0 think=2366ch 
+[48/133] G__volunteer_or_donate__r1 ok 194.9s ans=60.0 think=5645ch 
+[49/133] H__furniture_assembly__r2 ok 116.5s ans=40.0 think=3082ch 
+[50/133] F__nonstop_flight__r1 ok 150.6s ans=100.0 think=4182ch 
+[51/133] E__theme_park__r3 ok 119.6s ans=20.0 think=3701ch 
+[52/133] D__volunteer_or_donate__r1 ok 93.6s ans=72.0 think=2746ch 
+[53/133] B__priority_pickup__r1 ok 81.5s ans=5.0 think=2442ch 
+[54/133] D__general__r0 ok 57.7s ans=36.0 think=1746ch 
+[55/133] G__priority_pickup__r2 ok 65.1s ans=10.0 think=2286ch 
+[56/133] D__general__r4 ok 101.5s ans=36.0 think=3365ch 
+[57/133] C__grocery_delivery__r0 ok 146.7s ans=15.0 think=4536ch 
+[58/133] A__research_study__r3 ok 85.7s ans=15.0 think=2546ch 
+[59/133] F__grocery_delivery__r4 ok 241.5s ans=20.0 think=6622ch 
+[60/133] G__research_study__r0 ok 176.7s ans=15.0 think=5595ch 
+[61/133] D__furniture_assembly__r1 ok 112.2s ans=20.0 think=3191ch 
+[62/133] E__general__r4 ok 106.0s ans=15.0 think=3190ch 
+[63/133] H__train_delay__r1 ok 79.3s ans=100.0 think=2289ch 
+[64/133] G__weekend_gig__r1 ok 299.8s ans=20.0 think=9245ch 
+[65/133] A__volunteer_or_donate__r0 ok 92.3s ans=38.0 think=2432ch 
+[66/133] H__priority_pickup__r0 ok 92.4s ans=5.0 think=2861ch 
+[67/133] E__grocery_delivery__r4 ok 77.2s ans=10.0 think=2447ch 
+[68/133] H__furniture_assembly__r1 ok 166.0s ans=40.0 think=4652ch 
+[69/133] E__volunteer_or_donate__r4 ok 60.8s ans=50.0 think=2001ch 
+[70/133] H__general__r4 ok 135.5s ans=20.0 think=4144ch 
+[71/133] C__priority_pickup__r2 ok 178.4s ans=5.0 think=5037ch 
+[72/133] I__priority_pickup__r3 ok 97.2s ans=3.0 think=3001ch 
+[73/133] E__general__r2 ok 119.4s ans=15.0 think=3818ch 
+[74/133] B__theme_park__r4 ok 159.3s ans=15.0 think=4477ch 
+[75/133] G__nonstop_flight__r0 ok 86.8s ans=150.0 think=2776ch 
+[76/133] A__general__r4 ok 309.0s ans=19.23 think=9138ch 
+[77/133] H__grocery_delivery__r4 ok 82.4s ans=20.0 think=2412ch 
+[78/133] E__theme_park__r1 ok 64.3s ans=20.0 think=2002ch 
+[79/133] H__general__r2 ok 158.2s ans=20.0 think=4843ch 
+[80/133] G__furniture_assembly__r2 ok 195.9s ans=40.0 think=5708ch 
+[81/133] E__grocery_delivery__r0 ok 46.9s ans=15.0 think=1446ch 
+[82/133] I__nonstop_flight__r1 ok 92.9s ans=100.0 think=2813ch 
+[83/133] F__research_study__r0 ok 113.3s ans=15.0 think=3391ch 
+[84/133] C__priority_pickup__r1 ok 218.6s ans=2.5 think=5993ch 
+[85/133] H__furniture_assembly__r3 ok 92.3s ans=40.0 think=2491ch 
+[86/133] D__nonstop_flight__r4 ok 208.1s ans=72.0 think=5321ch 
+[87/133] H__priority_pickup__r4 ok 96.8s ans=15.0 think=2778ch 
+[88/133] F__theme_park__r4 ok 280.9s ans=50.0 think=7175ch 
+[89/133] C__nonstop_flight__r3 ok 109.8s ans=45.0 think=3086ch 
+[90/133] E__volunteer_or_donate__r0 ok 145.2s ans=50.0 think=4707ch 
+[91/133] B__general__r0 ok 131.1s ans=20.0 think=4318ch 
+[92/133] E__furniture_assembly__r1 ok 99.4s ans=30.0 think=3150ch 
+[93/133] D__grocery_delivery__r3 ok 107.2s ans=36.0 think=3442ch 
+[94/133] G__nonstop_flight__r2 ok 92.2s ans=100.0 think=2916ch 
+[95/133] C__grocery_delivery__r1 ok 141.3s ans=15.0 think=4099ch 
+[96/133] I__grocery_delivery__r1 ok 67.4s ans=5.0 think=2194ch 
+[97/133] E__weekend_gig__r4 ok 117.3s ans=20.0 think=3425ch 
+[98/133] I__grocery_delivery__r4 ok 51.7s ans=15.0 think=1666ch 
+[99/133] E__volunteer_or_donate__r1 ok 229.9s ans=20.0 think=6786ch 
+[100/133] C__train_delay__r3 ok 93.2s ans=75.0 think=3045ch 
+[101/133] B__weekend_gig__r0 ok 162.7s ans=25.0 think=4858ch 
+[102/133] B__priority_pickup__r2 ok 151.4s ans=5.0 think=4577ch 
+[103/133] C__weekend_gig__r3 ok 110.2s ans=50.0 think=3369ch 
+[104/133] G__theme_park__r3 ok 337.9s ans=29.0 think=10317ch 
+[105/133] D__theme_park__r1 ok 212.1s ans=72.0 think=6249ch 
+[106/133] B__priority_pickup__r3 ok 50.3s ans=4.0 think=1905ch 
+[107/133] D__general__r1 ok 77.9s ans=36.0 think=2914ch 
+[108/133] E__general__r0 ok 151.1s ans=45.0 think=5764ch 
+[109/133] H__train_delay__r4 ok 40.6s ans=100.0 think=2350ch 
+[110/133] G__train_delay__r0 ok 171.6s ans=145.0 think=7021ch 
+[111/133] H__volunteer_or_donate__r2 ok 42.1s ans=40.0 think=2227ch 
+[112/133] F__general__r0 ok 141.3s ans=210.0 think=5667ch 
+[113/133] I__research_study__r2 ok 66.1s ans=15.0 think=3708ch 
+[114/133] C__general__r2 ok 33.7s ans=15.0 think=2115ch 
+[115/133] B__research_study__r1 ok 75.9s ans=10.0 think=4538ch 
+[116/133] B__furniture_assembly__r4 ok 61.7s ans=30.0 think=2901ch 
+[117/133] B__research_study__r2 ok 79.0s ans=20.0 think=3592ch 
+[118/133] B__research_study__r3 ok 86.1s ans=10.0 think=3550ch 
+[119/133] B__nonstop_flight__r4 ok 83.2s ans=50.0 think=2547ch 
+[120/133] I__general__r1 ok 121.1s ans=18.0 think=3959ch 
+[121/133] F__grocery_delivery__r0 ok 135.5s ans=15.0 think=4905ch 
+[122/133] I__priority_pickup__r1 ok 85.5s ans=3.0 think=2553ch 
+[123/133] F__theme_park__r2 ok 175.4s ans=20.0 think=6066ch 
+[124/133] H__furniture_assembly__r0 ok 93.3s ans=40.0 think=2504ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 19:26:38 s1_single crashed (attempt 6); resuming in 30s
+500 cells, 491 done, running 9
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7390.12it/s]
+[1/9] C__furniture_assembly__r1 ok 63.5s ans=30.0 think=2240ch 
+[2/9] H__grocery_delivery__r0 ok 88.8s ans=20.0 think=2942ch 
+[3/9] G__grocery_delivery__r4 ok 99.6s ans=10.0 think=3585ch 
+[4/9] E__train_delay__r1 ok 105.8s ans=500.0 think=3810ch 
+[5/9] D__weekend_gig__r2 ok 144.1s ans=50.0 think=5189ch 
+[6/9] F__weekend_gig__r3 ok 158.2s ans=20.0 think=5547ch 
+[7/9] F__train_delay__r0 ok 183.2s ans=1050.0 think=6557ch 
+[8/9] C__weekend_gig__r2 ok 183.7s ans=30.0 think=6694ch 
+[9/9] G__weekend_gig__r4 ok 246.5s ans=30.0 think=12487ch 
+wrote answers.csv, summary.md, traces.md in runs/s1_single (500 calls)
+2026-10-21 19:32:20 s1 done; start s2_combos
+1140 cells, 2 done, running 1138
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 5784.36it/s]
+[1/1138] C-I__grocery_delivery__r1 ok 64.2s ans=8.0 think=2080ch 
+[2/1138] E-H__volunteer_or_donate__r1 ok 134.8s ans=40.0 think=3981ch 
+[3/1138] D-I__research_study__r0 ok 154.0s ans=15.0 think=4832ch 
+[4/1138] E-H__priority_pickup__r0 ok 166.4s ans=10.0 think=5099ch 
+[5/1138] D-F__theme_park__r0 ok 209.6s ans=72.0 think=5573ch 
+[6/1138] D-I__volunteer_or_donate__r1 ok 73.4s ans=20.0 think=2250ch 
+[7/1138] F-I__general__r1 ok 252.2s ans=210.0 think=7744ch 
+[8/1138] A-E__nonstop_flight__r0 ok 132.5s ans=100.0 think=3758ch 
+[9/1138] E-G__weekend_gig__r1 ok 269.4s ans=50.0 think=8035ch 
+[10/1138] B-D__theme_park__r1 ok 314.5s ans=60.0 think=8319ch 
+[11/1138] F-G__nonstop_flight__r1 ok 180.6s ans=35.0 think=4882ch 
+[12/1138] B-H__volunteer_or_donate__r0 ok 73.7s ans=40.0 think=2120ch 
+[13/1138] A-D__general__r0 ok 148.9s ans=36.0 think=4052ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 19:38:54 s2_combos crashed (attempt 1); resuming in 30s
+1140 cells, 15 done, running 1125
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7666.27it/s]
+[1/1125] A-H__volunteer_or_donate__r0 ok 66.5s ans=40.0 think=1848ch 
+[2/1125] E-H__train_delay__r0 ok 90.1s ans=100.0 think=3147ch 
+[3/1125] D-I__general__r0 ok 119.1s ans=36.0 think=3952ch 
+[4/1125] A-E__weekend_gig__r1 ok 139.1s ans=50.0 think=4193ch 
+[5/1125] F-I__weekend_gig__r0 ok 140.9s ans=40.0 think=4608ch 
+[6/1125] A-G__priority_pickup__r0 ok 152.0s ans=3.0 think=4577ch 
+[7/1125] B-G__priority_pickup__r0 ok 156.4s ans=4.0 think=4895ch 
+[8/1125] B-E__priority_pickup__r1 ok 205.2s ans=5.0 think=6444ch 
+[9/1125] B-D__research_study__r1 ok 178.2s ans=15.0 think=5431ch 
+[10/1125] G-I__general__r0 ok 144.8s ans=20.0 think=4091ch 
+[11/1125] A-C__furniture_assembly__r1 ok 146.7s ans=30.0 think=4235ch 
+[12/1125] E-I__theme_park__r1 ok 163.4s ans=15.0 think=4865ch 
+[13/1125] A-F__furniture_assembly__r1 ok 183.0s ans=35.0 think=5140ch 
+[14/1125] A-F__research_study__r1 ok 262.6s ans=15.0 think=7661ch 
+[15/1125] D-E__grocery_delivery__r1 ok 208.2s ans=15.0 think=6073ch 
+[16/1125] B-D__train_delay__r0 ok 301.0s ans=150.0 think=8383ch 
+[17/1125] B-H__priority_pickup__r1 ok 142.6s ans=5.0 think=3707ch 
+[18/1125] F-G__general__r0 ok 225.7s ans=30.0 think=6256ch 
+[19/1125] A-G__furniture_assembly__r1 ok 185.1s ans=40.0 think=4932ch 
+[20/1125] A-B__priority_pickup__r1 ok 168.0s ans=4.0 think=4917ch 
+[21/1125] D-F__nonstop_flight__r0 ok 237.6s ans=108.0 think=6172ch 
+[22/1125] A-C__weekend_gig__r1 ok 195.0s ans=50.0 think=5351ch 
+[23/1125] C-E__general__r0 ok 133.7s ans=15.0 think=3657ch 
+[24/1125] C-G__nonstop_flight__r0 ok 202.4s ans=45.0 think=5722ch 
+[25/1125] B-G__nonstop_flight__r0 ok 111.8s ans=100.0 think=3499ch 
+[26/1125] E-I__grocery_delivery__r0 ok 106.4s ans=10.0 think=3412ch 
+[27/1125] E-I__weekend_gig__r0 ok 173.3s ans=20.0 think=5389ch 
+[28/1125] A-C__theme_park__r1 ok 51.1s ans=30.0 think=1483ch 
+[29/1125] B-D__volunteer_or_donate__r1 ok 210.3s ans=72.0 think=6027ch 
+[30/1125] C-F__priority_pickup__r1 ok 295.7s ans=35.0 think=8098ch 
+[31/1125] F-G__priority_pickup__r1 ok 137.8s ans=35.0 think=3925ch 
+[32/1125] E-F__volunteer_or_donate__r0 ok 303.9s ans=420.0 think=7492ch 
+[33/1125] G-H__priority_pickup__r1 ok 117.4s ans=10.0 think=3292ch 
+[34/1125] H-I__research_study__r1 ok 109.1s ans=15.0 think=3063ch 
+[35/1125] F-G__volunteer_or_donate__r0 ok 308.2s ans=50.0 think=8091ch 
+[36/1125] D-G__furniture_assembly__r1 ok 156.0s ans=20.0 think=4430ch 
+[37/1125] D-E__theme_park__r0 ok 290.0s ans=15.0 think=7613ch 
+[38/1125] B-H__train_delay__r1 ok 122.9s ans=100.0 think=3592ch 
+[39/1125] B-I__general__r1 ok 278.0s ans=18.0 think=8057ch 
+[40/1125] B-E__grocery_delivery__r0 ok 97.3s ans=10.0 think=2960ch 
+[41/1125] D-G__theme_park__r0 ok 208.1s ans=48.0 think=5522ch 
+[42/1125] C-D__research_study__r0 ok 227.9s ans=15.0 think=6459ch 
+[43/1125] A-B__furniture_assembly__r1 ok 183.7s ans=25.0 think=5159ch 
+[44/1125] G-H__weekend_gig__r1 ok 172.3s ans=80.0 think=4604ch 
+[45/1125] B-F__volunteer_or_donate__r0 ok 186.1s ans=60.0 think=5092ch 
+[46/1125] G-I__weekend_gig__r1 ok 246.6s ans=50.0 think=7237ch 
+[47/1125] C-I__furniture_assembly__r0 ok 84.7s ans=20.0 think=2452ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 19:58:50 s2_combos crashed (attempt 2); resuming in 30s
+1140 cells, 62 done, running 1078
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8167.19it/s]
+[1/1078] B-I__grocery_delivery__r1 ok 73.0s ans=10.0 think=2531ch 
+[2/1078] C-F__general__r1 ok 103.9s ans=15.0 think=3253ch 
+[3/1078] C-I__research_study__r0 ok 114.9s ans=15.0 think=3761ch 
+[4/1078] C-E__furniture_assembly__r1 ok 115.7s ans=20.0 think=3719ch 
+[5/1078] C-H__train_delay__r1 ok 133.2s ans=100.0 think=4036ch 
+[6/1078] F-H__furniture_assembly__r0 ok 212.9s ans=40.0 think=6136ch 
+[7/1078] G-I__priority_pickup__r1 ok 111.9s ans=3.0 think=3552ch 
+[8/1078] C-H__priority_pickup__r1 ok 156.4s ans=5.0 think=4415ch 
+[9/1078] A-C__priority_pickup__r1 ok 255.1s ans=3.0 think=7078ch 
+[10/1078] A-H__general__r1 ok 170.0s ans=20.0 think=4811ch 
+[11/1078] A-D__grocery_delivery__r1 ok 308.0s ans=36.0 think=8676ch 
+[12/1078] G-I__research_study__r0 ok 119.7s ans=15.0 think=3543ch 
+[13/1078] B-F__train_delay__r1 ok 126.4s ans=50.0 think=3910ch 
+[14/1078] C-F__research_study__r0 ok 223.3s ans=20.0 think=6529ch 
+[15/1078] D-E__weekend_gig__r1 ok 254.7s ans=20.0 think=7973ch 
+[16/1078] C-H__research_study__r1 ok 119.8s ans=15.0 think=3604ch 
+[17/1078] F-G__research_study__r1 ok 241.3s ans=15.0 think=7264ch 
+[18/1078] A-E__train_delay__r1 ok 197.4s ans=50.0 think=6559ch 
+[19/1078] A-F__theme_park__r0 ok 307.1s ans=50.0 think=8027ch 
+[20/1078] F-H__train_delay__r0 ok 191.5s ans=100.0 think=5282ch 
+[21/1078] B-E__general__r0 ok 206.2s ans=30.0 think=6300ch 
+[22/1078] E-G__general__r0 ok 160.3s ans=29.0 think=4689ch 
+[23/1078] B-D__priority_pickup__r0 ok 287.4s ans=5.0 think=7903ch 
+[24/1078] C-E__weekend_gig__r0 ok 116.7s ans=50.0 think=3454ch 
+[25/1078] B-E__furniture_assembly__r1 ok 101.0s ans=15.0 think=3038ch 
+[26/1078] B-I__theme_park__r1 ok 159.4s ans=10.0 think=4720ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 20:11:11 s2_combos crashed (attempt 3); resuming in 30s
+1140 cells, 88 done, running 1052
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8465.74it/s]
+[1/1052] B-C__theme_park__r0 ok 37.9s ans=30.0 think=1288ch 
+[2/1052] A-C__train_delay__r1 ok 109.1s ans=75.0 think=3527ch 
+[3/1052] C-E__research_study__r1 ok 115.3s ans=10.0 think=3826ch 
+[4/1052] B-C__general__r0 ok 123.2s ans=15.0 think=4055ch 
+[5/1052] D-G__volunteer_or_donate__r0 ok 161.4s ans=72.0 think=4832ch 
+[6/1052] D-I__grocery_delivery__r1 ok 193.9s ans=15.0 think=5943ch 
+[7/1052] C-D__research_study__r1 ok 198.3s ans=15.0 think=6225ch 
+[8/1052] A-I__nonstop_flight__r0 ok 174.5s ans=50.0 think=5316ch 
+[9/1052] A-B__weekend_gig__r0 ok 119.1s ans=50.0 think=3244ch 
+[10/1052] A-D__theme_park__r0 ok 246.7s ans=20.0 think=7051ch 
+[11/1052] C-D__general__r1 ok 183.8s ans=15.0 think=5496ch 
+[12/1052] F-I__volunteer_or_donate__r1 ok 105.7s ans=50.0 think=3227ch 
+[13/1052] A-C__volunteer_or_donate__r1 ok 113.1s ans=38.0 think=3236ch 
+[14/1052] C-E__nonstop_flight__r0 ok 225.2s ans=45.0 think=6334ch 
+[15/1052] H-I__furniture_assembly__r0 ok 181.6s ans=40.0 think=5080ch 
+[16/1052] C-H__theme_park__r1 ok 53.7s ans=30.0 think=1650ch 
+[17/1052] B-E__volunteer_or_donate__r1 ok 163.0s ans=20.0 think=4961ch 
+[18/1052] C-G__priority_pickup__r1 ok 100.3s ans=10.0 think=2891ch 
+[19/1052] A-B__volunteer_or_donate__r1 ok 326.5s ans=38.0 think=9042ch 
+[20/1052] A-F__furniture_assembly__r0 ok 198.6s ans=40.0 think=5398ch 
+[21/1052] E-F__furniture_assembly__r0 ok 216.6s ans=35.0 think=6057ch 
+[22/1052] C-D__train_delay__r0 ok 140.7s ans=75.0 think=4071ch 
+[23/1052] A-G__nonstop_flight__r1 ok 153.2s ans=50.0 think=4102ch 
+[24/1052] E-G__train_delay__r1 ok 164.4s ans=150.0 think=4911ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 20:21:34 s2_combos crashed (attempt 4); resuming in 30s
+1140 cells, 112 done, running 1028
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8216.96it/s]
+[1/1028] A-H__nonstop_flight__r0 ok 79.2s ans=60.0 think=2663ch 
+[2/1028] A-E__volunteer_or_donate__r0 ok 91.7s ans=40.0 think=2858ch 
+[3/1028] A-F__priority_pickup__r0 ok 144.2s ans=35.0 think=4538ch 
+[4/1028] D-I__priority_pickup__r1 ok 149.4s ans=5.0 think=4730ch 
+[5/1028] H-I__general__r0 ok 161.3s ans=20.0 think=4965ch 
+[6/1028] C-I__furniture_assembly__r1 ok 167.6s ans=20.0 think=5259ch 
+[7/1028] F-H__general__r0 ok 172.4s ans=20.0 think=5319ch 
+[8/1028] E-F__weekend_gig__r0 ok 109.0s ans=50.0 think=3405ch 
+[9/1028] C-D__priority_pickup__r1 ok 219.9s ans=6.0 think=6592ch 
+[10/1028] F-G__priority_pickup__r0 ok 147.9s ans=35.0 think=4291ch 
+[11/1028] B-F__research_study__r1 ok 158.5s ans=20.0 think=5179ch 
+[12/1028] B-G__volunteer_or_donate__r0 ok 144.7s ans=30.0 think=4205ch 
+[13/1028] B-F__priority_pickup__r1 ok 163.7s ans=35.0 think=4811ch 
+[14/1028] A-I__priority_pickup__r1 ok 93.2s ans=5.0 think=2838ch 
+[15/1028] C-I__priority_pickup__r0 ok 83.8s ans=3.0 think=2591ch 
+[16/1028] B-C__train_delay__r0 ok 211.0s ans=75.0 think=6332ch 
+[17/1028] C-G__furniture_assembly__r1 ok 186.5s ans=30.0 think=5311ch 
+[18/1028] B-H__research_study__r0 ok 237.2s ans=20.0 think=6971ch 
+[19/1028] H-I__nonstop_flight__r1 ok 270.1s ans=60.0 think=7731ch 
+[20/1028] C-H__grocery_delivery__r1 ok 148.0s ans=20.0 think=4362ch 
+[21/1028] G-H__volunteer_or_donate__r0 ok 135.6s ans=40.0 think=3910ch 
+[22/1028] E-F__research_study__r1 ok 157.2s ans=15.0 think=4766ch 
+[23/1028] E-I__nonstop_flight__r1 ok 136.8s ans=150.0 think=4084ch 
+[24/1028] B-H__furniture_assembly__r1 ok 64.5s ans=40.0 think=1871ch 
+[25/1028] F-G__theme_park__r0 ok 106.0s ans=50.0 think=3046ch 
+[26/1028] G-I__volunteer_or_donate__r1 ok 167.1s ans=20.0 think=5108ch 
+[27/1028] D-E__grocery_delivery__r0 ok 124.4s ans=15.0 think=4082ch 
+[28/1028] B-F__train_delay__r0 ok 229.0s ans=150.0 think=6756ch 
+[29/1028] B-G__research_study__r1 ok 254.0s ans=15.0 think=8087ch 
+[30/1028] E-I__nonstop_flight__r0 ok 79.5s ans=50.0 think=2385ch 
+[31/1028] D-F__general__r1 ok 227.2s ans=35.0 think=6711ch 
+[32/1028] E-H__theme_park__r1 ok 146.4s ans=20.0 think=4324ch 
+[33/1028] D-I__furniture_assembly__r0 ok 147.4s ans=20.0 think=4210ch 
+[34/1028] E-I__train_delay__r0 ok 125.4s ans=30.0 think=4183ch 
+[35/1028] C-H__priority_pickup__r0 ok 187.2s ans=5.0 think=5429ch 
+[36/1028] D-E__nonstop_flight__r0 ok 114.4s ans=100.0 think=3249ch 
+[37/1028] A-C__weekend_gig__r0 ok 142.4s ans=50.0 think=4198ch 
+[38/1028] F-I__research_study__r0 ok 189.0s ans=15.0 think=5664ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 20:36:30 s2_combos crashed (attempt 5); resuming in 30s
+1140 cells, 150 done, running 990
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7570.95it/s]
+[1/990] C-H__theme_park__r0 ok 39.6s ans=30.0 think=1343ch 
+[2/990] C-F__furniture_assembly__r0 ok 85.0s ans=30.0 think=2739ch 
+[3/990] C-G__weekend_gig__r1 ok 117.5s ans=60.0 think=3655ch 
+[4/990] B-D__grocery_delivery__r1 ok 133.4s ans=30.0 think=4157ch 
+[5/990] A-B__furniture_assembly__r0 ok 155.0s ans=30.0 think=4860ch 
+[6/990] D-I__priority_pickup__r0 ok 156.1s ans=3.0 think=4707ch 
+[7/990] C-G__research_study__r0 ok 182.5s ans=15.0 think=5972ch 
+[8/990] E-G__furniture_assembly__r0 ok 138.7s ans=25.0 think=4299ch 
+[9/990] A-G__volunteer_or_donate__r1 ok 193.8s ans=58.0 think=5866ch 
+[10/990] C-G__theme_park__r1 ok 139.9s ans=30.0 think=4078ch 
+[11/990] B-I__general__r0 ok 163.0s ans=15.0 think=5056ch 
+[12/990] E-G__research_study__r0 ok 147.2s ans=10.0 think=4498ch 
+[13/990] D-G__general__r0 ok 161.0s ans=36.0 think=4409ch 
+[14/990] C-E__research_study__r0 ok 146.2s ans=15.0 think=4409ch 
+[15/990] F-G__grocery_delivery__r1 ok 128.0s ans=25.0 think=3731ch 
+[16/990] F-I__grocery_delivery__r0 ok 90.6s ans=15.0 think=2633ch 
+[17/990] B-F__volunteer_or_donate__r1 ok 389.8s ans=60.0 think=11487ch 
+[18/990] A-D__theme_park__r1 ok 200.4s ans=20.0 think=5520ch 
+[19/990] C-D__furniture_assembly__r1 ok 129.7s ans=30.0 think=3746ch 
+[20/990] C-H__research_study__r0 ok 178.1s ans=15.0 think=5113ch 
+[21/990] C-E__grocery_delivery__r1 ok 98.7s ans=15.0 think=2984ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 20:46:21 s2_combos crashed (attempt 6); resuming in 30s
+1140 cells, 171 done, running 969
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7784.85it/s]
+[1/969] C-H__furniture_assembly__r1 ok 104.7s ans=40.0 think=3300ch 
+[2/969] A-D__weekend_gig__r1 ok 153.2s ans=50.0 think=4820ch 
+[3/969] A-I__volunteer_or_donate__r1 ok 174.6s ans=38.0 think=5221ch 
+[4/969] E-I__volunteer_or_donate__r1 ok 176.0s ans=25.0 think=5465ch 
+[5/969] D-F__priority_pickup__r0 ok 177.3s ans=6.0 think=5375ch 
+[6/969] C-F__grocery_delivery__r0 ok 186.5s ans=35.0 think=5634ch 
+[7/969] B-C__theme_park__r1 ok 33.7s ans=30.0 think=977ch 
+[8/969] C-F__priority_pickup__r0 ok 148.4s ans=35.0 think=4325ch 
+[9/969] C-D__volunteer_or_donate__r1 ok 103.2s ans=72.0 think=2845ch 
+[10/969] C-G__research_study__r1 ok 274.7s ans=25.0 think=8286ch 
+[11/969] D-F__theme_park__r1 ok 293.9s ans=72.0 think=8031ch 
+[12/969] D-I__volunteer_or_donate__r0 ok 99.0s ans=20.0 think=3051ch 
+[13/969] F-I__priority_pickup__r1 ok 168.5s ans=35.0 think=4746ch 
+[14/969] B-C__grocery_delivery__r1 ok 189.5s ans=15.0 think=5511ch 
+[15/969] A-C__priority_pickup__r0 ok 209.3s ans=5.0 think=5647ch 
+[16/969] C-F__weekend_gig__r1 ok 98.1s ans=50.0 think=3106ch 
+[17/969] A-D__furniture_assembly__r1 ok 159.0s ans=20.0 think=4558ch 
+[18/969] D-F__general__r0 ok 215.8s ans=36.0 think=6420ch 
+[19/969] C-I__volunteer_or_donate__r1 ok 127.2s ans=20.0 think=3742ch 
+[20/969] A-F__theme_park__r1 ok 249.9s ans=40.0 think=6528ch 
+[21/969] F-H__research_study__r1 ok 226.0s ans=20.0 think=6669ch 
+[22/969] B-D__furniture_assembly__r1 ok 110.5s ans=25.0 think=3245ch 
+[23/969] F-H__grocery_delivery__r0 ok 328.0s ans=35.0 think=9150ch 
+[24/969] E-G__nonstop_flight__r0 ok 174.9s ans=30.0 think=5288ch 
+[25/969] B-I__priority_pickup__r1 ok 125.4s ans=4.0 think=3571ch 
+[26/969] D-I__nonstop_flight__r1 ok 307.5s ans=108.0 think=8213ch 
+[27/969] A-E__general__r0 ok 112.8s ans=20.0 think=3294ch 
+[28/969] C-D__priority_pickup__r0 ok 175.5s ans=5.0 think=4702ch 
+[29/969] B-E__grocery_delivery__r1 ok 211.3s ans=15.0 think=5891ch 
+[30/969] C-H__weekend_gig__r1 ok 341.5s ans=60.0 think=9181ch 
+[31/969] H-I__train_delay__r1 ok 110.4s ans=100.0 think=3328ch 
+[32/969] A-E__furniture_assembly__r1 ok 171.6s ans=20.0 think=5088ch 
+[33/969] H-I__priority_pickup__r1 ok 121.3s ans=5.0 think=3575ch 
+[34/969] B-E__volunteer_or_donate__r0 ok 162.9s ans=60.0 think=4875ch 
+[35/969] A-H__theme_park__r0 ok 155.9s ans=60.0 think=4164ch 
+[36/969] C-E__theme_park__r1 ok 32.0s ans=30.0 think=1011ch 
+[37/969] A-F__train_delay__r0 ok 138.8s ans=1050.0 think=3811ch 
+[38/969] B-D__nonstop_flight__r0 ok 338.2s ans=50.0 think=8516ch 
+[39/969] C-G__volunteer_or_donate__r0 ok 79.7s ans=30.0 think=2449ch 
+[40/969] A-H__research_study__r1 ok 177.0s ans=20.0 think=5225ch 
+[41/969] B-F__grocery_delivery__r1 ok 209.0s ans=20.0 think=5770ch 
+[42/969] B-C__priority_pickup__r1 ok 252.9s ans=5.0 think=7117ch 
+[43/969] B-G__theme_park__r1 ok 239.3s ans=30.0 think=6281ch 
+[44/969] E-I__furniture_assembly__r1 ok 149.7s ans=15.0 think=4274ch 
+[45/969] B-D__theme_park__r0 ok 261.5s ans=60.0 think=6870ch 
+[46/969] B-H__general__r0 ok 75.0s ans=20.0 think=2133ch 
+[47/969] G-I__volunteer_or_donate__r0 ok 151.0s ans=15.0 think=4645ch 
+[48/969] D-G__grocery_delivery__r0 ok 165.3s ans=30.0 think=4618ch 
+[49/969] B-D__grocery_delivery__r0 ok 293.9s ans=20.0 think=7999ch 
+[50/969] A-B__train_delay__r1 ok 104.4s ans=100.0 think=3161ch 
+[51/969] C-I__grocery_delivery__r0 ok 104.3s ans=10.0 think=3163ch 
+[52/969] A-C__grocery_delivery__r1 ok 193.4s ans=15.0 think=5720ch 
+[53/969] F-H__theme_park__r0 ok 251.0s ans=60.0 think=6794ch 
+[54/969] A-E__priority_pickup__r1 ok 114.5s ans=5.0 think=3419ch 
+[55/969] E-H__research_study__r1 ok 185.5s ans=15.0 think=5442ch 
+[56/969] E-F__volunteer_or_donate__r1 ok 262.4s ans=50.0 think=7263ch 
+[57/969] C-D__train_delay__r1 ok 239.8s ans=180.0 think=6491ch 
+[58/969] E-F__train_delay__r0 ok 215.5s ans=1050.0 think=6214ch 
+[59/969] B-H__grocery_delivery__r0 ok 179.2s ans=20.0 think=4991ch 
+[60/969] F-I__weekend_gig__r1 ok 105.4s ans=20.0 think=3056ch 
+[61/969] A-F__volunteer_or_donate__r0 ok 134.0s ans=40.0 think=3880ch 
+[62/969] B-D__volunteer_or_donate__r0 ok 132.9s ans=30.0 think=3964ch 
+[63/969] B-H__general__r1 ok 74.3s ans=20.0 think=2261ch 
+[64/969] G-H__weekend_gig__r0 ok 297.9s ans=50.0 think=8435ch 
+[65/969] B-C__weekend_gig__r0 ok 207.8s ans=50.0 think=6368ch 
+[66/969] F-G__theme_park__r1 ok 301.9s ans=58.0 think=8048ch 
+[67/969] D-G__research_study__r0 ok 208.3s ans=10.0 think=6356ch 
+[68/969] C-G__grocery_delivery__r1 ok 203.8s ans=15.0 think=5870ch 
+[69/969] E-I__train_delay__r1 ok 133.8s ans=50.0 think=4239ch 
+[70/969] A-B__grocery_delivery__r1 ok 56.2s ans=10.0 think=1752ch 
+[71/969] C-I__theme_park__r1 ok 68.6s ans=30.0 think=1994ch 
+[72/969] B-E__nonstop_flight__r1 ok 159.5s ans=15.0 think=4396ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 21:15:51 s2_combos crashed (attempt 7); resuming in 30s
+1140 cells, 243 done, running 897
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 9182.37it/s]
+[1/897] A-H__grocery_delivery__r0 ok 123.7s ans=18.0 think=3958ch 
+[2/897] A-I__grocery_delivery__r0 ok 125.5s ans=15.0 think=4149ch 
+[3/897] D-G__volunteer_or_donate__r1 ok 125.5s ans=72.0 think=4026ch 
+[4/897] B-C__weekend_gig__r1 ok 144.4s ans=50.0 think=4565ch 
+[5/897] D-G__priority_pickup__r1 ok 148.3s ans=6.0 think=4529ch 
+[6/897] A-F__weekend_gig__r1 ok 160.0s ans=50.0 think=4788ch 
+[7/897] D-H__general__r0 ok 174.3s ans=36.0 think=5285ch 
+[8/897] D-F__grocery_delivery__r1 ok 213.8s ans=35.0 think=6150ch 
+[9/897] A-H__furniture_assembly__r0 ok 99.4s ans=40.0 think=2709ch 
+[10/897] B-D__train_delay__r1 ok 91.1s ans=180.0 think=2716ch 
+[11/897] B-G__volunteer_or_donate__r1 ok 106.2s ans=50.0 think=3112ch 
+[12/897] A-D__furniture_assembly__r0 ok 141.7s ans=30.0 think=4073ch 
+[13/897] G-I__grocery_delivery__r1 ok 59.4s ans=10.0 think=1890ch 
+[14/897] B-E__general__r1 ok 232.0s ans=30.0 think=7111ch 
+[15/897] C-H__furniture_assembly__r0 ok 132.8s ans=30.0 think=3869ch 
+[16/897] B-C__research_study__r0 ok 181.4s ans=15.0 think=5739ch 
+[17/897] C-D__grocery_delivery__r0 ok 259.2s ans=25.0 think=7742ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 21:23:38 s2_combos crashed (attempt 8); resuming in 30s
+1140 cells, 260 done, running 880
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8227.71it/s]
+[1/880] C-H__volunteer_or_donate__r1 ok 49.1s ans=40.0 think=1729ch 
+[2/880] A-D__general__r1 ok 76.1s ans=36.0 think=2496ch 
+[3/880] E-I__research_study__r1 ok 105.0s ans=10.0 think=3815ch 
+[4/880] B-G__grocery_delivery__r0 ok 116.2s ans=10.0 think=4312ch 
+[5/880] B-G__weekend_gig__r1 ok 126.2s ans=50.0 think=4270ch 
+[6/880] G-I__nonstop_flight__r0 ok 143.9s ans=15.0 think=4749ch 
+[7/880] C-D__volunteer_or_donate__r0 ok 200.1s ans=60.0 think=6336ch 
+[8/880] B-C__grocery_delivery__r0 ok 183.0s ans=15.0 think=5822ch 
+[9/880] E-G__general__r1 ok 158.0s ans=30.0 think=5023ch 
+[10/880] D-G__furniture_assembly__r0 ok 264.1s ans=30.0 think=8161ch 
+[11/880] D-G__train_delay__r0 ok 149.8s ans=180.0 think=4562ch 
+[12/880] D-I__weekend_gig__r0 ok 203.9s ans=25.0 think=6586ch 
+[13/880] A-I__grocery_delivery__r1 ok 81.6s ans=10.0 think=2892ch 
+[14/880] C-E__nonstop_flight__r1 ok 206.1s ans=45.0 think=6789ch 
+[15/880] A-I__general__r0 ok 163.3s ans=20.0 think=5710ch 
+[16/880] C-F__train_delay__r0 ok 342.6s ans=75.0 think=12261ch 
+[17/880] C-D__general__r0 ok 130.7s ans=15.0 think=5864ch 
+[18/880] C-I__weekend_gig__r0 ok 138.1s ans=50.0 think=6184ch 
+[19/880] D-H__furniture_assembly__r1 ok 66.0s ans=40.0 think=3170ch 
+[20/880] B-C__nonstop_flight__r0 ok 173.7s ans=30.0 think=7188ch 
+[21/880] B-I__train_delay__r1 ok 131.8s ans=150.0 think=6938ch 
+[22/880] C-E__grocery_delivery__r0 ok 142.1s ans=15.0 think=5559ch 
+[23/880] E-F__furniture_assembly__r1 ok 152.5s ans=50.0 think=6137ch 
+[24/880] C-G__train_delay__r0 ok 101.6s ans=75.0 think=3238ch 
+[25/880] E-H__volunteer_or_donate__r0 ok 81.0s ans=40.0 think=2592ch 
+[26/880] D-H__volunteer_or_donate__r1 ok 174.5s ans=72.0 think=5475ch 
+[27/880] B-H__train_delay__r0 ok 85.5s ans=100.0 think=2796ch 
+[28/880] A-H__train_delay__r1 ok 204.4s ans=96.0 think=7206ch 
+[29/880] A-E__research_study__r1 ok 194.3s ans=20.0 think=5948ch 
+[30/880] D-G__general__r1 ok 188.2s ans=36.0 think=5752ch 
+[31/880] G-H__nonstop_flight__r0 ok 75.4s ans=60.0 think=2210ch 
+[32/880] C-D__theme_park__r0 ok 80.3s ans=30.0 think=2459ch 
+[33/880] A-B__general__r1 ok 79.2s ans=20.0 think=2560ch 
+[34/880] F-G__volunteer_or_donate__r1 ok 158.5s ans=58.0 think=4789ch 
+[35/880] D-G__weekend_gig__r0 ok 331.1s ans=25.0 think=10654ch 
+[36/880] E-F__grocery_delivery__r1 ok 150.2s ans=20.0 think=4458ch 
+[37/880] B-E__weekend_gig__r0 ok 124.7s ans=20.0 think=4023ch 
+[38/880] A-B__general__r0 ok 169.6s ans=19.0 think=4988ch 
+[39/880] C-D__nonstop_flight__r1 ok 174.8s ans=45.0 think=5107ch 
+[40/880] H-I__volunteer_or_donate__r1 ok 185.6s ans=40.0 think=5843ch 
+[41/880] A-G__volunteer_or_donate__r0 ok 232.8s ans=38.0 think=6991ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 21:40:12 s2_combos crashed (attempt 9); resuming in 30s
+1140 cells, 301 done, running 839
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8594.89it/s]
+[1/839] E-I__weekend_gig__r1 ok 96.0s ans=20.0 think=3351ch 
+[2/839] A-E__weekend_gig__r0 ok 103.5s ans=20.0 think=3406ch 
+[3/839] C-I__general__r1 ok 104.0s ans=15.0 think=3548ch 
+[4/839] G-I__priority_pickup__r0 ok 109.8s ans=5.0 think=3902ch 
+[5/839] B-F__furniture_assembly__r1 ok 150.6s ans=30.0 think=4988ch 
+[6/839] B-C__furniture_assembly__r0 ok 186.9s ans=30.0 think=6171ch 
+[7/839] A-H__grocery_delivery__r1 ok 104.7s ans=15.0 think=3410ch 
+[8/839] E-H__nonstop_flight__r0 ok 222.6s ans=30.0 think=7131ch 
+[9/839] A-D__volunteer_or_donate__r1 ok 143.7s ans=72.0 think=4061ch 
+[10/839] G-H__theme_park__r0 ok 169.1s ans=40.0 think=5305ch 
+[11/839] A-E__volunteer_or_donate__r1 ok 242.9s ans=38.0 think=6976ch 
+[12/839] C-F__weekend_gig__r0 ok 298.6s ans=40.0 think=9257ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 21:47:27 s2_combos crashed (attempt 10); resuming in 30s
+1140 cells, 313 done, running 827
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8909.31it/s]
+[1/827] C-G__theme_park__r0 ok 40.6s ans=30.0 think=1481ch 
+[2/827] A-G__train_delay__r1 ok 54.1s ans=100.0 think=1959ch 
+[3/827] C-G__grocery_delivery__r0 ok 102.5s ans=15.0 think=3667ch 
+[4/827] D-G__nonstop_flight__r1 ok 106.1s ans=108.0 think=3445ch 
+[5/827] C-G__priority_pickup__r0 ok 112.0s ans=10.0 think=3814ch 
+[6/827] G-I__weekend_gig__r0 ok 125.1s ans=20.0 think=4284ch 
+[7/827] B-E__train_delay__r0 ok 126.3s ans=150.0 think=4403ch 
+[8/827] B-H__weekend_gig__r1 ok 147.2s ans=80.0 think=4883ch 
+[9/827] E-I__priority_pickup__r1 ok 95.2s ans=5.0 think=3238ch 
+[10/827] A-I__furniture_assembly__r0 ok 157.8s ans=20.0 think=5001ch 
+[11/827] F-I__research_study__r1 ok 149.0s ans=15.0 think=4782ch 
+[12/827] B-C__volunteer_or_donate__r1 ok 158.3s ans=30.0 think=5251ch 
+[13/827] A-G__furniture_assembly__r0 ok 155.4s ans=25.0 think=4854ch 
+[14/827] F-I__priority_pickup__r0 ok 247.4s ans=10.0 think=7738ch 
+[15/827] D-G__grocery_delivery__r1 ok 145.7s ans=15.0 think=4590ch 
+[16/827] D-F__research_study__r0 ok 172.8s ans=15.0 think=5507ch 
+[17/827] G-H__grocery_delivery__r0 ok 112.6s ans=25.0 think=3666ch 
+[18/827] B-I__research_study__r1 ok 122.8s ans=15.0 think=4154ch 
+[19/827] G-I__research_study__r1 ok 119.1s ans=10.0 think=4365ch 
+[20/827] D-E__furniture_assembly__r0 ok 109.3s ans=20.0 think=3620ch 
+[21/827] A-C__volunteer_or_donate__r0 ok 151.0s ans=38.0 think=4635ch 
+[22/827] B-I__volunteer_or_donate__r1 ok 88.7s ans=60.0 think=2793ch 
+[23/827] A-C__research_study__r1 ok 129.1s ans=10.0 think=3948ch 
+[24/827] A-I__train_delay__r1 ok 126.4s ans=96.0 think=4059ch 
+[25/827] C-F__general__r0 ok 219.5s ans=15.0 think=7111ch 
+[26/827] A-B__theme_park__r0 ok 79.2s ans=20.0 think=2568ch 
+[27/827] A-F__nonstop_flight__r1 ok 128.5s ans=100.0 think=3915ch 
+[28/827] E-G__priority_pickup__r1 ok 121.0s ans=10.0 think=4289ch 
+[29/827] A-H__research_study__r0 ok 181.7s ans=15.0 think=5406ch 
+[30/827] E-G__volunteer_or_donate__r0 ok 182.9s ans=50.0 think=6058ch 
+[31/827] H-I__grocery_delivery__r1 ok 203.0s ans=20.0 think=6450ch 
+[32/827] E-I__general__r0 ok 220.3s ans=15.0 think=6984ch 
+[33/827] C-E__train_delay__r1 ok 133.1s ans=225.0 think=4236ch 
+[34/827] A-C__theme_park__r0 ok 140.5s ans=30.0 think=4190ch 
+[35/827] C-D__grocery_delivery__r1 ok 271.0s ans=15.0 think=8314ch 
+[36/827] D-G__nonstop_flight__r0 ok 170.4s ans=108.0 think=5041ch 
+[37/827] B-F__weekend_gig__r0 ok 137.9s ans=30.0 think=4352ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 22:01:27 s2_combos crashed (attempt 11); resuming in 30s
+1140 cells, 350 done, running 790
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7937.08it/s]
+[1/790] D-E__weekend_gig__r0 ok 85.9s ans=50.0 think=3121ch 
+[2/790] A-G__nonstop_flight__r0 ok 98.8s ans=60.0 think=3274ch 
+[3/790] B-H__grocery_delivery__r1 ok 110.6s ans=20.0 think=3566ch 
+[4/790] B-H__weekend_gig__r0 ok 113.7s ans=80.0 think=3727ch 
+[5/790] C-I__nonstop_flight__r1 ok 162.6s ans=45.0 think=5328ch 
+[6/790] A-H__weekend_gig__r1 ok 185.5s ans=80.0 think=6141ch 
+[7/790] A-G__train_delay__r0 ok 109.6s ans=100.0 think=3360ch 
+[8/790] A-D__weekend_gig__r0 ok 123.6s ans=50.0 think=3703ch 
+[9/790] D-I__research_study__r1 ok 136.9s ans=10.0 think=4437ch 
+[10/790] A-G__priority_pickup__r1 ok 90.1s ans=5.0 think=2762ch 
+[11/790] B-I__weekend_gig__r1 ok 120.0s ans=20.0 think=3743ch 
+[12/790] G-H__research_study__r0 ok 324.5s ans=15.0 think=10098ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 22:07:25 s2_combos crashed (attempt 12); resuming in 30s
+1140 cells, 362 done, running 778
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7874.16it/s]
+[1/778] A-G__grocery_delivery__r0 ok 70.0s ans=10.0 think=2472ch 
+[2/778] C-G__train_delay__r1 ok 116.0s ans=145.0 think=4026ch 
+[3/778] F-G__train_delay__r1 ok 121.6s ans=1050.0 think=3878ch 
+[4/778] A-C__grocery_delivery__r0 ok 127.3s ans=20.0 think=4333ch 
+[5/778] B-C__volunteer_or_donate__r0 ok 142.7s ans=60.0 think=4724ch 
+[6/778] A-E__furniture_assembly__r0 ok 153.0s ans=15.0 think=4805ch 
+[7/778] A-D__train_delay__r1 ok 172.1s ans=96.0 think=5861ch 
+[8/778] A-I__nonstop_flight__r1 ok 91.8s ans=50.0 think=2757ch 
+[9/778] D-I__general__r1 ok 81.7s ans=36.0 think=2631ch 
+[10/778] D-H__train_delay__r0 ok 119.7s ans=180.0 think=3516ch 
+[11/778] B-G__furniture_assembly__r0 ok 243.8s ans=25.0 think=7696ch 
+[12/778] E-I__grocery_delivery__r1 ok 103.7s ans=10.0 think=3308ch 
+[13/778] G-I__general__r1 ok 187.1s ans=30.0 think=6254ch 
+[14/778] E-H__furniture_assembly__r1 ok 165.8s ans=30.0 think=4918ch 
+[15/778] E-H__general__r1 ok 67.9s ans=20.0 think=2218ch 
+[16/778] F-I__volunteer_or_donate__r0 ok 68.3s ans=50.0 think=2341ch 
+[17/778] D-I__grocery_delivery__r0 ok 135.2s ans=10.0 think=4227ch 
+[18/778] A-E__train_delay__r0 ok 139.3s ans=96.0 think=4587ch 
+[19/778] A-H__furniture_assembly__r1 ok 75.8s ans=40.0 think=2178ch 
+[20/778] B-F__grocery_delivery__r0 ok 187.6s ans=30.0 think=5433ch 
+[21/778] B-E__theme_park__r0 ok 160.7s ans=15.0 think=4892ch 
+[22/778] B-G__nonstop_flight__r1 ok 73.8s ans=100.0 think=2429ch 
+[23/778] E-H__grocery_delivery__r1 ok 118.1s ans=15.0 think=3699ch 
+[24/778] D-H__general__r1 ok 320.6s ans=36.0 think=10090ch 
+[25/778] G-I__furniture_assembly__r0 ok 134.2s ans=20.0 think=3969ch 
+[26/778] G-H__furniture_assembly__r0 ok 306.2s ans=40.0 think=8857ch 
+[27/778] D-G__theme_park__r1 ok 183.9s ans=72.0 think=5608ch 
+[28/778] A-B__priority_pickup__r0 ok 121.2s ans=5.0 think=3517ch 
+[29/778] B-I__furniture_assembly__r0 ok 117.2s ans=25.0 think=3672ch 
+[30/778] F-H__weekend_gig__r0 ok 225.7s ans=60.0 think=6376ch 
+[31/778] D-E__train_delay__r1 ok 153.7s ans=180.0 think=4937ch 
+[32/778] A-H__weekend_gig__r0 ok 336.6s ans=80.0 think=9861ch 
+[33/778] A-I__general__r1 ok 107.8s ans=20.0 think=3444ch 
+[34/778] C-G__nonstop_flight__r1 ok 105.4s ans=30.0 think=3234ch 
+[35/778] F-H__research_study__r0 ok 206.7s ans=20.0 think=6105ch 
+[36/778] B-I__nonstop_flight__r1 ok 170.6s ans=4.0 think=5528ch 
+[37/778] C-D__theme_park__r1 ok 38.4s ans=30.0 think=1353ch 
+[38/778] D-H__research_study__r0 ok 165.6s ans=20.0 think=5252ch 
+[39/778] D-F__research_study__r1 ok 237.7s ans=15.0 think=7694ch 
+[40/778] G-I__train_delay__r1 ok 123.7s ans=200.0 think=4230ch 
+[41/778] E-F__grocery_delivery__r0 ok 221.9s ans=25.0 think=6665ch 
+[42/778] E-G__grocery_delivery__r1 ok 145.0s ans=10.0 think=4872ch 
+[43/778] B-I__volunteer_or_donate__r0 ok 105.5s ans=15.0 think=3521ch 
+[44/778] E-I__general__r1 ok 175.4s ans=3.0 think=5942ch 
+[45/778] D-F__train_delay__r0 ok 195.1s ans=180.0 think=6020ch 
+[46/778] A-G__research_study__r1 ok 106.0s ans=15.0 think=3344ch 
+[47/778] B-I__train_delay__r0 ok 179.2s ans=150.0 think=5873ch 
+[48/778] D-H__research_study__r1 ok 116.7s ans=15.0 think=4047ch 
+[49/778] B-F__weekend_gig__r1 ok 114.3s ans=25.0 think=3935ch 
+[50/778] C-E__volunteer_or_donate__r1 ok 97.7s ans=30.0 think=3286ch 
+[51/778] B-E__theme_park__r1 ok 151.2s ans=10.0 think=4922ch 
+[52/778] F-I__nonstop_flight__r1 ok 109.9s ans=30.0 think=3391ch 
+[53/778] B-I__research_study__r0 ok 102.9s ans=15.0 think=3258ch 
+[54/778] A-G__general__r1 ok 217.4s ans=29.0 think=7119ch 
+[55/778] A-B__volunteer_or_donate__r0 ok 247.6s ans=38.0 think=7451ch 
+[56/778] C-I__general__r0 ok 111.5s ans=15.0 think=3573ch 
+[57/778] B-H__theme_park__r0 ok 105.2s ans=60.0 think=2963ch 
+[58/778] E-H__priority_pickup__r1 ok 196.4s ans=10.0 think=6023ch 
+[59/778] B-E__priority_pickup__r0 ok 213.2s ans=5.0 think=6607ch 
+[60/778] A-F__train_delay__r1 ok 277.7s ans=1050.0 think=8296ch 
+[61/778] A-I__furniture_assembly__r1 ok 185.7s ans=15.0 think=5627ch 
+[62/778] B-G__train_delay__r0 ok 204.1s ans=150.0 think=6923ch 
+[63/778] G-I__theme_park__r1 ok 94.4s ans=10.0 think=2918ch 
+[64/778] F-I__theme_park__r0 ok 189.5s ans=30.0 think=5625ch 
+[65/778] C-H__volunteer_or_donate__r0 ok 253.7s ans=30.0 think=7806ch 
+[66/778] C-F__volunteer_or_donate__r1 ok 300.1s ans=420.0 think=9106ch 
+[67/778] B-G__general__r1 ok 63.6s ans=30.0 think=1839ch 
+[68/778] A-G__research_study__r0 ok 203.5s ans=15.0 think=6066ch 
+[69/778] B-H__volunteer_or_donate__r1 ok 68.4s ans=40.0 think=2088ch 
+[70/778] F-H__train_delay__r1 ok 81.6s ans=100.0 think=2519ch 
+[71/778] A-B__weekend_gig__r1 ok 162.4s ans=20.0 think=4842ch 
+[72/778] A-E__general__r1 ok 146.8s ans=19.0 think=4763ch 
+[73/778] B-D__weekend_gig__r1 ok 129.6s ans=20.0 think=4211ch 
+[74/778] D-H__volunteer_or_donate__r0 ok 179.7s ans=40.0 think=5404ch 
+[75/778] E-I__theme_park__r0 ok 107.7s ans=10.0 think=3530ch 
+[76/778] B-F__research_study__r0 ok 110.3s ans=15.0 think=3810ch 
+[77/778] A-B__grocery_delivery__r0 ok 74.7s ans=10.0 think=2480ch 
+[78/778] A-D__train_delay__r0 ok 116.9s ans=180.0 think=3674ch 
+[79/778] G-H__train_delay__r1 ok 86.6s ans=100.0 think=2674ch 
+[80/778] A-G__weekend_gig__r0 ok 249.5s ans=29.0 think=8494ch 
+[81/778] A-G__theme_park__r1 ok 131.0s ans=20.0 think=4043ch 
+[82/778] E-G__theme_park__r1 ok 158.0s ans=15.0 think=5050ch 
+[83/778] B-H__nonstop_flight__r0 ok 179.4s ans=60.0 think=5340ch 
+[84/778] A-I__weekend_gig__r0 ok 105.6s ans=50.0 think=3140ch 
+[85/778] F-H__priority_pickup__r1 ok 107.2s ans=35.0 think=3352ch 
+[86/778] B-H__priority_pickup__r0 ok 160.6s ans=5.0 think=5127ch 
+[87/778] E-G__priority_pickup__r0 ok 115.0s ans=10.0 think=3974ch 
+[88/778] H-I__theme_park__r1 ok 149.4s ans=40.0 think=4830ch 
+[89/778] C-H__nonstop_flight__r1 ok 195.6s ans=45.0 think=5847ch 
+[90/778] E-G__weekend_gig__r0 ok 215.2s ans=80.0 think=6924ch 
+[91/778] B-E__weekend_gig__r1 ok 146.3s ans=20.0 think=4728ch 
+[92/778] D-F__grocery_delivery__r0 ok 246.8s ans=35.0 think=7443ch 
+[93/778] F-I__nonstop_flight__r0 ok 216.8s ans=50.0 think=6173ch 
+[94/778] A-C__research_study__r0 ok 174.9s ans=15.0 think=5302ch 
+[95/778] C-F__furniture_assembly__r1 ok 117.2s ans=30.0 think=3571ch 
+[96/778] D-H__weekend_gig__r0 ok 347.1s ans=50.0 think=10792ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 22:40:47 s2_combos crashed (attempt 13); resuming in 30s
+1140 cells, 458 done, running 682
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8515.39it/s]
+[1/682] C-I__theme_park__r0 ok 28.7s ans=30.0 think=1005ch 
+[2/682] H-I__train_delay__r0 ok 80.9s ans=100.0 think=2956ch 
+[3/682] D-H__train_delay__r1 ok 91.9s ans=180.0 think=3069ch 
+[4/682] B-F__furniture_assembly__r0 ok 114.7s ans=20.0 think=3908ch 
+[5/682] B-I__theme_park__r0 ok 89.9s ans=10.0 think=2995ch 
+[6/682] G-I__theme_park__r0 ok 168.7s ans=15.0 think=5539ch 
+[7/682] B-D__general__r0 ok 185.2s ans=30.0 think=6110ch 
+[8/682] B-E__research_study__r1 ok 202.7s ans=10.0 think=7333ch 
+[9/682] B-G__grocery_delivery__r1 ok 94.9s ans=10.0 think=3167ch 
+[10/682] B-E__furniture_assembly__r0 ok 78.7s ans=25.0 think=2603ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 22:46:01 s2_combos crashed (attempt 14); resuming in 30s
+1140 cells, 468 done, running 672
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8167.19it/s]
+[1/672] C-F__theme_park__r1 ok 40.2s ans=30.0 think=1436ch 
+[2/672] B-C__furniture_assembly__r1 ok 104.4s ans=30.0 think=3895ch 
+[3/672] B-D__nonstop_flight__r1 ok 130.7s ans=108.0 think=4041ch 
+[4/672] B-D__weekend_gig__r0 ok 144.3s ans=40.0 think=4936ch 
+[5/672] B-H__furniture_assembly__r0 ok 172.7s ans=40.0 think=5531ch 
+[6/672] G-I__train_delay__r0 ok 191.9s ans=15.0 think=6613ch 
+[7/672] H-I__priority_pickup__r0 ok 180.4s ans=5.0 think=5746ch 
+[8/672] B-G__theme_park__r0 ok 225.2s ans=60.0 think=7023ch 
+[9/672] A-H__volunteer_or_donate__r1 ok 83.3s ans=40.0 think=2623ch 
+[10/672] F-G__grocery_delivery__r0 ok 235.4s ans=35.0 think=7349ch 
+[11/672] H-I__furniture_assembly__r1 ok 107.8s ans=40.0 think=2997ch 
+[12/672] B-I__furniture_assembly__r1 ok 104.1s ans=20.0 think=3320ch 
+[13/672] C-F__volunteer_or_donate__r0 ok 72.1s ans=30.0 think=2297ch 
+[14/672] E-G__train_delay__r0 ok 138.1s ans=50.0 think=4709ch 
+[15/672] C-G__weekend_gig__r0 ok 237.2s ans=60.0 think=7751ch 
+[16/672] A-E__nonstop_flight__r1 ok 133.1s ans=50.0 think=4253ch 
+[17/672] D-F__priority_pickup__r1 ok 164.5s ans=6.0 think=5080ch 
+[18/672] D-G__train_delay__r1 ok 113.2s ans=180.0 think=3752ch 
+[19/672] D-E__volunteer_or_donate__r0 ok 108.6s ans=25.0 think=3689ch 
+[20/672] A-H__priority_pickup__r1 ok 200.9s ans=5.0 think=5992ch 
+[21/672] G-H__general__r0 ok 234.2s ans=20.0 think=7279ch 
+[22/672] A-I__theme_park__r0 ok 121.0s ans=15.0 think=3716ch 
+[23/672] D-I__train_delay__r0 ok 102.9s ans=180.0 think=3215ch 
+[24/672] F-I__furniture_assembly__r1 ok 75.0s ans=50.0 think=2406ch 
+[25/672] F-H__volunteer_or_donate__r1 ok 179.3s ans=40.0 think=5535ch 
+[26/672] E-G__furniture_assembly__r1 ok 128.3s ans=20.0 think=4128ch 
+[27/672] E-F__general__r1 ok 110.3s ans=25.0 think=3459ch 
+[28/672] D-G__priority_pickup__r0 ok 120.3s ans=6.0 think=3659ch 
+[29/672] E-G__theme_park__r0 ok 139.6s ans=15.0 think=4626ch 
+[30/672] D-H__priority_pickup__r0 ok 92.7s ans=6.0 think=2821ch 
+[31/672] C-H__train_delay__r0 ok 147.3s ans=100.0 think=4687ch 
+[32/672] A-B__nonstop_flight__r1 ok 140.9s ans=50.0 think=4447ch 
+[33/672] A-D__nonstop_flight__r0 ok 192.5s ans=108.0 think=5410ch 
+[34/672] A-F__grocery_delivery__r1 ok 98.5s ans=20.0 think=3643ch 
+[35/672] C-D__nonstop_flight__r0 ok 315.5s ans=30.0 think=10128ch 
+[36/672] A-F__nonstop_flight__r0 ok 159.9s ans=60.0 think=5760ch 
+[37/672] G-H__theme_park__r1 ok 67.3s ans=40.0 think=3575ch 
+[38/672] C-I__nonstop_flight__r0 ok 126.3s ans=45.0 think=5959ch 
+[39/672] D-F__nonstop_flight__r1 ok 141.2s ans=108.0 think=6200ch 
+[40/672] E-H__weekend_gig__r0 ok 123.2s ans=60.0 think=6007ch 
+[41/672] A-C__furniture_assembly__r0 ok 83.2s ans=20.0 think=4069ch 
+[42/672] A-E__grocery_delivery__r0 ok 55.7s ans=15.0 think=2517ch 
+[43/672] E-H__theme_park__r0 ok 86.7s ans=40.0 think=3705ch 
+[44/672] C-H__general__r1 ok 152.2s ans=20.0 think=6762ch 
+[45/672] A-I__research_study__r1 ok 92.3s ans=15.0 think=2920ch 
+[46/672] D-G__weekend_gig__r1 ok 148.5s ans=0.0 think=6193ch 
+[47/672] A-I__research_study__r0 ok 123.6s ans=15.0 think=3987ch 
+[48/672] H-I__research_study__r0 ok 109.1s ans=15.0 think=3476ch 
+[49/672] F-I__train_delay__r1 ok 138.2s ans=1050.0 think=4520ch 
+[50/672] A-F__general__r1 ok 70.1s ans=20.0 think=2213ch 
+[51/672] C-E__priority_pickup__r1 ok 145.6s ans=10.0 think=4745ch 
+[52/672] D-H__nonstop_flight__r0 ok 198.4s ans=60.0 think=6132ch 
+[53/672] D-I__theme_park__r1 ok 122.4s ans=15.0 think=3684ch 
+[54/672] B-D__priority_pickup__r1 ok 144.8s ans=5.0 think=4382ch 
+[55/672] D-I__furniture_assembly__r1 ok 145.7s ans=15.0 think=4684ch 
+[56/672] A-H__nonstop_flight__r1 ok 110.5s ans=60.0 think=3423ch 
+[57/672] D-I__train_delay__r1 ok 173.3s ans=180.0 think=5434ch 
+[58/672] A-F__grocery_delivery__r0 ok 249.4s ans=35.0 think=7491ch 
+[59/672] A-F__volunteer_or_donate__r1 ok 250.0s ans=38.0 think=7299ch 
+[60/672] B-I__nonstop_flight__r0 ok 195.1s ans=5.0 think=5948ch 
+[61/672] D-I__weekend_gig__r1 ok 239.4s ans=20.0 think=7619ch 
+[62/672] A-C__nonstop_flight__r1 ok 109.2s ans=45.0 think=3200ch 
+[63/672] B-G__weekend_gig__r0 ok 249.7s ans=100.0 think=7896ch 
+[64/672] B-C__general__r1 ok 310.0s ans=15.0 think=9535ch 
+[65/672] A-B__theme_park__r1 ok 86.7s ans=20.0 think=2617ch 
+[66/672] C-F__nonstop_flight__r1 ok 287.9s ans=45.0 think=8166ch 
+[67/672] D-E__furniture_assembly__r1 ok 73.0s ans=20.0 think=2298ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 23:09:23 s2_combos crashed (attempt 15); resuming in 30s
+1140 cells, 535 done, running 605
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 8197.34it/s]
+[1/605] D-E__general__r1 ok 50.0s ans=36.0 think=1782ch 
+[2/605] G-I__furniture_assembly__r1 ok 108.8s ans=25.0 think=3852ch 
+[3/605] E-I__priority_pickup__r0 ok 115.5s ans=3.0 think=4206ch 
+[4/605] F-G__weekend_gig__r1 ok 165.4s ans=35.0 think=5627ch 
+[5/605] B-G__research_study__r0 ok 169.1s ans=10.0 think=6140ch 
+[6/605] E-G__volunteer_or_donate__r1 ok 203.3s ans=50.0 think=6557ch 
+[7/605] A-C__nonstop_flight__r0 ok 139.5s ans=150.0 think=4133ch 
+[8/605] F-G__general__r1 ok 300.8s ans=210.0 think=9593ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 23:14:57 s2_combos crashed (attempt 16); resuming in 30s
+1140 cells, 543 done, running 597
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 9028.64it/s]
+[1/597] B-E__train_delay__r1 ok 53.4s ans=50.0 think=2045ch 
+[2/597] E-I__furniture_assembly__r0 ok 108.2s ans=15.0 think=3927ch 
+[3/597] F-H__volunteer_or_donate__r0 ok 131.3s ans=40.0 think=4213ch 
+[4/597] A-E__theme_park__r1 ok 137.1s ans=15.0 think=4647ch 
+[5/597] C-F__nonstop_flight__r0 ok 171.7s ans=45.0 think=5692ch 
+[6/597] B-I__priority_pickup__r0 ok 174.4s ans=5.0 think=5501ch 
+[7/597] B-F__priority_pickup__r0 ok 185.1s ans=5.0 think=5853ch 
+[8/597] G-H__priority_pickup__r0 ok 118.3s ans=5.0 think=3560ch 
+[9/597] H-I__theme_park__r0 ok 146.7s ans=30.0 think=4425ch 
+[10/597] A-B__research_study__r0 ok 126.2s ans=15.0 think=3842ch 
+[11/597] A-G__weekend_gig__r1 ok 268.0s ans=77.0 think=8630ch 
+[12/597] C-E__volunteer_or_donate__r0 ok 123.3s ans=30.0 think=3983ch 
+[13/597] A-F__general__r0 ok 164.4s ans=20.0 think=5095ch 
+[14/597] A-H__priority_pickup__r0 ok 290.7s ans=3.0 think=8661ch 
+[15/597] F-I__grocery_delivery__r1 ok 56.4s ans=15.0 think=1787ch 
+[16/597] A-I__priority_pickup__r0 ok 183.0s ans=5.0 think=5679ch 
+[17/597] E-F__priority_pickup__r1 ok 117.9s ans=10.0 think=3697ch 
+[18/597] G-H__train_delay__r0 ok 141.0s ans=145.0 think=4539ch 
+[19/597] B-C__nonstop_flight__r1 ok 190.1s ans=30.0 think=5685ch 
+[20/597] A-F__research_study__r0 ok 115.6s ans=15.0 think=3856ch 
+[21/597] D-I__theme_park__r0 ok 216.6s ans=72.0 think=6451ch 
+[22/597] D-I__nonstop_flight__r0 ok 148.8s ans=50.0 think=4316ch 
+[23/597] D-E__priority_pickup__r0 ok 118.7s ans=6.0 think=3770ch 
+[24/597] C-I__weekend_gig__r1 ok 149.9s ans=30.0 think=4655ch 
+[25/597] G-H__nonstop_flight__r1 ok 190.8s ans=60.0 think=5758ch 
+[26/597] B-C__train_delay__r1 ok 97.6s ans=75.0 think=3144ch 
+[27/597] D-H__weekend_gig__r1 ok 228.2s ans=60.0 think=6520ch 
+[28/597] B-D__research_study__r0 ok 146.8s ans=10.0 think=4515ch 
+[29/597] D-E__priority_pickup__r1 ok 160.6s ans=6.0 think=4596ch 
+[30/597] A-G__general__r0 ok 237.4s ans=30.0 think=6830ch 
+[31/597] E-F__nonstop_flight__r0 ok 196.9s ans=50.0 think=5260ch 
+[32/597] F-G__nonstop_flight__r0 ok 300.3s ans=630.0 think=7872ch 
+[33/597] F-H__general__r1 ok 289.2s ans=20.0 think=7781ch 
+[34/597] A-I__weekend_gig__r1 ok 194.4s ans=20.0 think=5055ch 
+[35/597] A-B__research_study__r1 ok 124.4s ans=10.0 think=3294ch 
+[36/597] A-B__nonstop_flight__r0 ok 172.1s ans=50.0 think=4636ch 
+[37/597] A-I__volunteer_or_donate__r0 ok 201.7s ans=38.0 think=4925ch 
+[38/597] D-H__priority_pickup__r1 ok 102.2s ans=6.0 think=2913ch 
+[39/597] B-C__research_study__r1 ok 176.5s ans=15.0 think=5057ch 
+[40/597] G-H__volunteer_or_donate__r1 ok 305.2s ans=40.0 think=8046ch 
+[41/597] E-H__furniture_assembly__r0 ok 189.3s ans=40.0 think=5195ch 
+[42/597] D-H__furniture_assembly__r0 ok 215.0s ans=40.0 think=5782ch 
+[43/597] F-I__train_delay__r0 ok 160.3s ans=150.0 think=4708ch 
+[44/597] B-F__general__r0 ok 298.6s ans=30.0 think=8421ch 
+[45/597] C-F__research_study__r1 ok 172.5s ans=20.0 think=5021ch 
+[46/597] B-E__research_study__r0 ok 145.1s ans=10.0 think=4308ch 
+[47/597] E-H__weekend_gig__r1 ok 325.2s ans=80.0 think=9175ch 
+[48/597] H-I__general__r1 ok 205.7s ans=20.0 think=5837ch 
+[49/597] A-C__general__r1 ok 175.3s ans=15.0 think=4805ch 
+[50/597] A-D__volunteer_or_donate__r0 ok 224.2s ans=38.0 think=6522ch 
+[51/597] F-I__general__r0 ok 96.2s ans=15.0 think=3203ch 
+[52/597] B-I__weekend_gig__r0 ok 112.5s ans=50.0 think=3499ch 
+[53/597] E-F__weekend_gig__r1 ok 140.1s ans=30.0 think=4667ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1857, in _next
+    self._prompt_batch.prompt(prompts)
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1200, in prompt
+    mx.eval([c.state for c in self.prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 23:36:44 s2_combos crashed (attempt 17); resuming in 30s
+1140 cells, 596 done, running 544
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 6245.65it/s]
+[1/544] C-H__grocery_delivery__r0 ok 116.0s ans=20.0 think=3370ch 
+[2/544] B-G__general__r0 ok 116.8s ans=30.0 think=3576ch 
+[3/544] G-H__grocery_delivery__r1 ok 147.0s ans=20.0 think=4308ch 
+[4/544] D-G__research_study__r1 ok 158.6s ans=10.0 think=4918ch 
+[5/544] B-G__furniture_assembly__r1 ok 163.4s ans=20.0 think=4896ch 
+[6/544] D-E__research_study__r0 ok 176.5s ans=10.0 think=5269ch 
+[7/544] C-E__weekend_gig__r1 ok 213.7s ans=20.0 think=6462ch 
+[8/544] B-H__nonstop_flight__r1 ok 117.7s ans=60.0 think=3384ch 
+[9/544] F-G__furniture_assembly__r0 ok 267.0s ans=35.0 think=7573ch 
+[10/544] E-F__research_study__r0 ok 185.4s ans=20.0 think=5554ch 
+[11/544] C-D__furniture_assembly__r0 ok 218.7s ans=30.0 think=6093ch 
+[12/544] D-F__furniture_assembly__r1 ok 198.4s ans=25.0 think=5235ch 
+[13/544] C-I__train_delay__r0 ok 155.9s ans=75.0 think=4452ch 
+[14/544] C-E__theme_park__r0 ok 53.9s ans=30.0 think=1431ch 
+[15/544] H-I__volunteer_or_donate__r0 ok 96.3s ans=40.0 think=2475ch 
+[16/544] C-G__general__r0 ok 290.5s ans=29.0 think=7795ch 
+[17/544] D-H__theme_park__r0 ok 276.5s ans=72.0 think=7227ch 
+[18/544] A-I__theme_park__r1 ok 167.0s ans=20.0 think=4193ch 
+[19/544] A-C__train_delay__r0 ok 274.6s ans=96.0 think=7298ch 
+[20/544] E-F__priority_pickup__r0 ok 188.0s ans=35.0 think=4816ch 
+[21/544] B-G__priority_pickup__r1 ok 174.5s ans=5.0 think=4596ch 
+[22/544] B-D__furniture_assembly__r0 ok 192.2s ans=20.0 think=5213ch 
+[23/544] E-F__nonstop_flight__r1 ok 237.0s ans=630.0 think=5914ch 
+[24/544] H-I__weekend_gig__r0 ok 322.9s ans=80.0 think=9321ch 
+[25/544] D-H__grocery_delivery__r1 ok 193.6s ans=20.0 think=5493ch 
+[26/544] B-F__general__r1 ok 102.0s ans=30.0 think=3882ch 
+[27/544] F-G__weekend_gig__r0 ok 479.1s ans=50.0 think=13261ch 
+[28/544] A-D__research_study__r0 ok 189.9s ans=10.0 think=5976ch 
+[29/544] A-B__train_delay__r0 ok 36.3s ans=50.0 think=2202ch 
+[30/544] F-H__nonstop_flight__r0 ok 67.8s ans=60.0 think=3414ch 
+[31/544] B-D__general__r1 ok 80.7s ans=30.0 think=4054ch 
+[32/544] G-H__research_study__r1 ok 122.6s ans=29.0 think=6056ch 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "value_of_time/run.py", line 171, in <module>
+    main()
+  File "value_of_time/run.py", line 165, in main
+    for i, (cid, raw) in enumerate(engine.generate_stream(jobs(), a.batch_size), 1):
+  File "value_of_time/engines.py", line 109, in generate_stream
+    responses = gen.next_generated()
+                ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1881, in next_generated
+    prompt_responses, generation_responses = self._next()
+                                             ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1790, in _next
+    generation_responses = self._generation_batch.next()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1449, in next
+    tokens, logprobs = self._step()
+                       ^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/mlx_lm/generate.py", line 1405, in _step
+    mx.async_eval(self._next_tokens, self._next_logprobs, token_context)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+2026-10-21 23:51:24 s2_combos crashed (attempt 18); resuming in 30s
+1140 cells, 628 done, running 512
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 7632.17it/s]
+[1/512] D-E__general__r0 ok 106.0s ans=36.0 think=3084ch 
+[2/512] E-I__research_study__r0 ok 134.6s ans=10.0 think=3820ch 
+[3/512] A-D__research_study__r1 ok 139.4s ans=10.0 think=4027ch 
+[4/512] B-G__train_delay__r1 ok 175.2s ans=145.0 think=5166ch 
+[5/512] F-G__train_delay__r0 ok 175.9s ans=1050.0 think=4656ch 
+[6/512] B-I__grocery_delivery__r0 ok 181.7s ans=15.0 think=4961ch 
+[7/512] C-E__train_delay__r0 ok 64.0s ans=75.0 think=2306ch 
+[8/512] F-H__priority_pickup__r0 ok 103.4s ans=35.0 think=3525ch 
+[9/512] A-C__general__r0 ok 75.5s ans=15.0 think=2871ch 
+[10/512] C-E__priority_pickup__r0 ok 252.5s ans=5.0 think=8126ch 
+[11/512] F-H__grocery_delivery__r1 ok 271.2s ans=20.0 think=9372ch 
+[12/512] B-F__theme_park__r0 ok 135.7s ans=30.0 think=6156ch 
+[13/512] E-H__nonstop_flight__r1 ok 69.6s ans=60.0 think=3644ch 
+[14/512] C-F__train_delay__r1 ok 118.8s ans=75.0 think=5940ch 
+[15/512] F-H__weekend_gig__r1 ok 154.5s ans=80.0 think=7541ch 
+[16/512] E-F__general__r0 ok 140.9s ans=210.0 think=7201ch 
+[17/512] C-G__general__r1 ok 136.7s ans=29.0 think=7368ch 
+[18/512] F-H__theme_park__r1 ok 184.1s ans=40.0 think=8997ch 
+[19/512] A-H__theme_park__r1 ok 97.3s ans=40.0 think=4754ch 
+[20/512] C-E__general__r1 ok 75.5s ans=15.0 think=4294ch 
+[21/512] D-F__weekend_gig__r1 ok 72.0s ans=50.0 think=4261ch 
+[22/512] A-G__grocery_delivery__r1 ok 61.7s ans=10.0 think=3464ch 
+[23/512] B-H__theme_park__r1 ok 97.5s ans=60.0 think=5200ch 
+[24/512] D-E__research_study__r1 ok 109.0s ans=10.0 think=6436ch 
+[25/512] B-C__priority_pickup__r0 ok 47.7s ans=5.0 think=2477ch 
+[26/512] D-E__nonstop_flight__r1 ok 131.1s ans=108.0 think=6512ch 
+[27/512] G-I__grocery_delivery__r0 ok 64.6s ans=15.0 think=3461ch 
+[28/512] H-I__weekend_gig__r1 ok 109.0s ans=60.0 think=5657ch 
+[29/512] D-H__grocery_delivery__r0 ok 152.7s ans=20.0 think=8207ch 
+[30/512] B-F__theme_park__r1 ok 187.6s ans=60.0 think=9841ch 
+[31/512] C-I__research_study__r1 ok 125.6s ans=15.0 think=6604ch 
+[32/512] F-H__nonstop_flight__r1 ok 117.0s ans=60.0 think=5818ch 
+[33/512] A-E__grocery_delivery__r1 ok 69.1s ans=10.0 think=3658ch 
+[34/512] C-F__grocery_delivery__r1 ok 95.7s ans=30.0 think=4928ch 
+[35/512] E-G__grocery_delivery__r0 ok 69.1s ans=15.0 think=3802ch 
+[36/512] D-E__train_delay__r0 ok 125.3s ans=180.0 think=6711ch 
+[37/512] A-D__nonstop_flight__r1 ok 110.1s ans=108.0 think=5064ch 
+[38/512] C-H__weekend_gig__r0 ok 240.2s ans=60.0 think=12118ch 
+[39/512] A-E__research_study__r0 ok 119.9s ans=15.0 think=6301ch 
+[40/512] D-E__volunteer_or_donate__r1 ok 169.9s ans=90.0 think=8599ch 
+[41/512] E-G__nonstop_flight__r1 ok 75.5s ans=50.0 think=4060ch 
+[42/512] G-H__furniture_assembly__r1 ok 219.6s ans=58.0 think=10545ch 
+[43/512] D-F__train_delay__r1 ok 94.3s ans=180.0 think=4501ch 
+[44/512] F-I__furniture_assembly__r0 ok 114.2s ans=30.0 think=5746ch 
+[45/512] B-H__research_study__r1 ok 152.4s ans=20.0 think=7974ch 
+[46/512] D-F__weekend_gig__r0 ok 158.9s ans=50.0 think=8411ch 
+[47/512] E-I__volunteer_or_donate__r0 ok 73.2s ans=20.0 think=4292ch 
+[48/512] E-F__train_delay__r1 ok 116.1s ans=1050.0 think=6278ch 
+[49/512] E-G__research_study__r1 ok 88.3s ans=15.0 think=4862ch 
+[50/512] A-I__train_delay__r0 ok 73.9s ans=50.0 think=4127ch 
+[51/512] A-E__theme_park__r0 ok 103.7s ans=15.0 think=5548ch 
+[52/512] E-H__general__r0 ok 82.6s ans=20.0 think=4378ch 
+[53/512] D-H__nonstop_flight__r1 ok 186.7s ans=60.0 think=8870ch 
+[54/512] E-H__grocery_delivery__r0 ok 84.2s ans=15.0 think=4677ch 
+[55/512] F-G__furniture_assembly__r1 ok 69.1s ans=35.0 think=3532ch 
+[56/512] C-D__weekend_gig__r1 ok 142.5s ans=50.0 think=7871ch 
+[57/512] B-E__nonstop_flight__r0 ok 78.3s ans=15.0 think=4130ch 
+[58/512] G-I__nonstop_flight__r1 ok 90.1s ans=50.0 think=4691ch 
+[59/512] F-H__furniture_assembly__r1 ok 252.5s ans=50.0 think=12301ch 
+[60/512] A-D__priority_pickup__r1 ok 117.2s ans=5.0 think=5517ch 
+[61/512] E-F__theme_park__r0 ok 217.0s ans=35.0 think=10047ch 
+[62/512] E-H__train_delay__r1 ok 78.8s ans=100.0 think=4225ch 
+[63/512] C-H__nonstop_flight__r0 ok 156.0s ans=60.0 think=7637ch 
+[64/512] C-H__general__r0 ok 80.1s ans=15.0 think=4169ch 
+[65/512] D-F__volunteer_or_donate__r1 ok 100.2s ans=72.0 think=4927ch 
+[66/512] D-F__volunteer_or_donate__r0 ok 119.2s ans=30.0 think=6282ch 
+[67/512] A-F__weekend_gig__r0 ok 92.1s ans=50.0 think=4768ch 
+[68/512] A-H__general__r0 ok 47.9s ans=20.0 think=2570ch 
+[69/512] C-F__theme_park__r0 ok 21.3s ans=30.0 think=1267ch 
+[70/512] B-F__nonstop_flight__r1 ok 137.4s ans=60.0 think=6745ch 
+[71/512] D-E__theme_park__r1 ok 91.5s ans=72.0 think=4789ch 
+[72/512] A-E__priority_pickup__r0 ok 38.9s ans=5.0 think=2138ch 
+[73/512] A-F__priority_pickup__r1 ok 122.2s ans=5.0 think=6415ch 
+[74/512] A-G__theme_park__r0 ok 102.6s ans=20.0 think=5619ch 
+[75/512] C-D__weekend_gig__r0 ok 84.0s ans=20.0 think=4437ch 
+[76/512] E-F__theme_park__r1 ok 76.5s ans=40.0 think=3818ch 
+[77/512] C-E__furniture_assembly__r0 ok 73.1s ans=30.0 think=3968ch 
+[78/512] H-I__nonstop_flight__r0 ok 167.2s ans=60.0 think=8825ch 
+[79/512] E-H__research_study__r0 ok 113.6s ans=20.0 think=6352ch 
+[80/512] F-G__research_study__r0 ok 109.2s ans=25.0 think=5705ch 
+[81/512] C-G__volunteer_or_donate__r1 ok 59.3s ans=30.0 think=3123ch 
+[82/512] C-I__train_delay__r1 ok 93.5s ans=75.0 think=4938ch 
+[83/512] D-H__theme_park__r1 ok 95.6s ans=72.0 think=4605ch 
+[84/512] A-H__train_delay__r0 ok 73.4s ans=100.0 think=3879ch 
+[85/512] C-I__volunteer_or_donate__r0 ok 89.0s ans=30.0 think=4591ch 
+[86/512] A-D__grocery_delivery__r0 ok 86.8s ans=15.0 think=4465ch 
+[87/512] A-D__priority_pickup__r0 ok 95.1s ans=6.0 think=4530ch 
+[88/512] B-F__nonstop_flight__r0 ok 290.6s ans=100.0 think=14126ch 
+[89/512] C-G__furniture_assembly__r0 ok 64.4s ans=30.0 think=3459ch 
+[90/512] F-I__theme_park__r1 ok 114.4s ans=25.0 think=5589ch 
+[91/512] D-F__furniture_assembly__r0 ok 104.2s ans=20.0 think=5057ch 
+[92/512] C__train_delay__r0 ok 63.3s ans=75.0 think=3646ch 
+[93/512] C-E-F__weekend_gig__r0 ok 122.5s ans=60.0 think=6439ch 
+[94/512] C__volunteer_or_donate__r1 ok 39.5s ans=30.0 think=2280ch 
+[95/512] G-H__general__r1 ok 235.7s ans=30.0 think=11742ch 
+[96/512] B-C-H-I__train_delay__r1 ok 85.2s ans=75.0 think=4119ch 
+[97/512] B-C-G-H-I__volunteer_or_donate__r1 ok 58.0s ans=40.0 think=2740ch 
+[98/512] B-C-G-H-I__theme_park__r0 ok 129.3s ans=30.0 think=6568ch 
+[99/512] B-C-D-E-F-H-I__volunteer_or_donate__r0 ok 145.3s ans=40.0 think=7478ch 
+[100/512] A-C-D-E-F-G-H-I__research_study__r1 ok 192.4s ans=15.0 think=9532ch 
+[101/512] B-C-D-E-F-H-I__train_delay__r1 ok 203.4s ans=75.0 think=9786ch 
+[102/512] B-C-E-G-H-I__furniture_assembly__r0 ok 132.5s ans=30.0 think=6545ch 
+[103/512] A-B-C-D-E-F-H-I__general__r1 ok 116.7s ans=25.0 think=5774ch 
+[104/512] A-C-E-F-G-H__nonstop_flight__r1 ok 116.8s ans=45.0 think=5691ch 
+[105/512] B-C-E-G-H-I__train_delay__r1 ok 106.1s ans=75.0 think=5953ch 
+[106/512] B-C-D-E-F-H-I__research_study__r0 ok 104.5s ans=10.0 think=5924ch 
+[107/512] E-H-I__nonstop_flight__r0 ok 138.5s ans=60.0 think=7338ch 
+[108/512] E-H-I__research_study__r1 ok 107.3s ans=15.0 think=5783ch 
+[109/512] C-E-H-I__theme_park__r1 ok 58.2s ans=30.0 think=3251ch 
+[110/512] B-C-G-H-I__furniture_assembly__r0 ok 75.4s ans=40.0 think=3816ch 
+[111/512] C__priority_pickup__r1 ok 92.7s ans=5.0 think=4602ch 
+[112/512] A-B-C-E-G-H-I__priority_pickup__r0 ok 175.7s ans=5.0 think=8912ch 
+[113/512] B-C-D-E-H-I__volunteer_or_donate__r0 ok 72.7s ans=30.0 think=4115ch 
+[114/512] B-C-D-E-F-H-I__theme_park__r1 ok 42.6s ans=30.0 think=2405ch 
+[115/512] C-E-H-I__furniture_assembly__r1 ok 136.8s ans=30.0 think=6901ch 
+[116/512] C-E-H-I__general__r1 ok 105.2s ans=20.0 think=5516ch 
+[117/512] A-B-C-D-E-G-H-I__volunteer_or_donate__r0 ok 90.8s ans=38.0 think=4982ch 
+[118/512] A-C-E-F-G-H-I__train_delay__r1 ok 91.9s ans=75.0 think=4968ch 
+[119/512] B-C-H-I__priority_pickup__r0 ok 78.7s ans=5.0 think=4135ch 
+[120/512] A-C-E-F-G-H-I__general__r0 ok 136.2s ans=20.0 think=6662ch 
+[121/512] A-C-D-E-F-G-H-I__furniture_assembly__r0 ok 178.5s ans=60.0 think=9052ch 
+[122/512] A-C-D-E-F-G-H-I__theme_park__r0 ok 21.5s ans=30.0 think=1144ch 
+[123/512] B-C-D-E-F-H-I__weekend_gig__r0 ok 202.0s ans=80.0 think=10859ch 
+[124/512] C-E-F__train_delay__r1 ok 127.5s ans=75.0 think=6652ch 
+[125/512] C-E-H-I__grocery_delivery__r1 ok 57.4s ans=15.0 think=3103ch 
+[126/512] B-C-E-G-H-I__nonstop_flight__r1 ok 108.7s ans=45.0 think=5556ch 
+[127/512] A-B-C-D-E-F-H-I__nonstop_flight__r1 ok 113.0s ans=60.0 think=5901ch 
+[128/512] E-H-I__general__r0 ok 111.8s ans=20.0 think=5773ch 
+[129/512] B-C-D-E-F-H-I__general__r0 ok 172.7s ans=30.0 think=7746ch 
+[130/512] C-E-F-G__nonstop_flight__r1 ok 199.8s ans=45.0 think=9579ch 
+[131/512] C-E-H-I__weekend_gig__r0 ok 172.0s ans=40.0 think=8862ch 
+[132/512] A-B-C-D-E-F-G-H-I__priority_pickup__r0 ok 124.2s ans=5.0 think=6575ch 
+[133/512] I__weekend_gig__r0 ok 68.6s ans=40.0 think=3574ch 
+[134/512] C-E-F-G__priority_pickup__r1 ok 87.3s ans=35.0 think=4472ch 
+[135/512] A-C-E-F-G-H__volunteer_or_donate__r0 ok 179.2s ans=40.0 think=8816ch 
+[136/512] B-C-E-G-H-I__train_delay__r0 ok 107.7s ans=75.0 think=6083ch 
+[137/512] I__research_study__r1 ok 40.6s ans=15.0 think=2376ch 
+[138/512] A-C-D-E-F-G-H-I__furniture_assembly__r1 ok 74.0s ans=40.0 think=3794ch 
+[139/512] C-E-F__priority_pickup__r1 ok 119.5s ans=35.0 think=6153ch 
+[140/512] A-C-E-F-G-H-I__furniture_assembly__r1 ok 121.0s ans=40.0 think=6108ch 
+[141/512] C-E-F-G__grocery_delivery__r0 ok 175.8s ans=30.0 think=8708ch 
+[142/512] B-C-D-E-H-I__general__r1 ok 141.6s ans=25.0 think=7099ch 
+[143/512] A-B-C-D-E-F-H-I__priority_pickup__r1 ok 211.0s ans=5.0 think=10287ch 
+[144/512] B-C-D-E-F-H-I__theme_park__r0 ok 21.2s ans=30.0 think=1266ch 
+[145/512] A-C-E-F-G-H__furniture_assembly__r0 ok 112.0s ans=40.0 think=5456ch 
+[146/512] B-C-G-H-I__nonstop_flight__r1 ok 145.7s ans=30.0 think=7122ch 
+[147/512] B-H-I__theme_park__r0 ok 160.6s ans=40.0 think=8028ch 
+[148/512] C-E-H-I__grocery_delivery__r0 ok 80.4s ans=10.0 think=4303ch 
+[149/512] B-H-I__grocery_delivery__r0 ok 60.0s ans=15.0 think=3090ch 
+[150/512] B-C-H-I__furniture_assembly__r1 ok 123.4s ans=40.0 think=6620ch 
+[151/512] B-H-I__volunteer_or_donate__r1 ok 55.1s ans=40.0 think=2716ch 
+[152/512] B-C-G-H-I__weekend_gig__r1 ok 234.6s ans=80.0 think=11899ch 
+[153/512] A-B-C-D-E-F-G-H-I__volunteer_or_donate__r0 ok 79.8s ans=30.0 think=4100ch 
+[154/512] E-H-I__train_delay__r0 ok 54.1s ans=50.0 think=3112ch 
+[155/512] A-C-D-E-F-G-H-I__nonstop_flight__r1 ok 235.3s ans=45.0 think=11475ch 
+[156/512] A-C-E-F-G__nonstop_flight__r0 ok 104.8s ans=45.0 think=4937ch 
+[157/512] B-C-G-H-I__research_study__r1 ok 168.5s ans=20.0 think=8374ch 
+[158/512] A-C-E-F-G-H__nonstop_flight__r0 ok 182.9s ans=45.0 think=8179ch 
+[159/512] A-B-C-D-E-G-H-I__grocery_delivery__r0 ok 161.8s ans=30.0 think=7776ch 
+[160/512] A-B-C-E-G-H-I__priority_pickup__r1 ok 133.3s ans=5.0 think=6883ch 
+[161/512] C__general__r1 ok 46.6s ans=15.0 think=2816ch 
+[162/512] C-E-F-G__priority_pickup__r0 ok 54.4s ans=35.0 think=2821ch 
+[163/512] A-C-E-F-G-H__general__r0 ok 122.9s ans=20.0 think=6119ch 
+[164/512] A-C-E-F-G-H__research_study__r0 ok 116.4s ans=20.0 think=6181ch 
+[165/512] B-C-D-E-H-I__furniture_assembly__r0 ok 114.3s ans=30.0 think=6111ch 
+[166/512] B-H-I__volunteer_or_donate__r0 ok 47.6s ans=40.0 think=2542ch 
+[167/512] A-C-E-F-G__general__r1 ok 114.1s ans=25.0 think=5987ch 
+[168/512] B-C-E-G-H-I__grocery_delivery__r1 ok 111.0s ans=15.0 think=6276ch 
+[169/512] C-D-E-H-I__furniture_assembly__r0 ok 194.7s ans=30.0 think=9813ch 
+[170/512] B-C-D-E-F-H-I__volunteer_or_donate__r1 ok 166.8s ans=40.0 think=8232ch 
+[171/512] C-E-F__nonstop_flight__r0 ok 182.2s ans=30.0 think=9445ch 
+[172/512] A-B-C-E-G-H-I__weekend_gig__r1 ok 168.2s ans=20.0 think=9139ch 
+[173/512] C__furniture_assembly__r0 ok 33.7s ans=30.0 think=1951ch 
+[174/512] B-C-E-G-H-I__furniture_assembly__r1 ok 75.8s ans=40.0 think=3892ch 
+[175/512] I__theme_park__r0 ok 62.2s ans=15.0 think=3310ch 
+[176/512] E-H-I__weekend_gig__r1 ok 119.9s ans=40.0 think=6358ch 
+[177/512] B-C-H-I__general__r1 ok 85.8s ans=20.0 think=4686ch 
+[178/512] A-C-E-F-G-H__grocery_delivery__r1 ok 197.6s ans=20.0 think=9407ch 
+[179/512] B-H-I__furniture_assembly__r0 ok 52.7s ans=40.0 think=2664ch 
+[180/512] A-B-C-D-E-F-H-I__furniture_assembly__r1 ok 127.6s ans=40.0 think=6145ch 
+[181/512] I__train_delay__r0 ok 45.4s ans=50.0 think=2743ch 
+[182/512] B-C-G-H-I__theme_park__r1 ok 60.4s ans=30.0 think=3528ch 
+[183/512] C-E-F-G__train_delay__r1 ok 164.8s ans=150.0 think=8695ch 
+[184/512] E-H-I__furniture_assembly__r1 ok 100.2s ans=40.0 think=5306ch 
+[185/512] B-C-E-G-H-I__nonstop_flight__r0 ok 113.9s ans=30.0 think=6298ch 
+[186/512] B-H-I__train_delay__r0 ok 59.3s ans=100.0 think=3612ch 
+[187/512] C__grocery_delivery__r1 ok 75.0s ans=15.0 think=3983ch 
+[188/512] C-E-H-I__research_study__r1 ok 123.0s ans=15.0 think=6712ch 
+[189/512] A-C-E-F-G-H__weekend_gig__r1 ok 183.3s ans=116.0 think=9693ch 
+[190/512] B-C-D-E-H-I__furniture_assembly__r1 ok 65.9s ans=40.0 think=3309ch 
+[191/512] B-H-I__general__r0 ok 159.3s ans=20.0 think=8177ch 
+[192/512] B-C-D-E-H-I__theme_park__r1 ok 48.0s ans=30.0 think=2653ch 
+[193/512] I__research_study__r0 ok 62.2s ans=10.0 think=3316ch 
+[194/512] C-D-E-H-I__theme_park__r1 ok 53.2s ans=30.0 think=3072ch 
+[195/512] A-B-C-E-G-H-I__general__r0 ok 102.3s ans=30.0 think=5348ch 
+[196/512] A-B-C-D-E-F-H-I__theme_park__r0 ok 71.4s ans=30.0 think=3899ch 
+[197/512] C-D-E-H-I__priority_pickup__r0 ok 108.9s ans=3.0 think=5500ch 
+[198/512] B-C-D-E-F-H-I__priority_pickup__r0 ok 124.8s ans=5.0 think=6449ch 
+[199/512] A-C-E-F-G__research_study__r1 ok 143.6s ans=20.0 think=7909ch 
+[200/512] A-C-E-F-G-H-I__priority_pickup__r1 ok 142.8s ans=35.0 think=7592ch 
+[201/512] E-H-I__furniture_assembly__r0 ok 118.4s ans=40.0 think=6101ch 
+[202/512] E-H-I__grocery_delivery__r1 ok 95.8s ans=15.0 think=5057ch 
+[203/512] C-E-H-I__train_delay__r0 ok 110.2s ans=75.0 think=5940ch 
+[204/512] A-C-E-F-G-H-I__weekend_gig__r1 ok 200.5s ans=20.0 think=11243ch 
+[205/512] C-E-H-I__furniture_assembly__r0 ok 64.3s ans=30.0 think=3311ch 
+[206/512] A-C-E-F-G-H__general__r1 ok 147.8s ans=20.0 think=7610ch 
+[207/512] C-E-F-G__train_delay__r0 ok 77.5s ans=75.0 think=4405ch 
+[208/512] A-B-C-E-G-H-I__furniture_assembly__r1 ok 118.8s ans=30.0 think=6476ch 
+[209/512] E-H-I__volunteer_or_donate__r0 ok 59.8s ans=40.0 think=3218ch 
+[210/512] C-E-F__nonstop_flight__r1 ok 86.1s ans=45.0 think=4423ch 
+[211/512] I__furniture_assembly__r1 ok 64.8s ans=20.0 think=3299ch 
+[212/512] A-B-C-D-E-F-G-H-I__theme_park__r0 ok 62.8s ans=30.0 think=3264ch 
+[213/512] A-C-D-E-F-G-H-I__weekend_gig__r1 ok 250.1s ans=80.0 think=13068ch 
+[214/512] A-C-D-E-F-G-H-I__priority_pickup__r1 ok 212.6s ans=5.0 think=10164ch 
+[215/512] A-C-E-F-G__train_delay__r1 ok 224.9s ans=150.0 think=10937ch 
+[216/512] B-H-I__priority_pickup__r0 ok 58.2s ans=4.0 think=3140ch 
+[217/512] B-C-G-H-I__furniture_assembly__r1 ok 135.7s ans=40.0 think=7091ch 
+[218/512] C__weekend_gig__r0 ok 108.8s ans=20.0 think=5409ch 
+[219/512] B-C-H-I__grocery_delivery__r1 ok 128.2s ans=15.0 think=6435ch 
+[220/512] E-H-I__weekend_gig__r0 ok 104.4s ans=50.0 think=5231ch 
+[221/512] A-B-C-E-G-H-I__theme_park__r1 ok 55.7s ans=30.0 think=3059ch 
+[222/512] B-H-I__general__r1 ok 57.5s ans=20.0 think=3098ch 
+[223/512] A-C-E-F-G-H-I__grocery_delivery__r1 ok 74.5s ans=20.0 think=3891ch 
+[224/512] B-C-H-I__weekend_gig__r0 ok 76.2s ans=80.0 think=4400ch 
+[225/512] A-C-E-F-G-H__grocery_delivery__r0 ok 92.4s ans=20.0 think=4657ch 
+[226/512] C-E-F-G__research_study__r0 ok 206.0s ans=25.0 think=10733ch 
+[227/512] E-H-I__general__r1 ok 96.4s ans=20.0 think=5129ch 
+[228/512] A-C-D-E-F-G-H-I__research_study__r0 ok 154.6s ans=15.0 think=8326ch 
+[229/512] B-C-H-I__theme_park__r0 ok 54.1s ans=30.0 think=3170ch 
+[230/512] I__grocery_delivery__r1 ok 49.9s ans=10.0 think=2892ch 
+[231/512] A-C-E-F-G-H__priority_pickup__r1 ok 105.6s ans=35.0 think=5548ch 
+[232/512] A-B-C-D-E-F-G-H-I__furniture_assembly__r0 ok 171.5s ans=40.0 think=8841ch 
+[233/512] A-C-E-F-G__volunteer_or_donate__r0 ok 142.4s ans=38.0 think=6896ch 
+[234/512] I__general__r0 ok 95.4s ans=18.0 think=5438ch 
+[235/512] B-C-H-I__volunteer_or_donate__r1 ok 172.3s ans=30.0 think=9289ch 
+[236/512] A-C-E-F-G__nonstop_flight__r1 ok 150.6s ans=45.0 think=7384ch 
+[237/512] E-H-I__research_study__r0 ok 96.7s ans=15.0 think=5112ch 
+[238/512] A-C-E-F-G__theme_park__r0 ok 56.2s ans=30.0 think=3090ch 
+[239/512] B-H-I__train_delay__r1 ok 111.4s ans=60.0 think=6020ch 
+[240/512] C-E-F__general__r0 ok 109.8s ans=20.0 think=5792ch 
+[241/512] C-D-E-H-I__train_delay__r1 ok 161.6s ans=75.0 think=8490ch 
+[242/512] A-B-C-D-E-F-G-H-I__priority_pickup__r1 ok 108.5s ans=5.0 think=5582ch 
+[243/512] A-B-C-D-E-F-G-H-I__grocery_delivery__r1 ok 150.6s ans=15.0 think=7566ch 
+[244/512] A-B-C-E-G-H-I__volunteer_or_donate__r1 ok 129.5s ans=60.0 think=6459ch 
+[245/512] A-B-C-D-E-F-G-H-I__general__r1 ok 203.8s ans=20.0 think=10292ch 
+[246/512] A-C-E-F-G-H-I__volunteer_or_donate__r1 ok 68.6s ans=30.0 think=3359ch 
+[247/512] B-C-D-E-F-H-I__general__r1 ok 159.4s ans=20.0 think=7462ch 
+[248/512] B-C-E-G-H-I__research_study__r1 ok 198.4s ans=15.0 think=9927ch 
+[249/512] I__furniture_assembly__r0 ok 77.6s ans=10.0 think=4094ch 
+[250/512] A-B-C-E-G-H-I__nonstop_flight__r0 ok 218.9s ans=45.0 think=10698ch 
+[251/512] A-C-D-E-F-G-H-I__grocery_delivery__r0 ok 100.3s ans=15.0 think=4913ch 
+[252/512] B-H-I__nonstop_flight__r1 ok 267.0s ans=90.0 think=13509ch 
+[253/512] C-E-F-G__nonstop_flight__r0 ok 263.8s ans=630.0 think=12196ch 
+[254/512] E-H-I__theme_park__r0 ok 147.0s ans=15.0 think=7348ch 
+[255/512] B-C-D-E-F-H-I__train_delay__r0 ok 163.9s ans=150.0 think=7854ch 
+[256/512] B-C-G-H-I__general__r0 ok 64.5s ans=20.0 think=2960ch 
+[257/512] A-C-E-F-G-H-I__weekend_gig__r0 ok 300.4s ans=116.0 think=15161ch 
+[258/512] A-B-C-D-E-G-H-I__train_delay__r0 ok 109.0s ans=75.0 think=5475ch 
+[259/512] B-C-E-G-H-I__weekend_gig__r1 ok 190.3s ans=80.0 think=9134ch 
+[260/512] B-C-D-E-H-I__nonstop_flight__r0 ok 252.4s ans=60.0 think=10869ch 
+[261/512] B-C-H-I__grocery_delivery__r0 ok 152.9s ans=30.0 think=7430ch 
+[262/512] A-C-E-F-G-H__train_delay__r1 ok 55.4s ans=75.0 think=2970ch 
+[263/512] C-D-E-H-I__weekend_gig__r0 ok 159.6s ans=20.0 think=8097ch 
+[264/512] A-B-C-E-G-H-I__volunteer_or_donate__r0 ok 62.3s ans=40.0 think=3031ch 
+[265/512] A-B-C-E-G-H-I__grocery_delivery__r1 ok 130.3s ans=15.0 think=6357ch 
+[266/512] A-C-E-F-G-H-I__theme_park__r0 ok 98.2s ans=30.0 think=4897ch 
+[267/512] A-C-D-E-F-G-H-I__nonstop_flight__r0 ok 222.4s ans=30.0 think=10418ch 
+[268/512] A-B-C-D-E-F-H-I__grocery_delivery__r0 ok 246.9s ans=210.0 think=11724ch 
+[269/512] A-C-D-E-F-G-H-I__general__r0 ok 83.4s ans=20.0 think=4287ch 
+[270/512] C-E-F__volunteer_or_donate__r1 ok 99.1s ans=30.0 think=5061ch 
+[271/512] B-C-D-E-F-H-I__grocery_delivery__r1 ok 130.1s ans=30.0 think=6166ch 
+[272/512] B-C-D-E-H-I__research_study__r0 ok 166.8s ans=10.0 think=9011ch 
+[273/512] A-B-C-D-E-F-G-H-I__research_study__r1 ok 187.8s ans=30.0 think=9526ch 
+[274/512] C-E-F__priority_pickup__r0 ok 134.4s ans=35.0 think=6693ch 
+[275/512] A-B-C-D-E-G-H-I__weekend_gig__r1 ok 150.0s ans=50.0 think=8098ch 
+[276/512] A-B-C-D-E-F-H-I__furniture_assembly__r0 ok 172.3s ans=60.0 think=8252ch 
+[277/512] A-B-C-E-G-H-I__grocery_delivery__r0 ok 135.4s ans=30.0 think=7005ch 
+[278/512] A-B-C-D-E-G-H-I__research_study__r1 ok 117.3s ans=10.0 think=6473ch 
+[279/512] A-C-E-F-G-H__priority_pickup__r0 ok 171.2s ans=35.0 think=8311ch 
+[280/512] B-C-E-G-H-I__general__r0 ok 65.6s ans=20.0 think=3441ch 
+[281/512] C-E-F-G__volunteer_or_donate__r0 ok 84.0s ans=30.0 think=4403ch 
+[282/512] A-B-C-E-G-H-I__nonstop_flight__r1 ok 150.2s ans=30.0 think=7422ch 
+[283/512] A-C-D-E-F-G-H-I__theme_park__r1 ok 79.6s ans=30.0 think=4110ch 
+[284/512] C-D-E-H-I__research_study__r1 ok 102.4s ans=10.0 think=5564ch 
+[285/512] B-C-D-E-F-H-I__priority_pickup__r1 ok 212.0s ans=5.0 think=10363ch 
+[286/512] C-D-E-H-I__theme_park__r0 ok 38.3s ans=30.0 think=2209ch 
+[287/512] A-C-D-E-F-G-H-I__priority_pickup__r0 ok 148.6s ans=6.0 think=7264ch 
+[288/512] B-C-D-E-F-H-I__furniture_assembly__r0 ok 119.7s ans=40.0 think=6174ch 
+[289/512] A-B-C-D-E-F-H-I__volunteer_or_donate__r1 ok 170.0s ans=40.0 think=8290ch 
+[290/512] C-D-E-H-I__research_study__r0 ok 141.0s ans=10.0 think=7732ch 
+[291/512] B-C-D-E-F-H-I__furniture_assembly__r1 ok 146.8s ans=40.0 think=7336ch 
+[292/512] C-D-E-H-I__general__r1 ok 184.9s ans=15.0 think=9944ch 
+[293/512] A-C-E-F-G-H__weekend_gig__r0 ok 197.7s ans=80.0 think=10323ch 
+[294/512] C__nonstop_flight__r0 ok 81.6s ans=45.0 think=4073ch 
+[295/512] A-C-E-F-G-H-I__general__r1 ok 43.1s ans=15.0 think=2151ch 
+[296/512] C__priority_pickup__r0 ok 121.9s ans=2.5 think=5873ch 
+[297/512] E-H-I__grocery_delivery__r0 ok 102.1s ans=15.0 think=5565ch 
+[298/512] I__priority_pickup__r1 ok 52.8s ans=3.0 think=3101ch 
+[299/512] A-B-C-D-E-G-H-I__furniture_assembly__r0 ok 96.7s ans=40.0 think=5175ch 
+[300/512] C-E-H-I__priority_pickup__r0 ok 109.5s ans=3.0 think=5907ch 
+[301/512] E-H-I__theme_park__r1 ok 53.5s ans=20.0 think=3084ch 
+[302/512] B-C-D-E-H-I__grocery_delivery__r0 ok 117.2s ans=20.0 think=6290ch 
+[303/512] B-C-H-I__general__r0 ok 34.6s ans=30.0 think=1672ch 
+[304/512] A-B-C-D-E-F-G-H-I__grocery_delivery__r0 ok 122.7s ans=15.0 think=6493ch 
+[305/512] A-B-C-E-G-H-I__research_study__r1 ok 89.0s ans=15.0 think=4752ch 
+[306/512] A-B-C-D-E-F-H-I__general__r0 ok 154.3s ans=20.0 think=7712ch 
+[307/512] C-D-E-H-I__grocery_delivery__r1 ok 171.0s ans=15.0 think=8999ch 
+[308/512] A-B-C-E-G-H-I__furniture_assembly__r0 ok 141.2s ans=40.0 think=7287ch 
+[309/512] B-C-H-I__research_study__r0 ok 128.6s ans=20.0 think=7074ch 
+[310/512] A-C-E-F-G-H-I__research_study__r0 ok 170.1s ans=20.0 think=8819ch 
+[311/512] A-B-C-D-E-F-H-I__weekend_gig__r0 ok 153.1s ans=60.0 think=7739ch 
+[312/512] A-C-D-E-F-G-H-I__volunteer_or_donate__r0 ok 160.3s ans=30.0 think=7197ch 
+[313/512] A-B-C-D-E-G-H-I__research_study__r0 ok 228.4s ans=20.0 think=11781ch 
+[314/512] A-B-C-D-E-G-H-I__weekend_gig__r0 ok 189.6s ans=50.0 think=9746ch 
+[315/512] A-C-D-E-F-G-H-I__grocery_delivery__r1 ok 206.3s ans=20.0 think=9483ch 
+[316/512] A-B-C-D-E-F-H-I__weekend_gig__r1 ok 156.7s ans=20.0 think=7983ch 
+[317/512] B-C-D-E-H-I__general__r0 ok 98.0s ans=20.0 think=4708ch 
+[318/512] B-C-G-H-I__grocery_delivery__r0 ok 66.4s ans=15.0 think=3436ch 
+[319/512] A-C-E-F-G__priority_pickup__r1 ok 139.5s ans=35.0 think=7054ch 
+[320/512] A-C-E-F-G__furniture_assembly__r1 ok 107.8s ans=30.0 think=5588ch 
+[321/512] A-C-D-E-F-G-H-I__general__r1 ok 166.1s ans=20.0 think=8056ch 
+[322/512] A-B-C-E-G-H-I__theme_park__r0 ok 37.1s ans=30.0 think=2142ch 
+[323/512] A-C-E-F-G-H-I__research_study__r1 ok 177.5s ans=15.0 think=9425ch 
+[324/512] B-C-D-E-H-I__weekend_gig__r1 ok 172.5s ans=80.0 think=9332ch 
+[325/512] C-E-F-G__theme_park__r1 ok 58.9s ans=30.0 think=3033ch 
+[326/512] B-C-D-E-H-I__volunteer_or_donate__r1 ok 72.6s ans=40.0 think=3471ch 
+[327/512] C-E-H-I__research_study__r0 ok 164.7s ans=15.0 think=8598ch 
+[328/512] B-H-I__priority_pickup__r1 ok 94.4s ans=5.0 think=4986ch 
+[329/512] B-C-D-E-H-I__nonstop_flight__r1 ok 205.1s ans=45.0 think=9993ch 
+[330/512] B-C-D-E-H-I__theme_park__r0 ok 60.9s ans=30.0 think=3144ch 
+[331/512] A-C-E-F-G-H-I__volunteer_or_donate__r0 ok 65.1s ans=40.0 think=3084ch 
+[332/512] A-B-C-D-E-G-H-I__theme_park__r0 ok 78.0s ans=30.0 think=4154ch 
+[333/512] A-B-C-D-E-G-H-I__train_delay__r1 ok 239.1s ans=150.0 think=11117ch 
+[334/512] C-E-H-I__priority_pickup__r1 ok 106.4s ans=3.0 think=5704ch 
+[335/512] C-D-E-H-I__grocery_delivery__r0 ok 142.8s ans=15.0 think=6749ch 
+[336/512] B-C-H-I__volunteer_or_donate__r0 ok 106.3s ans=40.0 think=5451ch 
+[337/512] C-E-F-G__volunteer_or_donate__r1 ok 85.3s ans=30.0 think=4286ch 
+[338/512] B-C-G-H-I__train_delay__r0 ok 63.4s ans=75.0 think=3274ch 
+[339/512] A-B-C-D-E-G-H-I__nonstop_flight__r0 ok 81.0s ans=60.0 think=4182ch 
+[340/512] A-B-C-D-E-F-H-I__train_delay__r1 ok 125.6s ans=75.0 think=6848ch 
+[341/512] I__general__r1 ok 50.3s ans=15.0 think=3059ch 
+[342/512] C__grocery_delivery__r0 ok 70.0s ans=15.0 think=3949ch 
+[343/512] B-C-H-I__nonstop_flight__r0 ok 111.6s ans=45.0 think=5526ch 
+[344/512] A-B-C-D-E-G-H-I__priority_pickup__r0 ok 93.3s ans=5.0 think=5073ch 
+[345/512] C-E-F-G__furniture_assembly__r1 ok 72.3s ans=30.0 think=3985ch 
+[346/512] B-C-D-E-F-H-I__weekend_gig__r1 ok 141.9s ans=80.0 think=7569ch 
+[347/512] C-E-F-G__grocery_delivery__r1 ok 108.0s ans=30.0 think=5362ch 
+[348/512] C-E-F__furniture_assembly__r0 ok 123.6s ans=30.0 think=6703ch 
+[349/512] A-C-E-F-G__general__r0 ok 169.5s ans=29.0 think=9080ch 
+[350/512] A-C-E-F-G-H__theme_park__r1 ok 91.4s ans=30.0 think=4610ch 
+[351/512] C-E-F__grocery_delivery__r0 ok 223.2s ans=25.0 think=10611ch 
+[352/512] A-C-E-F-G__train_delay__r0 ok 149.5s ans=145.0 think=7416ch 
+[353/512] A-B-C-D-E-F-G-H-I__theme_park__r1 ok 82.1s ans=30.0 think=4349ch 
+[354/512] B-C-G-H-I__grocery_delivery__r1 ok 130.0s ans=15.0 think=6489ch 
+[355/512] B-C-D-E-H-I__weekend_gig__r0 ok 127.1s ans=80.0 think=6581ch 
+[356/512] A-B-C-E-G-H-I__weekend_gig__r0 ok 162.3s ans=80.0 think=8701ch 
+[357/512] C-E-F__weekend_gig__r1 ok 185.5s ans=60.0 think=9901ch 
+[358/512] C-D-E-H-I__nonstop_flight__r0 ok 195.5s ans=30.0 think=9556ch 
+[359/512] C-D-E-H-I__general__r0 ok 118.3s ans=20.0 think=5753ch 
+[360/512] B-C-G-H-I__priority_pickup__r0 ok 99.7s ans=5.0 think=5005ch 
+[361/512] A-C-D-E-F-G-H-I__volunteer_or_donate__r1 ok 155.3s ans=38.0 think=7205ch 
+[362/512] A-C-E-F-G-H-I__nonstop_flight__r0 ok 135.2s ans=45.0 think=6802ch 
+[363/512] C-E-H-I__volunteer_or_donate__r0 ok 90.2s ans=30.0 think=4766ch 
+[364/512] A-C-E-F-G-H-I__grocery_delivery__r0 ok 158.8s ans=20.0 think=7888ch 
+[365/512] A-B-C-D-E-F-G-H-I__nonstop_flight__r0 ok 138.7s ans=45.0 think=7094ch 
+[366/512] A-B-C-D-E-F-G-H-I__weekend_gig__r1 ok 84.5s ans=80.0 think=4421ch 
+[367/512] B-C-D-E-F-H-I__research_study__r1 ok 129.2s ans=15.0 think=6905ch 
+[368/512] C-E-F__general__r1 ok 96.2s ans=15.0 think=5119ch 
+[369/512] C-E-F-G__research_study__r1 ok 169.3s ans=15.0 think=9576ch 
+[370/512] A-B-C-D-E-G-H-I__grocery_delivery__r1 ok 130.0s ans=20.0 think=6622ch 
+[371/512] B-C-H-I__furniture_assembly__r0 ok 41.8s ans=40.0 think=2147ch 
+[372/512] A-B-C-D-E-F-G-H-I__nonstop_flight__r1 ok 198.8s ans=45.0 think=9698ch 
+[373/512] B-C-H-I__nonstop_flight__r1 ok 127.2s ans=30.0 think=6531ch 
+[374/512] C-E-F-G__weekend_gig__r0 ok 288.7s ans=180.0 think=14557ch 
+[375/512] A-B-C-D-E-F-H-I__grocery_delivery__r1 ok 147.6s ans=15.0 think=7171ch 
+[376/512] B-C-D-E-H-I__priority_pickup__r0 ok 177.8s ans=5.0 think=8888ch 
+[377/512] A-C-E-F-G__priority_pickup__r0 ok 169.5s ans=35.0 think=8126ch 
+[378/512] B-C-D-E-H-I__train_delay__r1 ok 196.4s ans=150.0 think=9950ch 
+[379/512] A-B-C-D-E-G-H-I__volunteer_or_donate__r1 ok 140.8s ans=40.0 think=7007ch 
+[380/512] B-H-I__weekend_gig__r0 ok 140.9s ans=80.0 think=7233ch 
+[381/512] C__train_delay__r1 ok 40.6s ans=75.0 think=2334ch 
+[382/512] I__volunteer_or_donate__r0 ok 56.5s ans=25.0 think=3058ch 
+[383/512] I__weekend_gig__r1 ok 79.9s ans=15.0 think=4314ch 
+[384/512] A-B-C-D-E-G-H-I__general__r0 ok 125.6s ans=20.0 think=6499ch 
+[385/512] B-H-I__grocery_delivery__r1 ok 64.6s ans=15.0 think=3419ch 
+[386/512] B-H-I__theme_park__r1 ok 92.7s ans=60.0 think=4602ch 
+[387/512] C-E-H-I__weekend_gig__r1 ok 201.6s ans=50.0 think=10677ch 
+[388/512] B-C-D-E-F-H-I__grocery_delivery__r0 ok 133.2s ans=20.0 think=6572ch 
+[389/512] B-C-H-I__weekend_gig__r1 ok 177.3s ans=60.0 think=9310ch 
+[390/512] A-B-C-D-E-F-H-I__volunteer_or_donate__r0 ok 170.5s ans=420.0 think=8719ch 
+[391/512] A-B-C-E-G-H-I__train_delay__r1 ok 80.4s ans=75.0 think=4232ch 
+[392/512] B-C-E-G-H-I__volunteer_or_donate__r1 ok 55.9s ans=30.0 think=2924ch 
+[393/512] B-C-H-I__train_delay__r0 ok 140.2s ans=75.0 think=7213ch 
+[394/512] A-C-E-F-G-H__theme_park__r0 ok 129.8s ans=38.0 think=6515ch 
+[395/512] A-B-C-D-E-F-G-H-I__train_delay__r0 ok 121.0s ans=96.0 think=6848ch 
+[396/512] A-C-D-E-F-G-H-I__train_delay__r1 ok 104.3s ans=180.0 think=5695ch 
+[397/512] B-C-G-H-I__volunteer_or_donate__r0 ok 136.7s ans=30.0 think=7075ch 
+[398/512] E-H-I__nonstop_flight__r1 ok 132.9s ans=15.0 think=7421ch 
+[399/512] A-B-C-D-E-F-G-H-I__weekend_gig__r0 ok 142.4s ans=80.0 think=7797ch 
+[400/512] A-B-C-D-E-F-G-H-I__research_study__r0 ok 132.8s ans=15.0 think=7297ch 
+[401/512] A-C-E-F-G__grocery_delivery__r1 ok 139.0s ans=15.0 think=6944ch 
+[402/512] C__weekend_gig__r1 ok 65.7s ans=20.0 think=3679ch 
+[403/512] B-C-G-H-I__general__r1 ok 88.4s ans=25.0 think=4661ch 
+[404/512] B-C-D-E-H-I__research_study__r1 ok 137.1s ans=15.0 think=7261ch 
+[405/512] C__general__r0 ok 39.4s ans=15.0 think=2288ch 
+[406/512] B-C-E-G-H-I__general__r1 ok 117.1s ans=20.0 think=5706ch 
+[407/512] C-D-E-H-I__furniture_assembly__r1 ok 123.4s ans=30.0 think=6326ch 
+[408/512] B-C-D-E-F-H-I__nonstop_flight__r1 ok 245.1s ans=45.0 think=11715ch 
+[409/512] C-E-F__furniture_assembly__r1 ok 101.9s ans=30.0 think=5135ch 
+[410/512] I__grocery_delivery__r0 ok 66.3s ans=10.0 think=3618ch 
+[411/512] C-E-H-I__train_delay__r1 ok 105.8s ans=75.0 think=6128ch 
+[412/512] C-E-F-G__weekend_gig__r1 ok 114.4s ans=116.0 think=6463ch 
+[413/512] B-C-G-H-I__priority_pickup__r1 ok 122.3s ans=5.0 think=6753ch 
+[414/512] B-H-I__weekend_gig__r1 ok 200.6s ans=40.0 think=10216ch 
+[415/512] B-C-E-G-H-I__research_study__r0 ok 149.5s ans=15.0 think=8142ch 
+[416/512] C-D-E-H-I__volunteer_or_donate__r0 ok 67.5s ans=40.0 think=3522ch 
+[417/512] B-C-E-G-H-I__theme_park__r0 ok 61.4s ans=30.0 think=3210ch 
+[418/512] A-B-C-D-E-F-H-I__theme_park__r1 ok 25.8s ans=30.0 think=1372ch 
+[419/512] A-B-C-D-E-F-H-I__research_study__r0 ok 244.9s ans=20.0 think=12812ch 
+[420/512] C__furniture_assembly__r1 ok 78.6s ans=20.0 think=3956ch 
+[421/512] I__train_delay__r1 ok 73.1s ans=50.0 think=4152ch 
+[422/512] B-C-E-G-H-I__priority_pickup__r1 ok 69.5s ans=4.0 think=3721ch 
+[423/512] A-C-E-F-G__research_study__r0 ok 143.9s ans=15.0 think=7319ch 
+[424/512] B-H-I__nonstop_flight__r0 ok 228.7s ans=60.0 think=10726ch 
+[425/512] A-C-E-F-G-H__furniture_assembly__r1 ok 103.2s ans=40.0 think=4841ch 
+[426/512] A-B-C-D-E-F-G-H-I__furniture_assembly__r1 ok 105.4s ans=40.0 think=5310ch 
+[427/512] B-C-H-I__theme_park__r1 ok 61.6s ans=30.0 think=3043ch 
+[428/512] A-B-C-D-E-G-H-I__nonstop_flight__r1 ok 128.2s ans=45.0 think=6411ch 
+[429/512] B-C-E-G-H-I__weekend_gig__r0 ok 293.0s ans=80.0 think=14334ch 
+[430/512] I__theme_park__r1 ok 66.9s ans=15.0 think=3395ch 
+[431/512] C-E-F__train_delay__r0 ok 170.0s ans=75.0 think=8051ch 
+[432/512] C-E-H-I__theme_park__r0 ok 55.9s ans=30.0 think=3216ch 
+[433/512] B-C-G-H-I__research_study__r0 ok 85.1s ans=15.0 think=4630ch 
+[434/512] B-C-D-E-H-I__train_delay__r0 ok 141.7s ans=75.0 think=7510ch 
+[435/512] C-D-E-H-I__priority_pickup__r1 ok 120.1s ans=6.0 think=6094ch 
+[436/512] A-C-E-F-G-H-I__train_delay__r0 ok 205.4s ans=75.0 think=10205ch 
+[437/512] C-D-E-H-I__volunteer_or_donate__r1 ok 187.2s ans=30.0 think=9461ch 
+[438/512] A-B-C-D-E-F-H-I__research_study__r1 ok 200.2s ans=15.0 think=10225ch 
+[439/512] A-B-C-D-E-F-G-H-I__train_delay__r1 ok 269.4s ans=75.0 think=12939ch 
+[440/512] A-C-E-F-G-H__train_delay__r0 ok 149.9s ans=100.0 think=6446ch 
+[441/512] B-C-E-G-H-I__theme_park__r1 ok 45.7s ans=30.0 think=2453ch 
+[442/512] C-E-F__research_study__r0 ok 107.9s ans=15.0 think=5465ch 
+[443/512] A-C-E-F-G-H-I__theme_park__r1 ok 53.8s ans=30.0 think=2747ch 
+[444/512] A-B-C-D-E-F-H-I__nonstop_flight__r0 ok 222.9s ans=35.0 think=10387ch 
+[445/512] A-B-C-E-G-H-I__research_study__r0 ok 146.6s ans=10.0 think=7750ch 
+[446/512] A-C-D-E-F-G-H-I__train_delay__r0 ok 141.7s ans=75.0 think=7200ch 
+[447/512] B-C-E-G-H-I__priority_pickup__r0 ok 135.6s ans=5.0 think=6858ch 
+[448/512] C-E-H-I__nonstop_flight__r1 ok 103.7s ans=45.0 think=5264ch 
+[449/512] C-E-F__volunteer_or_donate__r0 ok 83.2s ans=30.0 think=4365ch 
+[450/512] A-C-E-F-G-H-I__priority_pickup__r0 ok 125.6s ans=35.0 think=6284ch 
+[451/512] A-B-C-D-E-F-G-H-I__volunteer_or_donate__r1 ok 69.4s ans=40.0 think=3726ch 
+[452/512] E-H-I__priority_pickup__r1 ok 91.9s ans=3.0 think=5339ch 
+[453/512] A-C-E-F-G-H-I__furniture_assembly__r0 ok 127.1s ans=40.0 think=6327ch 
+[454/512] B-C-G-H-I__nonstop_flight__r0 ok 116.8s ans=60.0 think=5848ch 
+[455/512] C__volunteer_or_donate__r0 ok 37.5s ans=30.0 think=2228ch 
+[456/512] B-C-E-G-H-I__grocery_delivery__r0 ok 88.6s ans=15.0 think=4658ch 
+[457/512] B-C-E-G-H-I__volunteer_or_donate__r0 ok 49.1s ans=40.0 think=2749ch 
+[458/512] C-E-H-I__general__r0 ok 157.4s ans=15.0 think=8024ch 
+[459/512] A-B-C-D-E-F-H-I__priority_pickup__r0 ok 131.2s ans=5.0 think=6617ch 
+[460/512] A-B-C-D-E-G-H-I__theme_park__r1 ok 77.6s ans=30.0 think=4329ch 
+[461/512] I__volunteer_or_donate__r1 ok 83.6s ans=20.0 think=4914ch 
+[462/512] C__theme_park__r1 ok 23.5s ans=30.0 think=1415ch 
+[463/512] B-C-D-E-H-I__priority_pickup__r1 ok 118.3s ans=5.0 think=6367ch 
+[464/512] A-B-C-E-G-H-I__train_delay__r0 ok 79.6s ans=100.0 think=4247ch 
+[465/512] B-H-I__furniture_assembly__r1 ok 81.0s ans=40.0 think=4189ch 
+[466/512] A-C-D-E-F-G-H-I__weekend_gig__r0 ok 161.0s ans=80.0 think=8437ch 
+[467/512] B-C-G-H-I__train_delay__r1 ok 107.9s ans=100.0 think=5604ch 
+[468/512] I__nonstop_flight__r1 ok 57.1s ans=100.0 think=3111ch 
+[469/512] E-H-I__train_delay__r1 ok 66.5s ans=50.0 think=3834ch 
+[470/512] C__nonstop_flight__r1 ok 113.5s ans=45.0 think=5734ch 
+[471/512] A-C-E-F-G__furniture_assembly__r0 ok 245.3s ans=39.0 think=12002ch 
+[472/512] C-D-E-H-I__train_delay__r0 ok 143.6s ans=75.0 think=7161ch 
+[473/512] B-C-D-E-F-H-I__nonstop_flight__r0 ok 143.4s ans=30.0 think=6911ch 
+[474/512] B-C-H-I__research_study__r1 ok 146.6s ans=15.0 think=7778ch 
+[475/512] A-C-E-F-G__grocery_delivery__r0 ok 136.1s ans=15.0 think=6475ch 
+[476/512] I__nonstop_flight__r0 ok 60.0s ans=50.0 think=2998ch 
+[477/512] C-E-F__theme_park__r0 ok 50.5s ans=30.0 think=2583ch 
+[478/512] C-E-F-G__general__r1 ok 246.2s ans=45.0 think=12400ch 
+[479/512] A-C-E-F-G__theme_park__r1 ok 160.9s ans=30.0 think=7917ch 
+[480/512] E-H-I__volunteer_or_donate__r1 ok 66.8s ans=40.0 think=3852ch 
+[481/512] C-E-F-G__general__r0 ok 89.0s ans=25.0 think=4829ch 
+[482/512] A-B-C-E-G-H-I__general__r1 ok 129.0s ans=20.0 think=7187ch 
+[483/512] C-E-F__grocery_delivery__r1 ok 105.6s ans=30.0 think=5406ch 
+[484/512] A-C-E-F-G__volunteer_or_donate__r1 ok 153.8s ans=38.0 think=7748ch 
+[485/512] I__priority_pickup__r0 ok 48.9s ans=3.0 think=2722ch 
+[486/512] A-B-C-D-E-G-H-I__general__r1 ok 69.0s ans=20.0 think=3278ch 
+[487/512] C-D-E-H-I__nonstop_flight__r1 ok 180.4s ans=30.0 think=9143ch 
+[488/512] A-C-E-F-G-H__volunteer_or_donate__r1 ok 143.2s ans=38.0 think=7153ch 
+[489/512] B-C-G-H-I__weekend_gig__r0 ok 163.2s ans=80.0 think=8740ch 
+[490/512] C__research_study__r1 ok 62.9s ans=20.0 think=3562ch 
+[491/512] C-E-F-G__theme_park__r0 ok 37.2s ans=30.0 think=2212ch 
+[492/512] C-E-H-I__volunteer_or_donate__r1 ok 76.3s ans=30.0 think=4066ch 
+[493/512] C-E-F__theme_park__r1 ok 22.2s ans=30.0 think=1283ch 
+[494/512] E-H-I__priority_pickup__r0 ok 111.1s ans=3.0 think=6389ch 
+[495/512] A-B-C-D-E-F-H-I__train_delay__r0 ok 123.2s ans=75.0 think=6094ch 
+[496/512] C__theme_park__r0 ok 30.2s ans=30.0 think=1586ch 
+[497/512] C-E-F-G__furniture_assembly__r0 ok 154.4s ans=30.0 think=7597ch 
+[498/512] A-B-C-D-E-G-H-I__furniture_assembly__r1 ok 78.9s ans=40.0 think=4147ch 
+[499/512] A-B-C-D-E-G-H-I__priority_pickup__r1 ok 192.5s ans=5.0 think=9700ch 
+[500/512] C-E-F__research_study__r1 ok 99.5s ans=15.0 think=5381ch 
+[501/512] B-C-D-E-H-I__grocery_delivery__r1 ok 107.5s ans=20.0 think=5600ch 
+[502/512] A-C-E-F-G__weekend_gig__r1 ok 206.5s ans=60.0 think=10747ch 
+[503/512] C-E-H-I__nonstop_flight__r0 ok 158.7s ans=30.0 think=7885ch 
+[504/512] A-C-E-F-G__weekend_gig__r0 ok 197.2s ans=77.0 think=10476ch 
+[505/512] B-H-I__research_study__r1 ok 127.2s ans=15.0 think=6670ch 
+[506/512] A-C-E-F-G-H__research_study__r1 ok 161.5s ans=15.0 think=8110ch 
+[507/512] C__research_study__r0 ok 78.3s ans=15.0 think=4151ch 
+[508/512] B-C-H-I__priority_pickup__r1 ok 144.0s ans=3.0 think=8337ch 
+[509/512] A-C-E-F-G-H-I__nonstop_flight__r1 ok 158.0s ans=45.0 think=9445ch 
+[510/512] B-H-I__research_study__r0 ok 80.6s ans=15.0 think=6204ch 
+[511/512] A-B-C-D-E-F-G-H-I__general__r0 ok 119.6s ans=25.0 think=8497ch 
+[512/512] C-D-E-H-I__weekend_gig__r1 ok 180.1s ans=60.0 think=14477ch 
+wrote answers.csv, summary.md, traces.md in runs/s2_combos (1140 calls)
+2026-10-22 02:02:50 queue finished

@@ -1,0 +1,286 @@
+{
+  "run_id": "timing_probe",
+  "created": "2026-10-21T16:24:59",
+  "git_commit": "741816ef423499dc1d37c09ab059d961a56e48d4",
+  "argv": [
+    "value_of_time/run.py",
+    "--stages",
+    "baseline",
+    "single",
+    "--reps",
+    "1",
+    "--engine",
+    "mlx",
+    "--run-id",
+    "timing_probe",
+    "--limit",
+    "6"
+  ],
+  "args": {
+    "stages": [
+      "baseline",
+      "single"
+    ],
+    "reps": 1,
+    "ladders": 3,
+    "seed": 0,
+    "engine": "mlx",
+    "model": null,
+    "max_tokens": 8192,
+    "questions": null,
+    "limit": 6,
+    "run_id": "timing_probe"
+  },
+  "engine": {
+    "engine": "mlx",
+    "model_id": "mlx-community/Qwen3-8B-4bit",
+    "mlx_lm_version": "0.32.0",
+    "max_tokens": 8192,
+    "temp": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": true
+  },
+  "n_cells": 100,
+  "persona": "You are Sam, a 31-year-old who shares an apartment with your partner, Jordan, and a rescue dog named Pepper. On weekday evenings you like cooking, watching basketball, and calling your sister. On weekends you play in a recreational soccer league, see friends, and now and then take a trip. People describe you as friendly.",
+  "facts": [
+    {
+      "id": "A",
+      "text": "You work full-time as an office coordinator and earn $40,000 a year before taxes.",
+      "domain": "work",
+      "bound": "point",
+      "implied_hourly": 19.23,
+      "derivation": "$40,000 / 2,080 hours",
+      "mixed_motive": false,
+      "keywords": [
+        "40,?000",
+        "\\bsalary\\b",
+        "\\bwage\\b",
+        "office coordinator",
+        "19\\.2"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Last night you chose Lyft's \"Wait & Save\" option: you waited an extra 8 minutes for your ride to save $4.",
+      "domain": "travel",
+      "bound": "upper",
+      "implied_hourly": 30.0,
+      "derivation": "$4 / (8/60 h): waiting was worth it, so an hour is worth at most $30",
+      "mixed_motive": false,
+      "keywords": [
+        "lyft",
+        "wait\\s*(&|and)\\s*save",
+        "8 (extra )?minutes"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "On a trip to Disneyland last month, you paid $30 for a skip-the-line pass that saved you about 2 hours of waiting over the day.",
+      "domain": "leisure",
+      "bound": "lower",
+      "implied_hourly": 15.0,
+      "derivation": "$30 / 2 h: paying was worth it, so an hour is worth at least $15",
+      "mixed_motive": true,
+      "keywords": [
+        "disney",
+        "skip[- ]the[- ]line pass",
+        "lightning lane"
+      ]
+    },
+    {
+      "id": "D",
+      "text": "On your commute to work you take a toll road that costs $9 and saves you about 15 minutes compared with the free route.",
+      "domain": "travel",
+      "bound": "lower",
+      "implied_hourly": 36.0,
+      "derivation": "$9 / (15/60 h): at least $36/h",
+      "mixed_motive": false,
+      "keywords": [
+        "\\btoll",
+        "\\$9\\b",
+        "commute"
+      ]
+    },
+    {
+      "id": "E",
+      "text": "Last weekend downtown you circled the block for 20 minutes looking for free street parking instead of paying $15 for a garage.",
+      "domain": "errands",
+      "bound": "upper",
+      "implied_hourly": 45.0,
+      "derivation": "$15 / (20/60 h): at most $45/h",
+      "mixed_motive": false,
+      "keywords": [
+        "circl",
+        "street parking",
+        "garage"
+      ]
+    },
+    {
+      "id": "F",
+      "text": "On a date last night you paid $35 to valet the car, which saved you about 10 minutes of looking for parking.",
+      "domain": "leisure",
+      "bound": "lower",
+      "implied_hourly": 210.0,
+      "derivation": "$35 / (10/60 h): at least $210/h",
+      "mixed_motive": true,
+      "keywords": [
+        "valet",
+        "\\$35\\b",
+        "\\bdate\\b"
+      ]
+    },
+    {
+      "id": "G",
+      "text": "Last month your manager offered you an extra Saturday shift at time-and-a-half, about $29 an hour, and you turned it down.",
+      "domain": "work",
+      "bound": "lower",
+      "implied_hourly": 28.85,
+      "derivation": "declined $28.85/h (pre-tax) for a free Saturday: leisure hour worth at least ~$29",
+      "mixed_motive": false,
+      "keywords": [
+        "saturday shift",
+        "time[- ]and[- ]a[- ]half",
+        "\\$29\\b",
+        "turned (it )?down"
+      ]
+    },
+    {
+      "id": "H",
+      "text": "You pay a cleaner $60 to clean your apartment, a job that would take you about 3 hours yourself.",
+      "domain": "chores",
+      "bound": "lower",
+      "implied_hourly": 20.0,
+      "derivation": "$60 / 3 h: at least $20/h",
+      "mixed_motive": false,
+      "keywords": [
+        "cleaner",
+        "\\$60\\b",
+        "clean(ing)? (the|your) apartment"
+      ]
+    },
+    {
+      "id": "I",
+      "text": "Yesterday you drove 10 extra minutes to a cheaper gas station to save $3 on a fill-up.",
+      "domain": "errands",
+      "bound": "upper",
+      "implied_hourly": 18.0,
+      "derivation": "$3 / (10/60 h): at most $18/h",
+      "mixed_motive": false,
+      "keywords": [
+        "gas station",
+        "fill-?up",
+        "\\$3\\b"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "general",
+      "domain": "general",
+      "direction": "neutral",
+      "text": "In general, how much is one hour of your time worth to you, in dollars?",
+      "hours": 1.0,
+      "hypothesized_facts": [
+        "A"
+      ]
+    },
+    {
+      "id": "weekend_gig",
+      "domain": "work",
+      "direction": "WTA",
+      "text": "A local business offers you a one-time, 4-hour job this Saturday. What is the lowest total payment you would accept to do it?",
+      "hours": 4.0,
+      "hypothesized_facts": [
+        "A",
+        "G"
+      ]
+    },
+    {
+      "id": "research_study",
+      "domain": "work",
+      "direction": "WTA",
+      "text": "A university researcher invites you to a 1-hour study on a weekday evening. What is the lowest payment you would accept to take part?",
+      "hours": 1.0,
+      "hypothesized_facts": [
+        "A",
+        "G"
+      ]
+    },
+    {
+      "id": "nonstop_flight",
+      "domain": "travel",
+      "direction": "WTP",
+      "text": "You are booking a flight home to see your family for the holidays. A nonstop flight saves 3 hours compared with a one-stop flight. What is the most extra you would pay for the nonstop?",
+      "hours": 3.0,
+      "hypothesized_facts": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "id": "priority_pickup",
+      "domain": "travel",
+      "direction": "WTP",
+      "text": "You are ordering a rideshare. A \"Priority Pickup\" option gets a driver to you 10 minutes sooner. What is the most extra you would pay for it?",
+      "hours": 0.16666666666666666,
+      "hypothesized_facts": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "id": "grocery_delivery",
+      "domain": "errands",
+      "direction": "WTP",
+      "text": "Grocery delivery would save you a 1-hour trip to the store. What is the most you would pay in delivery fees and tip combined?",
+      "hours": 1.0,
+      "hypothesized_facts": [
+        "E",
+        "I",
+        "H"
+      ]
+    },
+    {
+      "id": "furniture_assembly",
+      "domain": "chores",
+      "direction": "WTP",
+      "text": "You bought a bookshelf that takes about 2 hours to assemble. What is the most you would pay someone to assemble it for you?",
+      "hours": 2.0,
+      "hypothesized_facts": [
+        "H"
+      ]
+    },
+    {
+      "id": "theme_park",
+      "domain": "leisure",
+      "direction": "WTP",
+      "text": "At an amusement park, a skip-the-line pass would save you about 2 hours of waiting over the day. What is the most you would pay for it?",
+      "hours": 2.0,
+      "hypothesized_facts": [
+        "C"
+      ]
+    },
+    {
+      "id": "train_delay",
+      "domain": "travel",
+      "direction": "WTA",
+      "text": "Your train is delayed 5 hours because of the operator's error. What compensation would fully make up for the lost time?",
+      "hours": 5.0,
+      "hypothesized_facts": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "id": "volunteer_or_donate",
+      "domain": "social",
+      "direction": "neutral",
+      "text": "A local charity asks you to volunteer for 2 hours this weekend; you could donate money instead. What donation would feel equivalent to giving the 2 hours?",
+      "hours": 2.0,
+      "hypothesized_facts": [
+        "A"
+      ]
+    }
+  ]
+}

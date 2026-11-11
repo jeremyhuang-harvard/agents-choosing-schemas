@@ -1,0 +1,11 @@
+memories_shown,calls,answer_copies_a_shown_rate,answer_equals_mean_of_shown_rates,of_which_also_copy_a_shown_rate,median_trace_words,median_general_question
+0,50,,,,511.5,20.0
+1,490,173,,,667.5,20.0
+2,720,347,27,22,881.0,20.0
+3,60,38,0,0,1021.5,20.0
+4,60,50,0,0,1082.0,22.5
+5,60,50,0,0,1286.5,22.5
+6,60,56,0,0,1166.5,20.0
+7,60,54,0,0,1294.5,20.0
+8,60,51,0,0,1337.0,20.0
+9,20,19,0,0,1275.0,22.5

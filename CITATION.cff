@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Agents choosing schemas: which remembered experience an LLM agent uses to value its time"
+message: "If you use this code or data, please cite it as below."
+type: software
+authors:
+  - family-names: Huang
+    given-names: Jeremy
+repository-code: "https://github.com/jeremyhuang-harvard/agents-choosing-schemas"

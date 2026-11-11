@@ -1,0 +1,10 @@
+memory,label,rate,bound,selected,shown
+C,Disney line pass,15.0,floor,144,340
+H,pays a cleaner,20.0,floor,104,320
+B,Lyft wait & save,30.0,ceiling,32,200
+F,valet on a date,210.0,floor,13,180
+A,wage $40k/yr,19.23,exact,9,160
+G,declined $29/h shift,28.85,floor,5,200
+D,commute toll,36.0,floor,3,140
+I,drove to cheaper gas,18.0,ceiling,6,300
+E,circled for free parking,45.0,ceiling,2,320

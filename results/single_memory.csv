@@ -1,0 +1,11 @@
+memory,label,bound,rate,calls,answers_copy_rate,trace_calls_sam_cost_conscious
+none,(no memory),,,50,,14
+A,wage $40k/yr,exact,19.23,50,8,19
+B,Lyft wait & save,ceiling,30.0,50,6,48
+C,Disney line pass,floor,15.0,50,37,5
+D,commute toll,floor,36.0,50,27,10
+E,circled for free parking,ceiling,45.0,50,2,46
+F,valet on a date,floor,210.0,50,18,8
+G,declined $29/h shift,floor,28.85,50,9,9
+H,pays a cleaner,floor,20.0,50,39,6
+I,drove to cheaper gas,ceiling,18.0,50,9,49

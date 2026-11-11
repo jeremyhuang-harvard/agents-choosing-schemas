@@ -1,0 +1,32 @@
+📊 Value-of-time study: TL;DR (Qwen3-8B thinking, 1,640 one-question calls)
+
+HIGHLIGHTS
+1. Paid-to-save-time memories become an exchange rate. The model divides ($60 ÷ 3 h = $20/h) and multiplies that into unrelated questions (cleaner: 39/50 answers exactly $20/h).
+2. Spent-time-to-save-money memories become a personality trait. 93% of those traces call Sam "cost-conscious", and answers drop below the memory's own number.
+3. With several memories it picks one; it doesn't blend. 0/380 answers equal the average of the shown rates. As memories are added, copying one rate rises from 35% to 95%.
+4. Two memories win almost every question: the cleaner ($60 ÷ 3 h) and the Disney pass ($30 ÷ 2 h). Both have easy division and sit near the no-memory default (~$20). This design can't yet tell which reason matters.
+
+PREDICTIONS (fig 2)
+• Each question pulls in its topical memory: PARTLY. The predicted memory is top for 3/10 questions; predicted memories are used 2× as often (31% vs 16%).
+• Wage anchors the general question: NO (6% vs cleaner 71%).
+• One-sided bounds respected: NO. Floors are treated as exact prices, ceilings as a trait.
+• Mixed motives (date, vacation) discounted: NO. Valet on a date gives $210/h → train delay $1,050 (5/5).
+• Refusing a $29/h shift raises the price of weekend work: NO. It is read as "accept less".
+• More memories get averaged: NO.
+• Being paid to give up time > paying to save it: NO gap (~$14–15/h both ways).
+
+SCHEMA SWITCHING (figs 1, 3)
+• Changing the question changes the memory used in 24/36 pairs, but weakly: within a pair, the dominant memory still takes a median 85% of calls.
+• Real switches are topical: rideshare → Lyft (81%), theme park → Disney (98%), bookshelf → cleaner (73%), donation → wage (47%, the only question where the wage matters).
+• General, flight, train, grocery, and work questions all fall back on cleaner or Disney.
+
+TRACES (figs 4, 5)
+• Computing ≠ choosing. It computes the wage in 67% of traces where it's shown, but uses it in 9%.
+• Conflicts are noticed (42% of traces with 3+ memories) but never resolved by "time is worth different amounts in different settings" (≤12%).
+• Traces get 2.5× longer with more memories (≈510 → 1,300 words), but the extra thinking ends in selecting one memory, not integrating them.
+• 1–5% of traces cite an "example answer" that doesn't exist.
+
+CAVEATS
+One model, one persona, n = 2–5 per cell. Floor/ceiling is confounded with topic. Trace coding is keyword-based. No human comparison yet.
+
+Full report + slides: agentic-norms-learning/docs (report.html, slides/, tldr/)

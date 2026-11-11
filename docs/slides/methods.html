@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Methods</title><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#111827;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.slide{width:1600px;height:900px;padding:44px 56px;overflow:hidden}
+h1{font-size:38px;margin:0 0 6px}.sub{font-size:20px;color:#6b7280;margin:0 0 22px}
+.m-grid{display:grid;grid-template-columns:760px 1fr;gap:26px}
+.card{border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.col{display:flex;flex-direction:column;gap:14px}
+.tag{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#6b7280;font-weight:700;margin-bottom:10px}
+.tag2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#6b7280;margin-bottom:4px}
+.acc{color:#2563eb}.acc2{color:#b45309}
+.prompt{font-size:17px;line-height:1.45}.mono{color:#4b5563;margin:8px 0}
+.fixed{background:#f3f4f6;border-radius:8px;padding:10px 12px}
+.slot{border:2.5px dashed #2563eb;border-radius:8px;padding:10px 12px;margin:10px 0;background:#eff6ff}
+.slot.q1{border-color:#d97706;background:#fffbeb}
+table.st{border-collapse:collapse;width:100%;font-size:16px}table.st th{text-align:left;color:#6b7280;font-weight:600;border-bottom:1px solid #e5e7eb;padding:4px 6px}
+table.st td{padding:5px 6px;border-bottom:1px solid #f3f4f6}table.st td:nth-child(3),table.st td:nth-child(4),table.st th:nth-child(3),table.st th:nth-child(4){text-align:right}
+.note{font-size:14px;color:#6b7280;margin-top:8px}
+.qs{display:grid;grid-template-columns:1.25fr 1fr;gap:6px 16px}.qg{display:flex;flex-direction:column;gap:5px}
+.qg:nth-child(3){grid-column:2}.qg:nth-child(2){grid-column:2;grid-row:1}.qg:nth-child(1){grid-row:1/3}
+.qh{font-size:13px;font-weight:700;color:#b45309;text-transform:uppercase;letter-spacing:.05em}
+.q{font-size:14.5px;line-height:1.3}.q span{color:#4b5563}.hr{font-size:12px;background:#fef3c7;color:#92400e!important;border-radius:4px;padding:0 5px}
+.model{font-size:15.5px;background:#f9fafb}
+</style></head><body><div class="slide"><h1>Design: one persona, varied memories, one question per call</h1><p class="sub">Which remembered choices does the model use to answer “what is your time worth?”</p>
+<div class="m-grid">
+  <div class="card prompt">
+    <div class="tag">The prompt (one call per question)</div>
+    <p class="mono">Please read this description of yourself and answer as this person.</p>
+    <div class="fixed"><div class="tag2">Persona · fixed</div>You are Sam, a 31-year-old who shares an apartment with your partner, Jordan, and a rescue dog named Pepper. On weekday evenings you like cooking, watching basketball, and calling your sister. On weekends you play in a recreational soccer league, see friends, and now and then take a trip. People describe you as friendly.</div>
+    <div class="slot"><div class="tag2 acc">Memories · varied (0 to 9)</div>Some things you remember from your recent life:<br>
+      – Last night you chose Lyft's "Wait &amp; Save" option: you waited an extra 8 minutes to save $4.<br>
+      – On your commute to work you take a toll road that costs $9 and saves you about 15 minutes…</div>
+    <p class="mono">Now please answer this survey question as yourself. There are no right or wrong answers.</p>
+    <div class="slot q1"><div class="tag2 acc2">Question · 1 of 10</div>In general, how much is one hour of your time worth to you, in dollars?</div>
+    <p class="mono">Reply with only a single dollar amount, written as a plain number with no dollar sign, words, or range.</p>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="tag">What was varied</div>
+      <table class="st">
+        <tr><th>Stage</th><th>Memory sets</th><th>Samples</th><th>Calls</th></tr>
+        <tr><td>1</td><td>None, and each of the 9 alone</td><td>5</td><td>500</td></tr>
+        <tr><td>2</td><td>All 36 pairs</td><td>2</td><td>720</td></tr>
+        <tr><td>2</td><td>Add memories one at a time (3 random orders) → all 9</td><td>2</td><td>420</td></tr>
+      </table>
+      <div class="note">Memory order shuffled across samples. Prompt never says the memories are relevant.</div>
+    </div>
+    <div class="card">
+      <div class="tag">The 10 survey questions</div>
+      <div class="qs"><div class="qg"><div class="qh">Pay to save time</div><div class="q"><b>Nonstop flight</b> <span class="hr">3 h</span><br><span>Most extra you&#x27;d pay for a nonstop that saves 3 h</span></div><div class="q"><b>Priority pickup</b> <span class="hr">10 min</span><br><span>Most extra for a rideshare that arrives 10 min sooner</span></div><div class="q"><b>Grocery delivery</b> <span class="hr">1 h</span><br><span>Most in fees + tip to skip a 1-h store trip</span></div><div class="q"><b>Bookshelf</b> <span class="hr">2 h</span><br><span>Most you&#x27;d pay someone for a 2-h assembly</span></div><div class="q"><b>Theme park</b> <span class="hr">2 h</span><br><span>Most for a pass that skips 2 h of lines</span></div></div><div class="qg"><div class="qh">Be paid to give up time</div><div class="q"><b>Weekend gig</b> <span class="hr">4 h</span><br><span>Lowest pay you&#x27;d accept for a 4-h Saturday job</span></div><div class="q"><b>Research study</b> <span class="hr">1 h</span><br><span>Lowest pay for a 1-h weekday-evening study</span></div><div class="q"><b>Train delay</b> <span class="hr">5 h</span><br><span>Compensation that makes up for a 5-h delay</span></div></div><div class="qg"><div class="qh">Neutral</div><div class="q"><b>General</b> <span class="hr">1 h</span><br><span>How much is one hour of your time worth?</span></div><div class="q"><b>Donate vs. volunteer</b> <span class="hr">2 h</span><br><span>Donation equal to volunteering 2 h</span></div></div></div>
+      <div class="note"><b>Outcome:</b> implied $/hour = dollar answer ÷ time at stake · plus the full thinking trace</div>
+    </div>
+    <div class="card model"><b>Model:</b> Qwen3-8B (4-bit, MLX), thinking mode on, temperature 0.6 · each question in a fresh call · 1,640 calls</div>
+  </div>
+</div></div></body></html>

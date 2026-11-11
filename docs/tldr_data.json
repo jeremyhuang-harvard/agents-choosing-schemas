@@ -1,0 +1,963 @@
+{
+ "sel": {
+  "general|A": [
+   2,
+   32
+  ],
+  "general|B": [
+   11,
+   36
+  ],
+  "general|C": [
+   17,
+   50
+  ],
+  "general|D": [
+   12,
+   30
+  ],
+  "general|E": [
+   1,
+   48
+  ],
+  "general|F": [
+   3,
+   34
+  ],
+  "general|G": [
+   5,
+   36
+  ],
+  "general|H": [
+   34,
+   48
+  ],
+  "general|I": [
+   1,
+   46
+  ],
+  "weekend_gig|A": [
+   2,
+   32
+  ],
+  "weekend_gig|B": [
+   0,
+   36
+  ],
+  "weekend_gig|C": [
+   10,
+   50
+  ],
+  "weekend_gig|D": [
+   0,
+   30
+  ],
+  "weekend_gig|E": [
+   1,
+   48
+  ],
+  "weekend_gig|F": [
+   0,
+   34
+  ],
+  "weekend_gig|G": [
+   3,
+   36
+  ],
+  "weekend_gig|H": [
+   24,
+   48
+  ],
+  "weekend_gig|I": [
+   0,
+   46
+  ],
+  "research_study|A": [
+   0,
+   32
+  ],
+  "research_study|B": [
+   1,
+   36
+  ],
+  "research_study|C": [
+   30,
+   50
+  ],
+  "research_study|D": [
+   0,
+   30
+  ],
+  "research_study|E": [
+   0,
+   48
+  ],
+  "research_study|F": [
+   0,
+   34
+  ],
+  "research_study|G": [
+   1,
+   36
+  ],
+  "research_study|H": [
+   13,
+   48
+  ],
+  "research_study|I": [
+   0,
+   46
+  ],
+  "nonstop_flight|A": [
+   0,
+   32
+  ],
+  "nonstop_flight|B": [
+   1,
+   36
+  ],
+  "nonstop_flight|C": [
+   28,
+   50
+  ],
+  "nonstop_flight|D": [
+   9,
+   30
+  ],
+  "nonstop_flight|E": [
+   0,
+   48
+  ],
+  "nonstop_flight|F": [
+   3,
+   34
+  ],
+  "nonstop_flight|G": [
+   0,
+   36
+  ],
+  "nonstop_flight|H": [
+   20,
+   48
+  ],
+  "nonstop_flight|I": [
+   0,
+   46
+  ],
+  "priority_pickup|A": [
+   0,
+   32
+  ],
+  "priority_pickup|B": [
+   29,
+   36
+  ],
+  "priority_pickup|C": [
+   0,
+   50
+  ],
+  "priority_pickup|D": [
+   12,
+   30
+  ],
+  "priority_pickup|E": [
+   0,
+   48
+  ],
+  "priority_pickup|F": [
+   20,
+   34
+  ],
+  "priority_pickup|G": [
+   0,
+   36
+  ],
+  "priority_pickup|H": [
+   0,
+   48
+  ],
+  "priority_pickup|I": [
+   11,
+   46
+  ],
+  "grocery_delivery|A": [
+   0,
+   32
+  ],
+  "grocery_delivery|B": [
+   6,
+   36
+  ],
+  "grocery_delivery|C": [
+   23,
+   50
+  ],
+  "grocery_delivery|D": [
+   3,
+   30
+  ],
+  "grocery_delivery|E": [
+   0,
+   48
+  ],
+  "grocery_delivery|F": [
+   1,
+   34
+  ],
+  "grocery_delivery|G": [
+   0,
+   36
+  ],
+  "grocery_delivery|H": [
+   18,
+   48
+  ],
+  "grocery_delivery|I": [
+   0,
+   46
+  ],
+  "furniture_assembly|A": [
+   1,
+   32
+  ],
+  "furniture_assembly|B": [
+   1,
+   36
+  ],
+  "furniture_assembly|C": [
+   23,
+   50
+  ],
+  "furniture_assembly|D": [
+   0,
+   30
+  ],
+  "furniture_assembly|E": [
+   0,
+   48
+  ],
+  "furniture_assembly|F": [
+   0,
+   34
+  ],
+  "furniture_assembly|G": [
+   1,
+   36
+  ],
+  "furniture_assembly|H": [
+   35,
+   48
+  ],
+  "furniture_assembly|I": [
+   0,
+   46
+  ],
+  "theme_park|A": [
+   1,
+   32
+  ],
+  "theme_park|B": [
+   7,
+   36
+  ],
+  "theme_park|C": [
+   49,
+   50
+  ],
+  "theme_park|D": [
+   7,
+   30
+  ],
+  "theme_park|E": [
+   0,
+   48
+  ],
+  "theme_park|F": [
+   0,
+   34
+  ],
+  "theme_park|G": [
+   1,
+   36
+  ],
+  "theme_park|H": [
+   7,
+   48
+  ],
+  "theme_park|I": [
+   0,
+   46
+  ],
+  "train_delay|A": [
+   6,
+   32
+  ],
+  "train_delay|B": [
+   9,
+   36
+  ],
+  "train_delay|C": [
+   33,
+   50
+  ],
+  "train_delay|D": [
+   14,
+   30
+  ],
+  "train_delay|E": [
+   1,
+   48
+  ],
+  "train_delay|F": [
+   7,
+   34
+  ],
+  "train_delay|G": [
+   4,
+   36
+  ],
+  "train_delay|H": [
+   16,
+   48
+  ],
+  "train_delay|I": [
+   0,
+   46
+  ],
+  "volunteer_or_donate|A": [
+   15,
+   32
+  ],
+  "volunteer_or_donate|B": [
+   6,
+   36
+  ],
+  "volunteer_or_donate|C": [
+   22,
+   50
+  ],
+  "volunteer_or_donate|D": [
+   7,
+   30
+  ],
+  "volunteer_or_donate|E": [
+   1,
+   48
+  ],
+  "volunteer_or_donate|F": [
+   3,
+   34
+  ],
+  "volunteer_or_donate|G": [
+   2,
+   36
+  ],
+  "volunteer_or_donate|H": [
+   31,
+   48
+  ],
+  "volunteer_or_donate|I": [
+   0,
+   46
+  ]
+ },
+ "top": {
+  "general": "H",
+  "weekend_gig": "H",
+  "research_study": "C",
+  "nonstop_flight": "C",
+  "priority_pickup": "B",
+  "grocery_delivery": "C",
+  "furniture_assembly": "H",
+  "theme_park": "C",
+  "train_delay": "C",
+  "volunteer_or_donate": "H"
+ },
+ "hyp": [
+  199,
+  638,
+  466,
+  2962
+ ],
+ "hyp_top": {
+  "general": false,
+  "weekend_gig": false,
+  "research_study": false,
+  "nonstop_flight": false,
+  "priority_pickup": true,
+  "grocery_delivery": false,
+  "furniture_assembly": true,
+  "theme_park": true,
+  "train_delay": false,
+  "volunteer_or_donate": false
+ },
+ "dom": [
+  164,
+  560,
+  501,
+  3040
+ ],
+ "flip": {
+  "both used (question decides)": 24,
+  "one always": 12
+ },
+ "flip_examples": [
+  [
+   [
+    "A",
+    "B"
+   ],
+   {
+    "volunteer_or_donate": "A",
+    "general": "A",
+    "priority_pickup": "B"
+   }
+  ],
+  [
+   [
+    "A",
+    "C"
+   ],
+   {
+    "furniture_assembly": "C",
+    "theme_park": "C",
+    "train_delay": "C",
+    "volunteer_or_donate": "A",
+    "grocery_delivery": "C",
+    "research_study": "C",
+    "nonstop_flight": "C",
+    "general": "C"
+   }
+  ],
+  [
+   [
+    "A",
+    "D"
+   ],
+   {
+    "general": "D",
+    "grocery_delivery": "D",
+    "volunteer_or_donate": "D",
+    "train_delay": "A",
+    "nonstop_flight": "D",
+    "priority_pickup": "D"
+   }
+  ],
+  [
+   [
+    "A",
+    "F"
+   ],
+   {
+    "priority_pickup": "F",
+    "train_delay": "F",
+    "volunteer_or_donate": "A"
+   }
+  ],
+  [
+   [
+    "A",
+    "G"
+   ],
+   {
+    "volunteer_or_donate": "G",
+    "general": "G",
+    "weekend_gig": "A"
+   }
+  ],
+  [
+   [
+    "A",
+    "H"
+   ],
+   {
+    "volunteer_or_donate": "H",
+    "general": "H",
+    "nonstop_flight": "H",
+    "research_study": "H",
+    "furniture_assembly": "H",
+    "train_delay": "A",
+    "weekend_gig": "H",
+    "theme_park": "H"
+   }
+  ],
+  [
+   [
+    "B",
+    "C"
+   ],
+   {
+    "theme_park": "C",
+    "general": "C",
+    "train_delay": "C",
+    "grocery_delivery": "C",
+    "priority_pickup": "B",
+    "research_study": "C",
+    "furniture_assembly": "C",
+    "volunteer_or_donate": "C"
+   }
+  ],
+  [
+   [
+    "B",
+    "D"
+   ],
+   {
+    "theme_park": "B",
+    "train_delay": "B",
+    "volunteer_or_donate": "D",
+    "priority_pickup": "B",
+    "grocery_delivery": "B",
+    "general": "B",
+    "nonstop_flight": "D"
+   }
+  ],
+  [
+   [
+    "B",
+    "F"
+   ],
+   {
+    "volunteer_or_donate": "B",
+    "priority_pickup": "F",
+    "train_delay": "B",
+    "grocery_delivery": "B",
+    "general": "B",
+    "theme_park": "B"
+   }
+  ],
+  [
+   [
+    "B",
+    "G"
+   ],
+   {
+    "train_delay": "B",
+    "general": "B",
+    "theme_park": "B",
+    "priority_pickup": "B"
+   }
+  ],
+  [
+   [
+    "B",
+    "H"
+   ],
+   {
+    "volunteer_or_donate": "H",
+    "priority_pickup": "B",
+    "train_delay": "H",
+    "research_study": "H",
+    "furniture_assembly": "H",
+    "general": "H",
+    "grocery_delivery": "H",
+    "weekend_gig": "H",
+    "theme_park": "B",
+    "nonstop_flight": "H"
+   }
+  ],
+  [
+   [
+    "B",
+    "I"
+   ],
+   {
+    "general": "I",
+    "train_delay": "B",
+    "volunteer_or_donate": "B",
+    "priority_pickup": "B"
+   }
+  ],
+  [
+   [
+    "C",
+    "D"
+   ],
+   {
+    "research_study": "C",
+    "general": "C",
+    "train_delay": "C",
+    "priority_pickup": "D",
+    "furniture_assembly": "C",
+    "volunteer_or_donate": "D",
+    "theme_park": "C",
+    "nonstop_flight": "C",
+    "grocery_delivery": "C"
+   }
+  ],
+  [
+   [
+    "C",
+    "E"
+   ],
+   {
+    "general": "C",
+    "nonstop_flight": "C",
+    "research_study": "C",
+    "grocery_delivery": "C",
+    "theme_park": "C",
+    "train_delay": "E",
+    "volunteer_or_donate": "C",
+    "furniture_assembly": "C"
+   }
+  ],
+  [
+   [
+    "C",
+    "F"
+   ],
+   {
+    "priority_pickup": "F",
+    "general": "C",
+    "furniture_assembly": "C",
+    "train_delay": "C",
+    "volunteer_or_donate": "F",
+    "theme_park": "C",
+    "nonstop_flight": "C"
+   }
+  ],
+  [
+   [
+    "C",
+    "G"
+   ],
+   {
+    "nonstop_flight": "C",
+    "furniture_assembly": "C",
+    "weekend_gig": "C",
+    "research_study": "C",
+    "theme_park": "C",
+    "volunteer_or_donate": "C",
+    "grocery_delivery": "C",
+    "train_delay": "C",
+    "general": "G"
+   }
+  ],
+  [
+   [
+    "C",
+    "H"
+   ],
+   {
+    "train_delay": "H",
+    "research_study": "C",
+    "theme_park": "C",
+    "grocery_delivery": "H",
+    "furniture_assembly": "H",
+    "weekend_gig": "C",
+    "volunteer_or_donate": "H",
+    "nonstop_flight": "C",
+    "general": "H"
+   }
+  ],
+  [
+   [
+    "C",
+    "I"
+   ],
+   {
+    "priority_pickup": "I",
+    "research_study": "C",
+    "theme_park": "C",
+    "general": "C",
+    "nonstop_flight": "C",
+    "train_delay": "C",
+    "volunteer_or_donate": "C"
+   }
+  ],
+  [
+   [
+    "D",
+    "E"
+   ],
+   {
+    "train_delay": "D",
+    "general": "D",
+    "priority_pickup": "D",
+    "nonstop_flight": "D",
+    "volunteer_or_donate": "E",
+    "theme_park": "D"
+   }
+  ],
+  [
+   [
+    "D",
+    "H"
+   ],
+   {
+    "general": "D",
+    "furniture_assembly": "H",
+    "volunteer_or_donate": "D",
+    "train_delay": "D",
+    "research_study": "H",
+    "priority_pickup": "D",
+    "nonstop_flight": "H",
+    "theme_park": "D",
+    "grocery_delivery": "H"
+   }
+  ],
+  [
+   [
+    "D",
+    "I"
+   ],
+   {
+    "general": "D",
+    "priority_pickup": "I",
+    "nonstop_flight": "D",
+    "train_delay": "D",
+    "theme_park": "D"
+   }
+  ],
+  [
+   [
+    "F",
+    "G"
+   ],
+   {
+    "priority_pickup": "F",
+    "theme_park": "G",
+    "volunteer_or_donate": "G",
+    "train_delay": "F",
+    "general": "F",
+    "nonstop_flight": "F"
+   }
+  ],
+  [
+   [
+    "F",
+    "H"
+   ],
+   {
+    "furniture_assembly": "H",
+    "train_delay": "H",
+    "general": "H",
+    "research_study": "H",
+    "priority_pickup": "F",
+    "volunteer_or_donate": "H",
+    "nonstop_flight": "H",
+    "grocery_delivery": "H",
+    "weekend_gig": "H",
+    "theme_park": "H"
+   }
+  ],
+  [
+   [
+    "G",
+    "H"
+   ],
+   {
+    "weekend_gig": "H",
+    "volunteer_or_donate": "H",
+    "nonstop_flight": "H",
+    "theme_park": "H",
+    "furniture_assembly": "H",
+    "train_delay": "H",
+    "general": "H",
+    "grocery_delivery": "H",
+    "research_study": "G"
+   }
+  ]
+ ],
+ "moves": {
+  "No memory": {
+   "Computes an hourly rate": 0.66,
+   "Trait: cost-conscious / frugal": 0.24,
+   "Uses persona for income/status": 0.3,
+   "Appeals to what's 'common/typical'": 0.26,
+   "Mentions averaging": 0.38,
+   "Flags a conflict between memories": 0.04,
+   "Cites a nonexistent example / prior turn": 0.0,
+   "Says the value depends on context": 0.0
+  },
+  "1 floor memory": {
+   "Computes an hourly rate": 0.92,
+   "Trait: cost-conscious / frugal": 0.108,
+   "Uses persona for income/status": 0.112,
+   "Appeals to what's 'common/typical'": 0.056,
+   "Mentions averaging": 0.14,
+   "Flags a conflict between memories": 0.104,
+   "Cites a nonexistent example / prior turn": 0.016,
+   "Says the value depends on context": 0.004
+  },
+  "1 ceiling memory": {
+   "Computes an hourly rate": 0.6733333333333333,
+   "Trait: cost-conscious / frugal": 0.9333333333333333,
+   "Uses persona for income/status": 0.18666666666666668,
+   "Appeals to what's 'common/typical'": 0.14666666666666667,
+   "Mentions averaging": 0.18666666666666668,
+   "Flags a conflict between memories": 0.02,
+   "Cites a nonexistent example / prior turn": 0.04666666666666667,
+   "Says the value depends on context": 0.0
+  },
+  "Wage only": {
+   "Computes an hourly rate": 0.92,
+   "Trait: cost-conscious / frugal": 0.28,
+   "Uses persona for income/status": 0.56,
+   "Appeals to what's 'common/typical'": 0.14,
+   "Mentions averaging": 0.1,
+   "Flags a conflict between memories": 0.04,
+   "Cites a nonexistent example / prior turn": 0.04,
+   "Says the value depends on context": 0.02
+  },
+  "2 memories": {
+   "Computes an hourly rate": 0.8986111111111111,
+   "Trait: cost-conscious / frugal": 0.5097222222222222,
+   "Uses persona for income/status": 0.19027777777777777,
+   "Appeals to what's 'common/typical'": 0.03611111111111111,
+   "Mentions averaging": 0.17916666666666667,
+   "Flags a conflict between memories": 0.20555555555555555,
+   "Cites a nonexistent example / prior turn": 0.008333333333333333,
+   "Says the value depends on context": 0.03333333333333333
+  },
+  "3\u20139 memories": {
+   "Computes an hourly rate": 0.9210526315789473,
+   "Trait: cost-conscious / frugal": 0.5868421052631579,
+   "Uses persona for income/status": 0.07894736842105263,
+   "Appeals to what's 'common/typical'": 0.002631578947368421,
+   "Mentions averaging": 0.28157894736842104,
+   "Flags a conflict between memories": 0.42105263157894735,
+   "Cites a nonexistent example / prior turn": 0.013157894736842105,
+   "Says the value depends on context": 0.12368421052631579
+  }
+ },
+ "moves_n": {
+  "No memory": 50,
+  "1 floor memory": 250,
+  "1 ceiling memory": 150,
+  "Wage only": 50,
+  "2 memories": 720,
+  "3\u20139 memories": 380
+ },
+ "stated_actual": {
+  "A": {
+   "n": 370,
+   "computed": 248,
+   "used": 35,
+   "computed_not_used": 213,
+   "used_given_computed": 0.14112903225806453
+  },
+  "B": {
+   "n": 410,
+   "computed": 95,
+   "used": 77,
+   "computed_not_used": 69,
+   "used_given_computed": 0.2736842105263158
+  },
+  "C": {
+   "n": 570,
+   "computed": 379,
+   "used": 287,
+   "computed_not_used": 178,
+   "used_given_computed": 0.5303430079155673
+  },
+  "D": {
+   "n": 350,
+   "computed": 172,
+   "used": 91,
+   "computed_not_used": 111,
+   "used_given_computed": 0.3546511627906977
+  },
+  "E": {
+   "n": 530,
+   "computed": 52,
+   "used": 6,
+   "computed_not_used": 46,
+   "used_given_computed": 0.11538461538461539
+  },
+  "F": {
+   "n": 390,
+   "computed": 189,
+   "used": 55,
+   "computed_not_used": 162,
+   "used_given_computed": 0.14285714285714285
+  },
+  "G": {
+   "n": 410,
+   "computed": 355,
+   "used": 26,
+   "computed_not_used": 329,
+   "used_given_computed": 0.07323943661971831
+  },
+  "H": {
+   "n": 530,
+   "computed": 440,
+   "used": 237,
+   "computed_not_used": 205,
+   "used_given_computed": 0.5340909090909091
+  },
+  "I": {
+   "n": 530,
+   "computed": 84,
+   "used": 24,
+   "computed_not_used": 79,
+   "used_given_computed": 0.05952380952380952
+  }
+ },
+ "length": {
+  "0": {
+   "think_words": 511.5,
+   "n": 50,
+   "copy": null
+  },
+  "1": {
+   "think_words": 667.5,
+   "n": 490,
+   "copy": 0.35306122448979593
+  },
+  "2": {
+   "think_words": 881.0,
+   "n": 720,
+   "copy": 0.48194444444444445
+  },
+  "3": {
+   "think_words": 1021.5,
+   "n": 60,
+   "copy": 0.6333333333333333
+  },
+  "4": {
+   "think_words": 1082.0,
+   "n": 60,
+   "copy": 0.8333333333333334
+  },
+  "5": {
+   "think_words": 1286.5,
+   "n": 60,
+   "copy": 0.8333333333333334
+  },
+  "6": {
+   "think_words": 1166.5,
+   "n": 60,
+   "copy": 0.9333333333333333
+  },
+  "7": {
+   "think_words": 1294.5,
+   "n": 60,
+   "copy": 0.9
+  },
+  "8": {
+   "think_words": 1337.0,
+   "n": 60,
+   "copy": 0.85
+  },
+  "9": {
+   "think_words": 1275.0,
+   "n": 20,
+   "copy": 0.95
+  }
+ },
+ "wta": {
+  "no memory": [
+   13.75,
+   13.75
+  ],
+  "wage only": [
+   12.5,
+   13.75
+  ],
+  "all calls": [
+   15.0,
+   15.0
+  ]
+ }
+}

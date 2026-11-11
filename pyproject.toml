@@ -1,0 +1,16 @@
+[project]
+name = "agents-choosing-schemas"
+version = "0.1.0"
+description = "Which remembered experience does an LLM agent use to value its time, and how does the question select it?"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+mlx = ["mlx-lm==0.32.0"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
